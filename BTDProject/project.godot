@@ -14,8 +14,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Bunny_Tower_Defense"
-config/version="0.1"
+config/name="Bunny Tower Defense"
+config/version="0.2"
 run/main_scene="uid://co48p2eyjxms8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://d2lnr3b3wurpy"
@@ -30,6 +30,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://c8c00s7511rc3"
 
 [filesystem]
 
@@ -38,6 +39,10 @@ import/blender/enabled=false
 [global_group]
 
 HP=""
+
+[gui]
+
+theme/custom_font="uid://v56c1vt506yg"
 
 [input]
 

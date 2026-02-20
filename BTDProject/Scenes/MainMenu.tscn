@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
-[ext_resource type="Script" uid="uid://dtpbs6vm8yqw4" path="res://Scripts/main_menu.gd" id="1_xim88"]
+[ext_resource type="Script" uid="uid://ci4xf4udmxies" path="res://Scenes/cursor.gd" id="1_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://iwa8clfmunq2" path="res://Assets/Sprites/Others/Map (Grasslands)/MapGrasslands.png" id="2_loo7a"]
 [ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="3_cmrfp"]
 [ext_resource type="Script" uid="uid://gdipkf3u2vh" path="res://Scripts/bg_parallax.gd" id="3_if7li"]
@@ -83,7 +83,7 @@ offset_right = -1.777832
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xim88")
+script = ExtResource("1_rrcx7")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1612498522]
 position = Vector2(982, 530)
