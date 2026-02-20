@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://btew3t801ag51"]
+
+[ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Assets/Ghostlings/brute/brute.gd" id="1_hdtmh"]
+[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Ghostlings/brute/Brute.png" id="2_hdtmh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
+radius = 73.792366
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdtmh"]
+bg_color = Color(0.23529412, 1, 0, 1)
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
+rotates = false
+loop = false
+
+[node name="Brute" type="CharacterBody2D" parent="." unique_id=1513647972]
+position = Vector2(1, 0)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_hdtmh")
+
+[node name="Brute" type="Sprite2D" parent="Brute" unique_id=886288773]
+position = Vector2(1.25, -3.7500029)
+scale = Vector2(0.083, 0.083)
+texture = ExtResource("2_hdtmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brute" unique_id=708407390]
+position = Vector2(3.75, -1.25)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_hdtmh")
+
+[node name="Button" type="Button" parent="Brute" unique_id=705459695]
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.25
+offset_top = -72.5
+offset_right = 52.443962
+offset_bottom = 40.608093
+scale = Vector2(1.1924591, 1.2267026)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=411919945]
+offset_left = -54.0
+offset_top = -79.0
+offset_right = 63.0
+offset_bottom = -42.0
+theme_override_colors/font_color = Color(0.9882353, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/fill = SubResource("StyleBoxFlat_hdtmh")
+max_value = 5.0
+value = 5.0
+fill_mode = 1
+
+[connection signal="mouse_entered" from="Brute/Button" to="Brute" method="_on_button_mouse_entered"]

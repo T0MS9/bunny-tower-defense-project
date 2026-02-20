@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://btew3t801ag51"]
+
+[ext_resource type="Script" uid="uid://d1obqfb6h1piv" path="res://Assets/Ghostlings/ghostling/ghostling.gd" id="1_3hqvp"]
+[ext_resource type="Texture2D" uid="uid://fwrh6m1qh1qg" path="res://Assets/Ghostlings/ghostling/Ghostling.png" id="1_nmoqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmoqu"]
+size = Vector2(157.50006, 136.25005)
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
+rotates = false
+loop = false
+
+[node name="Ghostling" type="CharacterBody2D" parent="." unique_id=1513647972]
+position = Vector2(1, 0)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_3hqvp")
+
+[node name="Ghostling" type="Sprite2D" parent="Ghostling" unique_id=886288773]
+position = Vector2(2.5000002, 1.250001)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("1_nmoqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ghostling" unique_id=708407390]
+position = Vector2(-1.249995, -5.6249995)
+scale = Vector2(0.99999946, 0.99999946)
+shape = SubResource("RectangleShape2D_nmoqu")
+
+[node name="Button" type="Button" parent="Ghostling" unique_id=705459695]
+modulate = Color(1, 1, 1, 0)
+offset_left = -80.0
+offset_top = -73.75
+offset_right = 77.499985
+offset_bottom = 62.499985
+
+[connection signal="mouse_entered" from="Ghostling/Button" to="Ghostling" method="_on_button_mouse_entered"]
