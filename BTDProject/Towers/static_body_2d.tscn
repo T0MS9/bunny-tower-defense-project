@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b23kia8xwi7bv"]
 
-[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="1_tk8ua"]
+[ext_resource type="Texture2D" uid="uid://cucbh7wquatjc" path="res://Assets/Concepts/Bunnies/Rookie.png" id="1_tk8ua"]
 
 [sub_resource type="Animation" id="Animation_03fgm"]
 length = 0.001
