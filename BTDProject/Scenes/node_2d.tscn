@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://cf5i2ng5uq7i"]
 
 [ext_resource type="Script" uid="uid://cj5vuu45ii5tk" path="res://Scripts/ghostling_spawner.gd" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://iwa8clfmunq2" path="res://Assets/Sprites/Others/Map (Grasslands)/MapGrasslands.png" id="2_chwn1"]
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scenes/hud.gd" id="3_6whob"]
-[ext_resource type="Texture2D" uid="uid://r1g0akocc5h8" path="res://Assets/Map/Map.png" id="3_fg7i4"]
 [ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
 [ext_resource type="StyleBox" uid="uid://c5itxtaqwsjr0" path="res://MainMenu.tres" id="5_tx0tn"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scenes/music_control.gd" id="6_wjtap"]
-[ext_resource type="Texture2D" uid="uid://bv67mkv6ikgnm" path="res://Assets/Menu_Assets/settings.png" id="7_85gyg"]
-[ext_resource type="PackedScene" uid="uid://cu0fvufq1whky" path="res://Assets/Ghostlings/PathFollow_Ghost.tscn" id="7_wjtap"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scenes/label.gd" id="8_v7gqg"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="9_1nvmp"]
-[ext_resource type="Texture2D" uid="uid://b1jxy6mtooyma" path="res://Assets/HUD_Assets/heart.png" id="10_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://djjmp6hra7ngm" path="res://Assets/HUD_Assets/heart_broke.png" id="11_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://dvkbnu2fm0ixl" path="res://Assets/Sprites/Others/UI/Gameplay/Heart01.png" id="9_op2xg"]
+[ext_resource type="Texture2D" uid="uid://xt5searuq16h" path="res://Assets/Sprites/Others/UI/Gameplay/Heart02.png" id="10_1nvmp"]
+[ext_resource type="Texture2D" uid="uid://chdbwdd5jyt4q" path="res://Assets/Sprites/Others/UI/Gameplay/Carrot.png" id="11_el1jj"]
 [ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scenes/moedas.gd" id="11_p20hg"]
-[ext_resource type="Texture2D" uid="uid://blq4fgdpbwnoa" path="res://Assets/HUD_Assets/coin.png" id="12_op2xg"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/HUD_Assets/EventSign.png" id="14_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
-[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
-[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
-[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="19_op2xg"]
+[ext_resource type="Texture2D" uid="uid://c3ghc58omhn45" path="res://Assets/Sprites/Others/HUD/Others/EventSign.png" id="13_03fgm"]
+[ext_resource type="Texture2D" uid="uid://c6wdr6p7ya2ru" path="res://Assets/Sprites/Others/HUD/Shop/CheckerboardShop.png" id="14_uu23e"]
+[ext_resource type="Texture2D" uid="uid://m1o6ntk4ugsl" path="res://Assets/Sprites/Others/HUD/Shop/ShopFrame.png" id="15_ny2ev"]
+[ext_resource type="Texture2D" uid="uid://cr15dgm623tj2" path="res://Assets/Sprites/Others/HUD/Selection/CheckerboardSelection.png" id="16_jiy1d"]
+[ext_resource type="Texture2D" uid="uid://cnete1ivqlovg" path="res://Assets/Sprites/Others/HUD/Selection/SelectionFrame.png" id="17_ud1os"]
+[ext_resource type="Texture2D" uid="uid://c368wv6fagtel" path="res://Assets/Sprites/Characters/Bunnies/Rookie.png" id="18_fpmp2"]
+[ext_resource type="Texture2D" uid="uid://dsitusos2t3x8" path="res://Assets/Sprites/Others/UI/Gameplay/Settings.png" id="19_xiv05"]
+[ext_resource type="Texture2D" uid="uid://dpe3khxhnvb0m" path="res://Assets/Sprites/Others/UI/Debug/DebugWarning.png" id="20_el1jj"]
+[ext_resource type="Texture2D" uid="uid://md1ycfv2ef6o" path="res://Assets/Sprites/Others/UI/Debug/DebugButton.png" id="21_03fgm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7gqg"]
 bg_color = Color(0.70980394, 0.6784314, 0.69411767, 0.75686276)
@@ -190,9 +191,9 @@ autostart = true
 [node name="Map" type="Sprite2D" parent="." unique_id=2040754683]
 position = Vector2(1193.1869, 696.7664)
 scale = Vector2(0.5990241, 0.59902424)
-texture = ExtResource("3_fg7i4")
+texture = ExtResource("2_chwn1")
 
-[node name="Path2D" parent="." unique_id=53140908 instance=ExtResource("7_wjtap")]
+[node name="Path2D" parent="." unique_id=53140908]
 position = Vector2(39.520958, 154.49101)
 
 [node name="HUD" type="Node2D" parent="." unique_id=416119955 groups=["HP"]]
@@ -201,12 +202,14 @@ scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("3_6whob")
 
 [node name="Pause" type="Button" parent="HUD" unique_id=712995413]
-offset_left = 1802.3953
-offset_top = 59.88025
-offset_right = 1902.9941
-offset_bottom = 162.06406
+offset_left = 1790.419
+offset_top = 49.1018
+offset_right = 1912.5746
+offset_bottom = 173.182
 theme_override_font_sizes/font_size = 76
-icon = ExtResource("7_85gyg")
+icon = ExtResource("19_xiv05")
+flat = true
+expand_icon = true
 
 [node name="PauseMenu" type="Panel" parent="HUD" unique_id=1511948768]
 visible = false
@@ -412,10 +415,10 @@ value = 100.0
 
 [node name="Vida" type="Label" parent="HUD" unique_id=1375552447]
 process_mode = 3
-offset_left = 179.26949
-offset_top = 88.2515
-offset_right = 305.018
-offset_bottom = 153.2515
+offset_left = 166.46709
+offset_top = 93.413185
+offset_right = 292.21564
+offset_bottom = 158.41318
 theme = SubResource("Theme_v7gqg")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -426,27 +429,27 @@ text = "100"
 script = ExtResource("8_v7gqg")
 
 [node name="Heart" type="Sprite2D" parent="HUD" unique_id=161767128]
-position = Vector2(97.41913, 111.790344)
+position = Vector2(107.0922, 112.98804)
 scale = Vector2(0.15173654, 0.15173654)
-texture = ExtResource("10_hpu6p")
+texture = ExtResource("9_op2xg")
 
 [node name="HeartBroke" type="Sprite2D" parent="HUD" unique_id=367959400]
 visible = false
 position = Vector2(97.419, 111.79)
 scale = Vector2(0.152, 0.152)
-texture = ExtResource("11_hpu6p")
+texture = ExtResource("10_1nvmp")
 
 [node name="Coin" type="Sprite2D" parent="HUD" unique_id=648769237]
-position = Vector2(102.99401, 215.5689)
+position = Vector2(107.09219, 224.36523)
 scale = Vector2(0.152, 0.152)
-texture = ExtResource("12_op2xg")
+texture = ExtResource("11_el1jj")
 
 [node name="Moedas" type="Label" parent="HUD" unique_id=407741699]
 process_mode = 3
-offset_left = 179.26942
-offset_top = 192.44315
-offset_right = 305.01794
-offset_bottom = 257.44318
+offset_left = 166.46709
+offset_top = 202.39523
+offset_right = 292.21558
+offset_bottom = 267.39526
 theme = SubResource("Theme_he4j0")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -471,7 +474,7 @@ value = 50.0
 visible = false
 position = Vector2(220.35931, 955.68866)
 scale = Vector2(0.4844466, 0.4844466)
-texture = ExtResource("14_hpu6p")
+texture = ExtResource("13_03fgm")
 
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1727750006]
 position = Vector2(2138.922, 765.2696)
@@ -485,7 +488,7 @@ libraries/ = SubResource("AnimationLibrary_03fgm")
 texture_repeat = 2
 position = Vector2(-1076.7808, 819.1487)
 scale = Vector2(2.059324, 2.1613357)
-texture = ExtResource("16_hpu6p")
+texture = ExtResource("14_uu23e")
 region_enabled = true
 region_rect = Rect2(0, 0, 1080, 151.48657)
 
@@ -497,32 +500,35 @@ autoplay = &"BG_shop"
 [node name="HudShopFrame" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=1671455703]
 position = Vector2(-1066.2354, 718.4697)
 scale = Vector2(0.55052364, 0.5468554)
-texture = ExtResource("18_op2xg")
+texture = ExtResource("15_ny2ev")
 
 [node name="HudBgRight" type="Sprite2D" parent="HUD" unique_id=1849465092]
 position = Vector2(2138.922, 765.2696)
 scale = Vector2(1.078842, 1.078842)
-texture = ExtResource("17_op2xg")
+texture = ExtResource("16_jiy1d")
 region_enabled = true
 region_rect = Rect2(0, 0, 377.19507, 1080)
 
 [node name="HudSelectionFrame" type="Sprite2D" parent="HUD" unique_id=925908718]
 position = Vector2(2128.1438, 696.4719)
 scale = Vector2(0.5964736, 0.59708554)
-texture = ExtResource("16_gwne5")
+texture = ExtResource("17_ud1os")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=513665682]
 position = Vector2(645.5089, 425.1497)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("19_op2xg")
+texture = ExtResource("18_fpmp2")
 
 [node name="sigminha" type="Button" parent="Rookie" unique_id=1177221275]
+modulate = Color(1, 1, 1, 0.3372549)
 offset_left = -536.4773
 offset_top = -632.69965
 offset_right = 624.20337
 offset_bottom = 939.44586
-text = "Sigma
-"
+icon = ExtResource("20_el1jj")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=900058621]
 root_node = NodePath("../..")
@@ -531,9 +537,16 @@ libraries/ = SubResource("AnimationLibrary_ny2ev")
 [node name="attack" type="Button" parent="." unique_id=767841997]
 offset_left = 1964.0718
 offset_top = 208.38322
-offset_right = 2301.7964
-offset_bottom = 341.31735
-text = "attack"
+offset_right = 2317.3652
+offset_bottom = 361.67664
+theme_override_colors/font_color = Color(4.0059752, 4.0059752, 4.0059752, 1)
+theme_override_fonts/font = ExtResource("9_1nvmp")
+theme_override_font_sizes/font_size = 57
+text = "ATTACK!"
+icon = ExtResource("21_03fgm")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="timeout" from="GhostlingSpawner/Timer" to="GhostlingSpawner" method="_on_timer_timeout"]
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]
