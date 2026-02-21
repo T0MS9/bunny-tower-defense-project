@@ -4,6 +4,11 @@ extends Node
 var cursor_point = load("res://Assets/Sprites/Others/UI/Others/CursorPoint.png")
 var cursor_pressed = load("res://Assets/Sprites/Others/UI/Others/CursorPressed.png")
 
+func _ready() -> void:
+	Input.set_custom_mouse_cursor(cursor_point)
+
+
+
 func _input(event):
 	# Verifica se carregaste no botão do rato
 	if event is InputEventMouseButton:

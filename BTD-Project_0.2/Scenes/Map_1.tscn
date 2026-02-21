@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://cf5i2ng5uq7i"]
 
 [ext_resource type="Script" uid="uid://cj5vuu45ii5tk" path="res://Scripts/ghostling_spawner.gd" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scenes/hud.gd" id="3_6whob"]
-[ext_resource type="Texture2D" uid="uid://r1g0akocc5h8" path="res://Assets/Map/Map.png" id="3_fg7i4"]
+[ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
+[ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="3_6whob"]
+[ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="4_qhmcd"]
 [ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
-[ext_resource type="StyleBox" uid="uid://c5itxtaqwsjr0" path="res://MainMenu.tres" id="5_tx0tn"]
-[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scenes/music_control.gd" id="6_wjtap"]
-[ext_resource type="Texture2D" uid="uid://bv67mkv6ikgnm" path="res://Assets/Menu_Assets/settings.png" id="7_85gyg"]
-[ext_resource type="PackedScene" uid="uid://cu0fvufq1whky" path="res://Assets/Ghostlings/PathFollow_Ghost.tscn" id="7_wjtap"]
-[ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scenes/label.gd" id="8_v7gqg"]
+[ext_resource type="PackedScene" uid="uid://dqclnvpdade1k" path="res://Scenes/Enemies/Ghostling/ghaztling.tscn" id="4_w4m1r"]
+[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="6_wjtap"]
+[ext_resource type="PackedScene" uid="uid://cu0fvufq1whky" path="res://Scenes/Enemies/Map1_PathFollow_Ghost.tscn" id="7_wjtap"]
+[ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_v7gqg"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="9_1nvmp"]
-[ext_resource type="Texture2D" uid="uid://b1jxy6mtooyma" path="res://Assets/HUD_Assets/heart.png" id="10_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://djjmp6hra7ngm" path="res://Assets/HUD_Assets/heart_broke.png" id="11_hpu6p"]
-[ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scenes/moedas.gd" id="11_p20hg"]
-[ext_resource type="Texture2D" uid="uid://blq4fgdpbwnoa" path="res://Assets/HUD_Assets/coin.png" id="12_op2xg"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/HUD_Assets/EventSign.png" id="14_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
-[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
-[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
-[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="19_op2xg"]
+[ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="11_p20hg"]
+[ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="12_lycfg"]
+[ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="13_0w8u8"]
+[ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="14_gtlmr"]
+[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
+[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
+[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
+[ext_resource type="Texture2D" uid="uid://dgii8pniek5tc" path="res://Assets/Bunnies/Skins/buny.png" id="21_lycfg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7gqg"]
 bg_color = Color(0.70980394, 0.6784314, 0.69411767, 0.75686276)
@@ -185,15 +186,29 @@ scale = Vector2(0.835, 0.835)
 script = ExtResource("2_0e48y")
 
 [node name="Timer" type="Timer" parent="GhostlingSpawner" unique_id=1280611192]
+wait_time = 0.5
 autostart = true
 
 [node name="Map" type="Sprite2D" parent="." unique_id=2040754683]
 position = Vector2(1193.1869, 696.7664)
 scale = Vector2(0.5990241, 0.59902424)
-texture = ExtResource("3_fg7i4")
+texture = ExtResource("2_yi2un")
 
 [node name="Path2D" parent="." unique_id=53140908 instance=ExtResource("7_wjtap")]
-position = Vector2(39.520958, 154.49101)
+position = Vector2(34.730537, 166.46703)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D" unique_id=1755593801]
+position = Vector2(-53, 302)
+rotation = 0.0021834024
+rotates = false
+
+[node name="Ghostling" parent="Path2D/PathFollow2D2" unique_id=1495579962 instance=ExtResource("4_w4m1r")]
+
+[node name="BushPosition" type="Sprite2D" parent="." unique_id=1478967233]
+position = Vector2(1193.4265, 696.52686)
+scale = Vector2(0.59924597, 0.59924597)
+texture = ExtResource("17_dtr0u")
 
 [node name="HUD" type="Node2D" parent="." unique_id=416119955 groups=["HP"]]
 process_mode = 3
@@ -201,12 +216,16 @@ scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("3_6whob")
 
 [node name="Pause" type="Button" parent="HUD" unique_id=712995413]
-offset_left = 1802.3953
-offset_top = 59.88025
-offset_right = 1902.9941
-offset_bottom = 162.06406
+offset_left = 1819.3772
+offset_top = 52.694607
+offset_right = 1911.5928
+offset_bottom = 144.91019
 theme_override_font_sizes/font_size = 76
-icon = ExtResource("7_85gyg")
+icon = ExtResource("4_qhmcd")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" type="Panel" parent="HUD" unique_id=1511948768]
 visible = false
@@ -290,9 +309,6 @@ theme_override_constants/outline_size = 24
 theme_override_fonts/font = ExtResource("4_u7krg")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_v7gqg")
-theme_override_styles/normal_mirrored = ExtResource("5_tx0tn")
-theme_override_styles/pressed = ExtResource("5_tx0tn")
-theme_override_styles/hover = ExtResource("5_tx0tn")
 theme_override_styles/focus = SubResource("StyleBoxFlat_chwn1")
 text = "Voltar"
 
@@ -409,13 +425,14 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 step = 1.0
 value = 100.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Vida" type="Label" parent="HUD" unique_id=1375552447]
 process_mode = 3
-offset_left = 179.26949
-offset_top = 88.2515
-offset_right = 305.018
-offset_bottom = 153.2515
+offset_left = 176.87427
+offset_top = 100.59888
+offset_right = 302.62277
+offset_bottom = 165.59885
 theme = SubResource("Theme_v7gqg")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -424,29 +441,30 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_font_sizes/font_size = 64
 text = "100"
 script = ExtResource("8_v7gqg")
+metadata/_edit_use_anchors_ = true
 
 [node name="Heart" type="Sprite2D" parent="HUD" unique_id=161767128]
-position = Vector2(97.41913, 111.790344)
+position = Vector2(113.77246, 119.760345)
 scale = Vector2(0.15173654, 0.15173654)
-texture = ExtResource("10_hpu6p")
+texture = ExtResource("12_lycfg")
 
 [node name="HeartBroke" type="Sprite2D" parent="HUD" unique_id=367959400]
 visible = false
-position = Vector2(97.419, 111.79)
+position = Vector2(113.772, 119.76)
 scale = Vector2(0.152, 0.152)
-texture = ExtResource("11_hpu6p")
+texture = ExtResource("13_0w8u8")
 
 [node name="Coin" type="Sprite2D" parent="HUD" unique_id=648769237]
-position = Vector2(102.99401, 215.5689)
+position = Vector2(113.77252, 227.54474)
 scale = Vector2(0.152, 0.152)
-texture = ExtResource("12_op2xg")
+texture = ExtResource("14_gtlmr")
 
 [node name="Moedas" type="Label" parent="HUD" unique_id=407741699]
 process_mode = 3
-offset_left = 179.26942
-offset_top = 192.44315
-offset_right = 305.01794
-offset_bottom = 257.44318
+offset_left = 176.87418
+offset_top = 202.024
+offset_right = 302.62268
+offset_bottom = 267.02402
 theme = SubResource("Theme_he4j0")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -455,6 +473,7 @@ theme_override_fonts/font = ExtResource("9_1nvmp")
 theme_override_font_sizes/font_size = 64
 text = "100"
 script = ExtResource("11_p20hg")
+metadata/_edit_use_anchors_ = true
 
 [node name="PGB_M" type="ProgressBar" parent="HUD" unique_id=600978196]
 offset_left = 1644.3116
@@ -466,6 +485,7 @@ theme_override_font_sizes/font_size = 70
 max_value = 99999999.0
 step = 1.0
 value = 50.0
+metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=264607895]
 visible = false
@@ -514,7 +534,7 @@ texture = ExtResource("16_gwne5")
 [node name="Rookie" type="Sprite2D" parent="." unique_id=513665682]
 position = Vector2(645.5089, 425.1497)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("19_op2xg")
+texture = ExtResource("21_lycfg")
 
 [node name="sigminha" type="Button" parent="Rookie" unique_id=1177221275]
 offset_left = -536.4773
@@ -523,6 +543,7 @@ offset_right = 624.20337
 offset_bottom = 939.44586
 text = "Sigma
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=900058621]
 root_node = NodePath("../..")
@@ -534,6 +555,7 @@ offset_top = 208.38322
 offset_right = 2301.7964
 offset_bottom = 341.31735
 text = "attack"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="GhostlingSpawner/Timer" to="GhostlingSpawner" method="_on_timer_timeout"]
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]

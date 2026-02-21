@@ -1,10 +1,71 @@
 [gd_scene format=3 uid="uid://btew3t801ag51"]
 
-[ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Assets/Ghostlings/brute/brute.gd" id="1_hdtmh"]
-[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Ghostlings/brute/Brute.png" id="2_hdtmh"]
+[ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1_hdtmh"]
+[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
 radius = 73.792366
+
+[sub_resource type="Animation" id="Animation_k2pjp"]
+resource_name = "Brute_TakeDMG"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Brute/Brute:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.23921569, 0.23529412, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Brute/Brute:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.083, 0.083), Vector2(0.083, 0.07262598), Vector2(0.083, 0.083)]
+}
+
+[sub_resource type="Animation" id="Animation_opqqp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Brute/Brute:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Brute/Brute:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.083, 0.083)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_opqqp"]
+_data = {
+&"Brute_TakeDMG": SubResource("Animation_k2pjp"),
+&"RESET": SubResource("Animation_opqqp")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdtmh"]
 bg_color = Color(0.23529412, 1, 0, 1)
@@ -19,28 +80,33 @@ scale = Vector2(0.8, 0.8)
 script = ExtResource("1_hdtmh")
 
 [node name="Brute" type="Sprite2D" parent="Brute" unique_id=886288773]
-position = Vector2(1.25, -3.7500029)
+position = Vector2(1.25, 18.118998)
 scale = Vector2(0.083, 0.083)
 texture = ExtResource("2_hdtmh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Brute" unique_id=708407390]
-position = Vector2(3.75, -1.25)
+position = Vector2(5, 12.5)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CircleShape2D_hdtmh")
 
 [node name="Button" type="Button" parent="Brute" unique_id=705459695]
 modulate = Color(1, 1, 1, 0)
 offset_left = -71.25
-offset_top = -72.5
+offset_top = -50.00005
 offset_right = 52.443962
-offset_bottom = 40.608093
+offset_bottom = 63.108044
 scale = Vector2(1.1924591, 1.2267026)
+metadata/_edit_use_anchors_ = true
+
+[node name="Brute_TakeDMG" type="AnimationPlayer" parent="Brute" unique_id=790073864]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_opqqp")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=411919945]
-offset_left = -54.0
-offset_top = -79.0
-offset_right = 63.0
-offset_bottom = -42.0
+offset_left = -51.0
+offset_top = -66.0
+offset_right = 66.0
+offset_bottom = -29.0
 theme_override_colors/font_color = Color(0.9882353, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
@@ -48,5 +114,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_hdtmh")
 max_value = 5.0
 value = 5.0
 fill_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="Brute/Button" to="Brute" method="_on_button_mouse_entered"]
