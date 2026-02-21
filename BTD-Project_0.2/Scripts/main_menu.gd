@@ -14,7 +14,7 @@ extends Control
 
 #Main Menu botões
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Map_1.tscn")
 
 var SettingsUP = false
 

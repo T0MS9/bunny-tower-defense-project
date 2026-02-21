@@ -1,14 +1,11 @@
 extends Node2D
 
-@onready var path_ghazling = preload("res://Assets/Ghostlings/ghaztling/ghaztling.tscn")
+@onready var path_ghazling = preload("res://Scenes/Enemies/Ghostling/ghaztling.tscn")
 
-@onready var path_ghosling = preload("res://Assets/Ghostlings/ghostling/ghostling.tscn")
+@onready var path_ghosling = preload("res://Scenes/Enemies/Ghostling/ghostling.tscn")
 
-@onready var path_brute = preload("res://Assets/Ghostlings/brute/brute.tscn")
+@onready var path_brute = preload("res://Scenes/Enemies/Ghostling/brute.tscn")
 
-
-
-#teste
 var tempPath
 
 func random_ghostling() -> int:
@@ -16,8 +13,7 @@ func random_ghostling() -> int:
 
 
 func _on_timer_timeout():
-	#var tempPath
-	
+
 	match random_ghostling():
 		1:
 			tempPath = path_ghazling.instantiate()

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b23kia8xwi7bv"]
+[gd_scene format=3 uid="uid://4g60nn1y5qj1"]
 
-[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="1_tk8ua"]
+[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="1_yjt17"]
 
 [sub_resource type="Animation" id="Animation_03fgm"]
 length = 0.001
@@ -27,7 +27,7 @@ tracks/0/path = NodePath("Rookie:skew")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
+"times": PackedFloat32Array(0, 0.13333334, 0.3),
 "transitions": PackedFloat32Array(1.6817931, 0.5547847, 0.659755),
 "update": 0,
 "values": [0.0, 0.23911011, 0.0]
@@ -44,7 +44,7 @@ _data = {
 [node name="Rookie" type="Sprite2D" parent="." unique_id=1855483964]
 position = Vector2(-10.368808, -69)
 scale = Vector2(0.25917143, 0.25917143)
-texture = ExtResource("1_tk8ua")
+texture = ExtResource("1_yjt17")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=389462610]
 root_node = NodePath("../..")

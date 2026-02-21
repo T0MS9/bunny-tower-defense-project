@@ -16,5 +16,6 @@ func _on_button_mouse_entered() -> void:
 	var moedas = get_tree().current_scene.find_child("Moedas")
 	var valor_atual = int(moedas.text)
 	
+	
 	moedas.text = str(valor_atual + 1)
 	$"..".queue_free()

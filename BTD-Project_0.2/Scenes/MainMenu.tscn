@@ -1,26 +1,48 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
 [ext_resource type="Script" uid="uid://dtpbs6vm8yqw4" path="res://Scripts/main_menu.gd" id="1_xim88"]
-[ext_resource type="Texture2D" uid="uid://bkp6vxb73ohsq" path="res://Assets/Menu_Assets/BG.png" id="2_fh7cp"]
-[ext_resource type="Texture2D" uid="uid://c2bsaavrpur4s" path="res://Assets/Menu_Assets/BannerConcept.png" id="2_rrcx7"]
-[ext_resource type="FontFile" path="res://FontText/Candy Planet.ttf" id="3_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://bkp6vxb73ohsq" path="res://Assets/Others/Menu_Assets/BG.png" id="2_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://c2bsaavrpur4s" path="res://Assets/Others/Menu_Assets/BannerConcept.png" id="2_rrcx7"]
+[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="3_cmrfp"]
 [ext_resource type="Script" uid="uid://gdipkf3u2vh" path="res://Scripts/bg_parallax.gd" id="3_if7li"]
-[ext_resource type="StyleBox" uid="uid://c5itxtaqwsjr0" path="res://MainMenu.tres" id="4_cmrfp"]
-[ext_resource type="Script" uid="uid://6dubpg0r2b4" path="res://Scripts/bunnies_parallax.gd" id="5_rrcx7"]
-[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://SFX/game-start-6104.mp3" id="10_rrcx7"]
-[ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Music/MainTheme.mp3" id="11_fh7cp"]
-[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scenes/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Menu_Assets/MenuSign.png" id="13_8e205"]
-[ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scenes/fullscreen_cb.gd" id="13_fh7cp"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/HUD_Assets/EventSign.png" id="14_8e205"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
+[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
+[ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
+[ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_8e205"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Menu_Assets/LOGO.png" id="15_7467j"]
+[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
+
+[sub_resource type="GDScript" id="GDScript_8e205"]
+script/source = "extends Sprite2D
+
+@export var intensidade: float = 0 
+@export var suavizacao: float = 0
+
+@onready var posicao_original = position
+
+func _process(delta):
+	var centro_tela = get_viewport_rect().size / 2
+	var direcao_mouse = (get_global_mouse_position() - centro_tela).normalized()
+	
+	var alvo = posicao_original + (direcao_mouse * intensidade)
+	
+	position = position.lerp(alvo, suavizacao * delta)
+"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh7cp"]
 content_margin_left = 324.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loo7a"]
+bg_color = Color(0.70980394, 0.6784314, 0.69411767, 0.75686276)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7467j"]
 bg_color = Color(0.70980394, 0.6784314, 0.69411767, 0.75686276)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -99,7 +121,7 @@ script = ExtResource("3_if7li")
 position = Vector2(1320.8054, 679.1406)
 scale = Vector2(0.57241756, 0.5724175)
 texture = ExtResource("2_rrcx7")
-script = ExtResource("5_rrcx7")
+script = SubResource("GDScript_8e205")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1630119654]
 position = Vector2(408.55554, 218.375)
@@ -167,9 +189,9 @@ theme_override_constants/outline_size = 24
 theme_override_fonts/font = ExtResource("3_cmrfp")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_loo7a")
-theme_override_styles/normal_mirrored = ExtResource("4_cmrfp")
-theme_override_styles/pressed = ExtResource("4_cmrfp")
-theme_override_styles/hover = ExtResource("4_cmrfp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_7467j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7467j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7467j")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rrcx7")
 text = "Voltar"
 

@@ -22,6 +22,7 @@ func _on_button_mouse_entered() -> void:
 	
 	vida_B = vida_B - 1
 	moedas.text = str(valor_atual + 1)
+	$Brute_TakeDMG.play("Brute_TakeDMG")
 	
 	if vida_B <= 0:
 
