@@ -1,25 +1,37 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
-[ext_resource type="Script" uid="uid://dtpbs6vm8yqw4" path="res://Scripts/main_menu.gd" id="1_xim88"]
-[ext_resource type="Texture2D" uid="uid://bkp6vxb73ohsq" path="res://Assets/Others/Menu_Assets/BG.png" id="2_fh7cp"]
-[ext_resource type="Texture2D" uid="uid://c2bsaavrpur4s" path="res://Assets/Others/Menu_Assets/BannerConcept.png" id="2_rrcx7"]
-[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="3_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
 [ext_resource type="Script" uid="uid://gdipkf3u2vh" path="res://Scripts/bg_parallax.gd" id="3_if7li"]
-[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
-[ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
+[ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://dj5jf4w7aeq3r" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_8e205"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
+[ext_resource type="Texture2D" uid="uid://tylec20bbktq" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
+
+[sub_resource type="GDScript" id="GDScript_rrcx7"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="GDScript" id="GDScript_8e205"]
 script/source = "extends Sprite2D
 
-@export var intensidade: float = 0 
-@export var suavizacao: float = 0
+@export var intensidade: float = 2
+@export var suavizacao: float = 2
 
 @onready var posicao_original = position
 
@@ -109,27 +121,33 @@ offset_right = -1.777832
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xim88")
+script = SubResource("GDScript_rrcx7")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1612498522]
-position = Vector2(959.00006, 540)
-scale = Vector2(1.0638888, 1.0638889)
-texture = ExtResource("2_fh7cp")
+position = Vector2(959.99994, 540)
+scale = Vector2(0.50000006, 0.5)
+texture = ExtResource("2_8e205")
 script = ExtResource("3_if7li")
 
 [node name="Bunnies" type="Sprite2D" parent="." unique_id=390922226]
-position = Vector2(1320.8054, 679.1406)
-scale = Vector2(0.57241756, 0.5724175)
-texture = ExtResource("2_rrcx7")
+position = Vector2(949.33325, 546)
+scale = Vector2(0.5055556, 0.5055556)
+texture = ExtResource("4_7467j")
+script = SubResource("GDScript_8e205")
+
+[node name="Ghosts" type="Sprite2D" parent="." unique_id=294911566]
+position = Vector2(965.3334, 537)
+scale = Vector2(0.50277776, 0.50277776)
+texture = ExtResource("5_2x1g0")
 script = SubResource("GDScript_8e205")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1630119654]
-position = Vector2(408.55554, 218.375)
-scale = Vector2(0.31336808, 0.31336805)
+position = Vector2(859.7222, 193.59377)
+scale = Vector2(0.31584203, 0.29778647)
 texture = ExtResource("15_7467j")
 
 [node name="MenuSign" type="Sprite2D" parent="." unique_id=1992748751]
-position = Vector2(414.99997, 756.99994)
+position = Vector2(1363.3594, 833.50476)
 scale = Vector2(0.38569227, 0.36701456)
 texture = ExtResource("13_8e205")
 
@@ -141,6 +159,7 @@ bus = &"SFX"
 stream = ExtResource("11_fh7cp")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="Options" type="Panel" parent="." unique_id=1317177484]
 layout_mode = 1
@@ -152,7 +171,7 @@ anchor_bottom = 1.2312326
 offset_left = -426.24994
 offset_top = -185.5
 offset_right = 468.7857
-offset_bottom = 420.5
+offset_bottom = 420.49988
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -168,39 +187,37 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 98.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.43529412, 1, 0.54509807, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7019608)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.4392157)
-theme_override_constants/outline_size = 24
-theme_override_fonts/font = ExtResource("3_cmrfp")
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fh7cp")
-text = "Definições"
+text = "DEFINIÇÕES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ExitMenu" type="Button" parent="Options" unique_id=658183081]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 534.0
-offset_right = 186.0
-offset_bottom = 592.0
-theme_override_constants/outline_size = 24
-theme_override_fonts/font = ExtResource("3_cmrfp")
-theme_override_font_sizes/font_size = 30
+offset_left = 361.0
+offset_top = 521.0
+offset_right = 528.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_loo7a")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_7467j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7467j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7467j")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rrcx7")
-text = "Voltar"
+text = "VOLTAR"
 
 [node name="MusicControl" type="HSlider" parent="Options" unique_id=1107087269]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 101.0
-offset_right = 652.0
-offset_bottom = 234.0
+offset_left = 281.0
+offset_top = 89.0
+offset_right = 650.0
+offset_bottom = 222.0
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -213,6 +230,8 @@ offset_left = -129.0
 offset_top = 38.0
 offset_right = 2.0
 offset_bottom = 87.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
 theme_override_font_sizes/font_size = 32
 text = "Música"
 horizontal_alignment = 1
@@ -220,10 +239,10 @@ vertical_alignment = 1
 
 [node name="SFXControl" type="HSlider" parent="Options" unique_id=1704629079]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 182.0
-offset_right = 652.0
-offset_bottom = 315.0
+offset_left = 281.0
+offset_top = 170.0
+offset_right = 650.0
+offset_bottom = 303.0
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -236,6 +255,8 @@ offset_left = -129.0
 offset_top = 37.0
 offset_right = 2.0
 offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
 theme_override_font_sizes/font_size = 32
 text = "Sons"
 horizontal_alignment = 1
@@ -243,11 +264,13 @@ vertical_alignment = 1
 
 [node name="Fullscreen_CB" type="CheckBox" parent="Options" unique_id=561074705]
 layout_mode = 0
-offset_left = 162.0
-offset_top = 281.0
-offset_right = 402.0
-offset_bottom = 400.0
-theme_override_font_sizes/font_size = 23
+offset_left = 169.0
+offset_top = 257.0
+offset_right = 409.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 39
 theme_override_icons/checked = SubResource("ImageTexture_7467j")
 text = "Fullscreen"
 script = ExtResource("13_fh7cp")
@@ -256,56 +279,67 @@ script = ExtResource("13_fh7cp")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2x1g0")
 
+[node name="Label" type="Label" parent="." unique_id=800705017]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1047.0
+offset_right = 260.0
+offset_bottom = 1079.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 19
+text = "© Nke812 & T0MS v0.2 "
+
 [node name="Buttons" type="Node2D" parent="." unique_id=1671538779]
-position = Vector2(243, 478)
+position = Vector2(1195.3594, 553.50476)
 
 [node name="Start" type="Button" parent="Buttons" unique_id=1809978150]
-offset_left = 17.000008
-offset_top = 29.000011
-offset_right = 289.2699
-offset_bottom = 122.62068
+offset_left = 13.640633
+offset_top = 26.49525
+offset_right = 285.91052
+offset_bottom = 120.11592
 rotation = -0.08726646
 pivot_offset = Vector2(0.275, 0)
 pivot_offset_ratio = Vector2(-0.04, -0.27)
 theme = SubResource("Theme_fh7cp")
 theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
 theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxTexture_riqfo")
 text = "COMEÇAR"
 
 [node name="Settings" type="Button" parent="Buttons" unique_id=747610635]
-offset_left = 46.089554
-offset_top = 197.4491
-offset_right = 319.08954
-offset_bottom = 280.8062
+offset_left = 42.64058
+offset_top = 191.49524
+offset_right = 315.64056
+offset_bottom = 274.85236
 rotation = 0.010471975
 theme = SubResource("Theme_8e205")
 theme_type_variation = &"FlatButton"
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_cmrfp")
-theme_override_font_sizes/font_size = 36
-text = "Definições"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 39
+text = "DEFINIÇÕES"
 
 [node name="Exit" type="Button" parent="Buttons" unique_id=2058117749]
-offset_left = 38.99999
-offset_top = 391.00003
-offset_right = 305.4934
-offset_bottom = 464.4526
+offset_left = 34.640614
+offset_top = 385.49527
+offset_right = 301.13403
+offset_bottom = 458.94785
 rotation = -0.017453292
 theme = SubResource("Theme_7467j")
 theme_type_variation = &"FlatButton"
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_cmrfp")
-theme_override_font_sizes/font_size = 36
-text = "Sair"
-
-[node name="EventSign" type="Sprite2D" parent="." unique_id=1731426203]
-visible = false
-position = Vector2(64, 693)
-rotation = 0.8045968
-scale = Vector2(0.51152235, 0.56261593)
-texture = ExtResource("14_8e205")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 55
+text = "SAIR"
 
 [connection signal="pressed" from="Options/ExitMenu" to="." method="_on_exit_menu_pressed"]
 [connection signal="value_changed" from="Options/MusicControl" to="Options/MusicControl" method="_on_value_changed"]
