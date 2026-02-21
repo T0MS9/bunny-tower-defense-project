@@ -1,27 +1,33 @@
 [gd_scene format=3 uid="uid://cf5i2ng5uq7i"]
 
+[ext_resource type="Script" uid="uid://deemh3xh6l078" path="res://Scenes/map_1.gd" id="1_gtlmr"]
 [ext_resource type="Script" uid="uid://cj5vuu45ii5tk" path="res://Scripts/ghostling_spawner.gd" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="3_6whob"]
 [ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="4_qhmcd"]
-[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
+[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
 [ext_resource type="PackedScene" uid="uid://dqclnvpdade1k" path="res://Scenes/Enemies/Ghostling/ghaztling.tscn" id="4_w4m1r"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="6_wjtap"]
-[ext_resource type="PackedScene" uid="uid://cu0fvufq1whky" path="res://Scenes/Enemies/Map1_PathFollow_Ghost.tscn" id="7_wjtap"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_v7gqg"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="9_1nvmp"]
 [ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="11_p20hg"]
 [ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="12_lycfg"]
 [ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="13_0w8u8"]
 [ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="14_gtlmr"]
-[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
-[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
-[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
-[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
-[ext_resource type="Texture2D" uid="uid://21qogaw0x2ig" path="res://Assets/Bunnies/Skins/buny.png" id="21_lycfg"]
+[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
+[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
+[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
+[ext_resource type="Texture2D" uid="uid://dgii8pniek5tc" path="res://Assets/Bunnies/Skins/buny.png" id="21_lycfg"]
 [ext_resource type="Texture2D" uid="uid://b1j551hw7x0ax" path="res://Assets/Others/UI_Assets/Radius.png" id="22_0w8u8"]
+
+[sub_resource type="Curve2D" id="Curve2D_lycfg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -541.3174, 158.0839, 0, 0, 0, 0, 41.91617, 158.0839, 0, 0, 0, 0, 129.34131, -95.80835, 0, 0, 0, 0, 1243.1139, -86.22751, 0, 0, 0, 0, 1251.4971, 319.76053, 0, 0, 0, 0, 332.93414, 322.15573, 0, 0, 0, 0, 332.93414, 128.14377, 0, 0, 0, 0, 591.6168, 128.14377, 0, 0, 0, 0, 589.2216, 621.557, 0, 0, 0, 0, 1554.4911, 626.3474)
+}
+point_count = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7gqg"]
 bg_color = Color(0.70980394, 0.6784314, 0.69411767, 0.75686276)
@@ -182,12 +188,12 @@ _data = {
 [node name="Mapa_1" type="Node2D" unique_id=41714579]
 position = Vector2(-36, -42)
 scale = Vector2(0.835, 0.835)
+script = ExtResource("1_gtlmr")
 
 [node name="GhostlingSpawner" type="Node2D" parent="." unique_id=2109337534]
 script = ExtResource("2_0e48y")
 
 [node name="Timer" type="Timer" parent="GhostlingSpawner" unique_id=1280611192]
-wait_time = 0.5
 autostart = true
 
 [node name="Map" type="Sprite2D" parent="." unique_id=2040754683]
@@ -195,16 +201,18 @@ position = Vector2(1193.1869, 696.7664)
 scale = Vector2(0.5990241, 0.59902424)
 texture = ExtResource("2_yi2un")
 
-[node name="Path2D" parent="." unique_id=53140908 instance=ExtResource("7_wjtap")]
-position = Vector2(34.730537, 166.46703)
+[node name="Path2D" type="Path2D" parent="." unique_id=1947152330]
+position = Vector2(450.2994, 310.17963)
 scale = Vector2(0.99999994, 0.99999994)
+curve = SubResource("Curve2D_lycfg")
 
-[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D" unique_id=1755593801]
-position = Vector2(-53, 302)
-rotation = 0.0021834024
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1755593801]
+position = Vector2(-541.3174, 158.0839)
 rotates = false
+loop = false
 
-[node name="Ghostling" parent="Path2D/PathFollow2D2" unique_id=1495579962 instance=ExtResource("4_w4m1r")]
+[node name="Ghostling" parent="Path2D/PathFollow2D" unique_id=1495579962 instance=ExtResource("4_w4m1r")]
+position = Vector2(-2.3952446, 2.3952103)
 
 [node name="BushPosition" type="Sprite2D" parent="." unique_id=1478967233]
 position = Vector2(1193.4265, 696.52686)

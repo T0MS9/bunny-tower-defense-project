@@ -1,9 +1,11 @@
 extends Node
 
-# Aqui dizemos ao Godot onde estão as tuas imagens
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 var cursor_point = load("res://Assets/Others/Others/CursorPoint.png")
 var cursor_pressed = load("res://Assets/Others/Others/CursorPressed.png")
-# Verifica se carregaste no botão do rato
+
 
 func _input(event):
 	if event.is_action_pressed("fullscreen_key"):

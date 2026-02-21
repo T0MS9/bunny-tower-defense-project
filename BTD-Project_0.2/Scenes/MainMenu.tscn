@@ -1,37 +1,23 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
+[ext_resource type="Script" uid="uid://dfto0bmxbs4h6" path="res://main_menu.gd" id="1_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
-[ext_resource type="Script" uid="uid://gdipkf3u2vh" path="res://Scripts/bg_parallax.gd" id="3_if7li"]
 [ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
 [ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
-[ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://dj5jf4w7aeq3r" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://tylec20bbktq" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
-
-[sub_resource type="GDScript" id="GDScript_rrcx7"]
-script/source = "extends Control
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
 
 [sub_resource type="GDScript" id="GDScript_8e205"]
 script/source = "extends Sprite2D
 
-@export var intensidade: float = 2
-@export var suavizacao: float = 2
+@export var intensidade: float = 3
+@export var suavizacao: float = 3
 
 @onready var posicao_original = position
 
@@ -43,6 +29,18 @@ func _process(delta):
 	
 	position = position.lerp(alvo, suavizacao * delta)
 "
+
+[sub_resource type="Theme" id="Theme_fh7cp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrcx7"]
+
+[sub_resource type="Theme" id="Theme_8e205"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8e205"]
+
+[sub_resource type="Theme" id="Theme_7467j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7467j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh7cp"]
 content_margin_left = 324.0
@@ -103,14 +101,6 @@ _data = {
 &"Settings_Anim": SubResource("Animation_7467j")
 }
 
-[sub_resource type="Theme" id="Theme_fh7cp"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_riqfo"]
-
-[sub_resource type="Theme" id="Theme_8e205"]
-
-[sub_resource type="Theme" id="Theme_7467j"]
-
 [node name="MainMenu" type="Control" unique_id=85335859]
 process_mode = 3
 layout_mode = 3
@@ -121,13 +111,12 @@ offset_right = -1.777832
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_rrcx7")
+script = ExtResource("1_rrcx7")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1612498522]
 position = Vector2(959.99994, 540)
 scale = Vector2(0.50000006, 0.5)
 texture = ExtResource("2_8e205")
-script = ExtResource("3_if7li")
 
 [node name="Bunnies" type="Sprite2D" parent="." unique_id=390922226]
 position = Vector2(949.33325, 546)
@@ -142,12 +131,12 @@ texture = ExtResource("5_2x1g0")
 script = SubResource("GDScript_8e205")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1630119654]
-position = Vector2(859.7222, 193.59377)
+position = Vector2(407.72223, 212.59375)
 scale = Vector2(0.31584203, 0.29778647)
 texture = ExtResource("15_7467j")
 
 [node name="MenuSign" type="Sprite2D" parent="." unique_id=1992748751]
-position = Vector2(1363.3594, 833.50476)
+position = Vector2(1480.3594, 818.50476)
 scale = Vector2(0.38569227, 0.36701456)
 texture = ExtResource("13_8e205")
 
@@ -160,6 +149,73 @@ stream = ExtResource("11_fh7cp")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+
+[node name="Label" type="Label" parent="." unique_id=800705017]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1047.0
+offset_right = 260.0
+offset_bottom = 1079.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 19
+text = "© Nke812 & T0MS v0.2 "
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1671538779]
+position = Vector2(1312.3594, 538.50476)
+
+[node name="Start" type="Button" parent="Buttons" unique_id=1809978150]
+offset_left = 13.640633
+offset_top = 26.49525
+offset_right = 285.91052
+offset_bottom = 120.11592
+rotation = -0.08726646
+pivot_offset = Vector2(0.275, 0)
+pivot_offset_ratio = Vector2(-0.04, -0.27)
+theme = SubResource("Theme_fh7cp")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
+text = "COMEÇAR"
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Button" parent="Buttons" unique_id=747610635]
+offset_left = 42.64058
+offset_top = 191.49524
+offset_right = 315.64056
+offset_bottom = 274.85236
+rotation = 0.010471975
+theme = SubResource("Theme_8e205")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8e205")
+text = "DEFINIÇÕES"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="Buttons" unique_id=2058117749]
+offset_left = 34.640614
+offset_top = 385.49527
+offset_right = 301.13403
+offset_bottom = 458.94785
+rotation = -0.017453292
+theme = SubResource("Theme_7467j")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7467j")
+text = "SAIR"
+metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Panel" parent="." unique_id=1317177484]
 layout_mode = 1
@@ -279,72 +335,10 @@ script = ExtResource("13_fh7cp")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2x1g0")
 
-[node name="Label" type="Label" parent="." unique_id=800705017]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 1047.0
-offset_right = 260.0
-offset_bottom = 1079.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
-theme_override_constants/shadow_offset_x = 2
-theme_override_font_sizes/font_size = 19
-text = "© Nke812 & T0MS v0.2 "
-
-[node name="Buttons" type="Node2D" parent="." unique_id=1671538779]
-position = Vector2(1195.3594, 553.50476)
-
-[node name="Start" type="Button" parent="Buttons" unique_id=1809978150]
-offset_left = 13.640633
-offset_top = 26.49525
-offset_right = 285.91052
-offset_bottom = 120.11592
-rotation = -0.08726646
-pivot_offset = Vector2(0.275, 0)
-pivot_offset_ratio = Vector2(-0.04, -0.27)
-theme = SubResource("Theme_fh7cp")
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
-theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxTexture_riqfo")
-text = "COMEÇAR"
-
-[node name="Settings" type="Button" parent="Buttons" unique_id=747610635]
-offset_left = 42.64058
-offset_top = 191.49524
-offset_right = 315.64056
-offset_bottom = 274.85236
-rotation = 0.010471975
-theme = SubResource("Theme_8e205")
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
-theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 39
-text = "DEFINIÇÕES"
-
-[node name="Exit" type="Button" parent="Buttons" unique_id=2058117749]
-offset_left = 34.640614
-offset_top = 385.49527
-offset_right = 301.13403
-offset_bottom = 458.94785
-rotation = -0.017453292
-theme = SubResource("Theme_7467j")
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
-theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 55
-text = "SAIR"
-
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Options/ExitMenu" to="." method="_on_exit_menu_pressed"]
 [connection signal="value_changed" from="Options/MusicControl" to="Options/MusicControl" method="_on_value_changed"]
 [connection signal="value_changed" from="Options/SFXControl" to="Options/SFXControl" method="_on_SFXvalue_changed"]
 [connection signal="toggled" from="Options/Fullscreen_CB" to="Options/Fullscreen_CB" method="_on_toggled"]
-[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
