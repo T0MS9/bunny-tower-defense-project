@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
 [ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
 [ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
-[ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://dj5jf4w7aeq3r" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://tylec20bbktq" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
+[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
 
 [sub_resource type="GDScript" id="GDScript_8e205"]
 script/source = "extends Sprite2D
@@ -114,18 +114,18 @@ grow_vertical = 2
 script = ExtResource("1_rrcx7")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1612498522]
-position = Vector2(959.99994, 540)
+position = Vector2(-200.00024, 540)
 scale = Vector2(0.50000006, 0.5)
 texture = ExtResource("2_8e205")
 
 [node name="Bunnies" type="Sprite2D" parent="." unique_id=390922226]
-position = Vector2(949.33325, 546)
+position = Vector2(-210.66675, 546)
 scale = Vector2(0.5055556, 0.5055556)
 texture = ExtResource("4_7467j")
 script = SubResource("GDScript_8e205")
 
 [node name="Ghosts" type="Sprite2D" parent="." unique_id=294911566]
-position = Vector2(965.3334, 537)
+position = Vector2(-194.66675, 537)
 scale = Vector2(0.50277776, 0.50277776)
 texture = ExtResource("5_2x1g0")
 script = SubResource("GDScript_8e205")
