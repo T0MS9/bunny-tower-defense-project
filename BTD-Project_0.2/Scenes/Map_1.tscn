@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="3_6whob"]
 [ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="4_qhmcd"]
-[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
+[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
 [ext_resource type="PackedScene" uid="uid://dqclnvpdade1k" path="res://Scenes/Enemies/Ghostling/ghaztling.tscn" id="4_w4m1r"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="6_wjtap"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_v7gqg"]
@@ -14,18 +14,18 @@
 [ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="12_lycfg"]
 [ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="13_0w8u8"]
 [ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="14_gtlmr"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
-[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
-[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
-[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
-[ext_resource type="Texture2D" uid="uid://dgii8pniek5tc" path="res://Assets/Bunnies/Skins/buny.png" id="21_lycfg"]
+[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
+[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
+[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
+[ext_resource type="Texture2D" uid="uid://21qogaw0x2ig" path="res://Assets/Bunnies/Skins/buny.png" id="21_lycfg"]
 [ext_resource type="Texture2D" uid="uid://b1j551hw7x0ax" path="res://Assets/Others/UI_Assets/Radius.png" id="22_0w8u8"]
 
 [sub_resource type="Curve2D" id="Curve2D_lycfg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -541.3174, 158.0839, 0, 0, 0, 0, 41.91617, 158.0839, 0, 0, 0, 0, 129.34131, -95.80835, 0, 0, 0, 0, 1243.1139, -86.22751, 0, 0, 0, 0, 1251.4971, 319.76053, 0, 0, 0, 0, 332.93414, 322.15573, 0, 0, 0, 0, 332.93414, 128.14377, 0, 0, 0, 0, 591.6168, 128.14377, 0, 0, 0, 0, 589.2216, 621.557, 0, 0, 0, 0, 1554.4911, 626.3474)
+"points": PackedVector2Array(0, 0, 0, 0, -541.3174, 158.0839, 0, 0, 0, 0, 43.11377, 152.09586, 0, 0, 0, 0, 138.92218, -97.00595, 0, 0, 0, 0, 1250.2996, -87.42511, 0, 0, 0, 0, 1250.2996, 324.551, 0, 0, 0, 0, 320.95813, 324.551, 0, 0, 0, 0, 330.53894, 113.77252, 0, 0, 0, 0, 589.2216, 123.35336, 0, 0, 0, 0, 589.2216, 631.1378, 0, 0, 0, 0, 1566.4672, 621.557)
 }
 point_count = 10
 
@@ -186,7 +186,7 @@ _data = {
 }
 
 [node name="Mapa_1" type="Node2D" unique_id=41714579]
-position = Vector2(-36, -42)
+position = Vector2(-36.000004, -42.000004)
 scale = Vector2(0.835, 0.835)
 script = ExtResource("1_gtlmr")
 
@@ -550,6 +550,7 @@ offset_left = -536.4773
 offset_top = -632.69965
 offset_right = 624.20337
 offset_bottom = 939.44586
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_1nvmp")
 theme_override_font_sizes/font_size = 272
 theme_override_icons/icon = ExtResource("22_0w8u8")
@@ -565,14 +566,18 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_ny2ev")
 
 [node name="attack" type="Button" parent="." unique_id=767841997]
-offset_left = 1964.0718
-offset_top = 208.38322
-offset_right = 2301.7964
-offset_bottom = 341.31735
+offset_left = 579.64075
+offset_top = 297.00598
+offset_right = 853.64075
+offset_bottom = 405.73663
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_1nvmp")
-theme_override_font_sizes/font_size = 76
-text = "attack"
-metadata/_edit_use_anchors_ = true
+theme_override_font_sizes/font_size = 24
+theme_override_icons/icon = ExtResource("22_0w8u8")
+text = "Attack"
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="timeout" from="GhostlingSpawner/Timer" to="GhostlingSpawner" method="_on_timer_timeout"]
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]

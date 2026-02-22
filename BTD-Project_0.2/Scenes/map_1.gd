@@ -9,7 +9,7 @@ func _process(_delta: float) -> void:
 		# Verificamos se ele está dentro do túnel
 		
 		if ghostling.progress_ratio >= 0.72 and ghostling.progress_ratio <= 0.805:
-			ghostling.modulate.a = 0.3
+			ghostling.modulate.a = 0.1
 			
 		else:
 			ghostling.modulate.a = 1.0

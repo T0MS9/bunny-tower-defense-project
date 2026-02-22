@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://btew3t801ag51"]
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1_hdtmh"]
-[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
+[ext_resource type="Texture2D" uid="uid://titpwkyb1v5h" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
+[ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="3_opqqp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
 radius = 73.792366
@@ -68,7 +69,20 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdtmh"]
-bg_color = Color(0.23529412, 1, 0, 1)
+bg_color = Color(0.9999998, 0.1516906, 0.2572231, 0.7607843)
+border_width_left = 26
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(0.56, 0.2128, 0.2128, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 7
+shadow_color = Color(0, 0, 0, 0.39607844)
+shadow_size = 4
+shadow_offset = Vector2(0.745, 1.05)
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
 rotates = false
@@ -80,13 +94,13 @@ scale = Vector2(0.8, 0.8)
 script = ExtResource("1_hdtmh")
 
 [node name="Brute" type="Sprite2D" parent="Brute" unique_id=886288773]
-position = Vector2(1.25, 18.118998)
+position = Vector2(5, 6.25)
 scale = Vector2(0.083, 0.083)
 texture = ExtResource("2_hdtmh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Brute" unique_id=708407390]
-position = Vector2(5, 12.5)
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(4.9999995, 13.75)
+scale = Vector2(0.99999994, 0.8369582)
 shape = SubResource("CircleShape2D_hdtmh")
 
 [node name="Button" type="Button" parent="Brute" unique_id=705459695]
@@ -103,17 +117,18 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_opqqp")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=411919945]
-offset_left = -51.0
-offset_top = -66.0
-offset_right = 66.0
-offset_bottom = -29.0
-theme_override_colors/font_color = Color(0.9882353, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_font_sizes/font_size = 19
+offset_left = -48.0
+offset_top = -75.0
+offset_right = 69.0
+offset_bottom = -44.0
+theme_override_colors/font_color = Color(1.224, 1.224, 1.224, 1)
+theme_override_colors/font_outline_color = Color(0.0069834725, 2.8201613e-10, 0.0011421968, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_opqqp")
+theme_override_font_sizes/font_size = 31
 theme_override_styles/fill = SubResource("StyleBoxFlat_hdtmh")
 max_value = 5.0
 value = 5.0
-fill_mode = 1
-metadata/_edit_use_anchors_ = true
+rounded = true
 
 [connection signal="mouse_entered" from="Brute/Button" to="Brute" method="_on_button_mouse_entered"]

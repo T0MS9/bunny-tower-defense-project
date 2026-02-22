@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqclnvpdade1k"]
 
 [ext_resource type="Script" uid="uid://dw7s3gvxrvfn3" path="res://Scripts/Enemies/Ghostling/ghastling.gd" id="1_43je4"]
-[ext_resource type="Texture2D" uid="uid://divr8sdumf82b" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
+[ext_resource type="Texture2D" uid="uid://bl0sostc1x77b" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0wji"]
 radius = 37.01351
@@ -14,12 +14,13 @@ loop = false
 script = ExtResource("1_43je4")
 
 [node name="Ghaztling" type="Sprite2D" parent="Ghaztling" unique_id=1236887099]
-position = Vector2(3.0000002, -10.440002)
+position = Vector2(3.0000002, -12.440002)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_6gqum")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ghaztling" unique_id=2141100714]
 position = Vector2(1, -6)
+scale = Vector2(0.98, 0.98)
 shape = SubResource("CircleShape2D_p0wji")
 
 [node name="Button" type="Button" parent="Ghaztling" unique_id=866011822]

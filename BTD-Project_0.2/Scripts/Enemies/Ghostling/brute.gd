@@ -13,7 +13,7 @@ func _physics_process(delta):
 
 
 	if $"..".progress_ratio == 1:
-		get_tree().call_group("HP", "take_dmg", 1)
+		get_tree().call_group("HP", "take_dmg", 5)
 		$"..".queue_free()
 
 func _on_button_mouse_entered() -> void:
