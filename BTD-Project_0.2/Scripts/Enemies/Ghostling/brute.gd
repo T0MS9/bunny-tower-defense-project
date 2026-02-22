@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 250
+@export var speed = 220
 
 var vida_B = 5
 

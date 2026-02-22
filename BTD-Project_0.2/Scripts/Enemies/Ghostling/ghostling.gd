@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 450
+@export var speed = 200
 
 func _physics_process(delta):
 	var pf = get_parent() as PathFollow2D
