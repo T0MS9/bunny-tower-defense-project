@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
 [ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
 [ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
 [ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="AudioStream" uid="uid://dt343sexx4eeu" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
@@ -11,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bioq7koe3i5ol" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://bxbedxjm66wlh" path="res://Assets/Others/Menu_Assets/LOGO.png" id="15_7467j"]
 
 [sub_resource type="GDScript" id="GDScript_8e205"]
 script/source = "extends Sprite2D
@@ -131,9 +131,9 @@ texture = ExtResource("5_2x1g0")
 script = SubResource("GDScript_8e205")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1630119654]
-position = Vector2(687, 207)
-scale = Vector2(0.31584203, 0.29778647)
-texture = ExtResource("15_7467j")
+position = Vector2(872.00006, 223.99998)
+scale = Vector2(0.23157604, 0.21833767)
+texture = ExtResource("5_rrcx7")
 
 [node name="MenuSign" type="Sprite2D" parent="." unique_id=1992748751]
 position = Vector2(1480.3594, 818.50476)
