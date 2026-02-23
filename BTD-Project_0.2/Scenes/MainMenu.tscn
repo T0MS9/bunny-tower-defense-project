@@ -10,9 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://d0ct1mxw87rj6" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://b8rn0oafs20qj" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://dygqb8vuudxgm" path="res://Assets/Others/Menu_Assets/Beastiario.png" id="12_riqfo"]
 [ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
-[ext_resource type="Texture2D" uid="uid://d0ifrjks7f015" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
+[ext_resource type="Texture2D" uid="uid://dnf1s142qe46j" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://c2bo237k5k4hn" path="res://Assets/Others/Menu_Assets/MenuButtonPosGrass.png" id="14_2x1g0"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
@@ -226,6 +227,11 @@ position = Vector2(-1018, 790)
 scale = Vector2(0.19882807, 0.19882807)
 texture = ExtResource("11_riqfo")
 
+[node name="Bestiario" type="Sprite2D" parent="MainMenu_Left" unique_id=2123686087]
+position = Vector2(-737, 507)
+scale = Vector2(0.23955074, 0.23955074)
+texture = ExtResource("12_riqfo")
+
 [node name="MenuButtonPosGrass" type="Sprite2D" parent="MainMenu_Left" unique_id=1454186594]
 position = Vector2(-200.5, 540)
 scale = Vector2(0.49988323, 0.5)
@@ -235,24 +241,44 @@ texture = ExtResource("14_2x1g0")
 position = Vector2(1312.3594, 538.50476)
 
 [node name="Start" type="Button" parent="MainMenu_Left/Buttons" unique_id=1809978150]
-offset_left = -2989.3591
-offset_top = -177.50475
-offset_right = -2737.3591
-offset_bottom = -101.524506
+offset_left = -2985.3596
+offset_top = -196.5048
+offset_right = -2753.3596
+offset_bottom = -82.78548
 rotation = -0.15882497
 pivot_offset = Vector2(0.275, 0)
 pivot_offset_ratio = Vector2(-0.04, -0.27)
 theme = SubResource("Theme_fh7cp")
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(0.74509805, 0.64705884, 0.45490196, 1)
-theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(0.82979083, 0.87201846, 0.94867545, 1)
-theme_override_colors/font_outline_color = Color(0.4, 0.3372549, 0.21568628, 1)
-theme_override_constants/outline_size = 7
+theme_override_colors/font_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_hover_color = Color(0.9024597, 0.83626944, 0.70885265, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.3372549, 0.21568628, 1)
 theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 28
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
-text = "Novo Jogo"
+text = "NOVO JOGO"
+
+[node name="Continue" type="Button" parent="MainMenu_Left/Buttons" unique_id=615626795]
+offset_left = -3426.3594
+offset_top = 134.49525
+offset_right = -2914.2913
+offset_bottom = 311.40784
+rotation = -0.15882497
+pivot_offset = Vector2(0.275, 0)
+pivot_offset_ratio = Vector2(-0.04, -0.27)
+theme = SubResource("Theme_fh7cp")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_hover_color = Color(0.9024597, 0.83626944, 0.70885265, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
+text = "CONTINUAR"
 
 [node name="Settings" type="Button" parent="MainMenu_Left/Buttons" unique_id=747610635]
 offset_left = -2682.3594
