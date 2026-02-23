@@ -1,5 +1,6 @@
 # Bunny Tower Defense
 
+<img width="2880" height="2160" alt="GameLogo" src="https://github.com/user-attachments/assets/bfd7808d-faa2-438f-9ce3-842d9fbea578" />
 ![Versão](https://img.shields.io/badge/Versão-Alpha-orange)
 ![Engine](https://img.shields.io/badge/Engine-Godot_4.x-blue)
 
@@ -18,7 +19,7 @@ Em um mundo onde o etéreo invade o tangível, os **Bunnies** são a última lin
 ## Stack Técnica & Equipa
 
 * **Motor:** Godot Engine (v4.x)
-* **Artes/Som:** Criados especificamente para o projeto (Aseprite/DAWs).
+* **Artes/Som:** Criados especificamente para o projeto (Krita/FL Studio).
 
 ### A Equipa
 * **Dinis Oliveira:** Programador & Diretor (Arquitetura e Lógica).
