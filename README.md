@@ -42,6 +42,7 @@ Para manter o fluxo de trabalho entre a equipa:
 🔗 **Recursos Úteis:**
 * [Game Design Document (GDD)](https://docs.google.com/document/d/1cuCqTdBamEB11B5yerB3ozmm3zI4_PhSoup3T6cm2KQ/edit?tab=t.nxxqdn61obvq)
 * [Documentação Godot](https://docs.godotengine.org/en/stable/)
+* [Pagina da Itch.Io](https://t0ms9.itch.io/bunny-tower-defense)
 
 ---
 *Desenvolvido com por Dinis Oliveira e Tomás Bolas (2025/26).*
