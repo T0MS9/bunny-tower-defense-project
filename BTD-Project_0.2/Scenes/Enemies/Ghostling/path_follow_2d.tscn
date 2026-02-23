@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bub2eh7syno6k"]
+
+[ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="1_3enwf"]
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
+rotates = false
+loop = false
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=852521197]
+texture = ExtResource("1_3enwf")
