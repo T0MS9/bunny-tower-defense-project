@@ -1,50 +1,48 @@
 # Bunny Tower Defense
 
-Este repositório contém o desenvolvimento do jogo **Bunny Tower Defense**, um projeto que une a estratégia clássica de Tower Defense com uma estética visual única.
+<img width="2880" height="2160" alt="GameLogo" src="https://github.com/user-attachments/assets/bfd7808d-faa2-438f-9ce3-842d9fbea578" />
+
+![Versão](https://img.shields.io/badge/Versão-Alpha-orange)
+![Engine](https://img.shields.io/badge/Engine-Godot_4.x-blue)
+
+**Bunny Tower Defense** é um jogo de estratégia inspirado em clássicos como BTD6, onde a fofura dos Bunnies enfrenta o terror dos Ghostlings. Com eventos aleatórios e uma progressão profunda, cada partida oferece um desafio único.
 
 ---
 
-## Conceito do Projeto
+## O Jogo
+<img width="1500" height="500" alt="Bunnies" src="https://github.com/user-attachments/assets/7f39d67d-3ab2-4cc1-88be-9df94d799084" />
 
-O jogo baseia-se na premissa de *Bloons TD 6*, mas transportado para um ambiente 2D com uma direção de arte específica. O objetivo é defender a base contra hordas de fantasmas utilizando um arsenal variado de Coelhos.
+Em um mundo onde o etéreo invade o tangível, os **Bunnies** são a última linha de defesa. 
+* **Defesa Estratégica:** 10 Bunnies jogáveis com classes e árvores de upgrades distintas.
+* **Ameaça Espectral:** 10 tipos de Ghostlings e 5 Bosses Demônios com habilidades únicas.
+* **Economia de Cenouras:** Gestão de recursos crítica para sobrevivência.
+* **Caos Aleatório:** Eventos de gameplay que mudam as regras a meio da partida.
 
-### Diferenciais Visuais
-* **Estilo Artístico:** Gráficos fofos misturados com tons sombrios e estilizados.
-* **Paleta de Cores:** Uso de tons doces para criar contraste com a temática de fantasmas.
-* **Mecânicas:** Introdução de novas formas de defesa e interação com o mapa.
 
----
+## Stack Técnica & Equipa
+<img width="1500" height="500" alt="Ghosts" src="https://github.com/user-attachments/assets/21f04d57-f89d-4710-a555-29ca17123256" />
 
-## Equipa
+* **Motor:** Godot Engine (v4.x)
+* **Artes/Som:** Criados especificamente para o projeto (Krita/FL Studio).
 
-A equipa é composta por dois membros principais:
-
-* **Dinis Oliveira**
-    * Função: Programador, Diretor
-    * Responsabilidades: Arquitetura do código, lógica de jogo e sistemas técnicos.
-* **Tomás Bolas**
-    * Função: Artista, Designer e Músico
-    * Responsabilidades: Criação de assets visuais, composição sonora e interface de utilizador.
+### A Equipa
+* **Dinis Oliveira:** Programador & Diretor (Arquitetura e Lógica).
+* **Tomás Bolas:** Artista, Designer & Músico (Assets, Sound Design e UI).
 
 ---
 
-## Documentação e Recursos
+## Guia de Desenvolvimento
 
-A planeação centralizada do projeto pode ser acedida através dos seguintes links:
+Para manter o fluxo de trabalho entre a equipa:
 
-* **Game Design Document (GDD):** [Aceder ao Documento Google](https://docs.google.com/document/d/1cuCqTdBamEB11B5yerB3ozmm3zI4_PhSoup3T6cm2KQ/edit?tab=t.nxxqdn61obvq)
-* **Documentação Técnica:** [Manual do Godot Engine](https://docs.godotengine.org/en/stable/)
+1.  **Sincronização:** Sempre realizar `Fetch` e `Pull` no GitHub Desktop antes de abrir o Godot.
+2.  **Assets:** Todo o conteúdo bruto deve ir para `/assets` antes da importação.
+3.  **Segurança:** O `.gitignore` está ativo para proteger o repositório de lixo binário (`.godot/`).
 
----
-
-## Notas de Desenvolvimento (GitHub Desktop)
-
-Para garantir a integridade do projeto, a equipa segue estas diretrizes:
-
-1. **Atualização Constante:** Realizar `Fetch` e `Pull` antes de abrir o editor do Godot.
-2. **Organização de Assets:** Novos ficheiros de arte devem ser colocados na pasta `/assets` antes de serem importados no motor.
-3. **Ficheiro .gitignore:** Configurado para ignorar a pasta `.godot/` e ficheiros locais de cache.
+🔗 **Recursos Úteis:**
+* [Game Design Document (GDD)](https://docs.google.com/document/d/1cuCqTdBamEB11B5yerB3ozmm3zI4_PhSoup3T6cm2KQ/edit?tab=t.nxxqdn61obvq)
+* [Documentação Godot](https://docs.godotengine.org/en/stable/)
+* [Pagina da Itch.Io](https://t0ms9.itch.io/bunny-tower-defense)
 
 ---
-
-*Desenvolvido em 2025/26 por Dinis Oliveira e Tomás Bolas.*
+*Desenvolvido com por Dinis Oliveira e Tomás Bolas (2025/26).*
