@@ -10,12 +10,13 @@
 ---
 
 ## O Jogo
-
+<img width="1500" height="500" alt="Bunnies" src="https://github.com/user-attachments/assets/7f39d67d-3ab2-4cc1-88be-9df94d799084" />
 Em um mundo onde o etéreo invade o tangível, os **Bunnies** são a última linha de defesa. 
 * **Defesa Estratégica:** 10 Bunnies jogáveis com classes e árvores de upgrades distintas.
 * **Ameaça Espectral:** 10 tipos de Ghostlings e 5 Bosses Demônios com habilidades únicas.
 * **Economia de Cenouras:** Gestão de recursos crítica para sobrevivência.
 * **Caos Aleatório:** Eventos de gameplay que mudam as regras a meio da partida.
+
 
 ## Stack Técnica & Equipa
 
