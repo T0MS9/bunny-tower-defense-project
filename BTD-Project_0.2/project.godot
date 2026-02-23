@@ -18,7 +18,7 @@ config/name="Bunny_Tower_Defense"
 config/version="0.1"
 run/main_scene="uid://co48p2eyjxms8"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://d2lnr3b3wurpy"
+config/icon="uid://cnxptw5oc4axy"
 
 [autoload]
 

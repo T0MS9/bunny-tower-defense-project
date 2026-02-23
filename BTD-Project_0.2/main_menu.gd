@@ -5,7 +5,7 @@ extends Control
 
 #Main Menu botões
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Map_1.tscn")
+	$MainMenu_Left/AnimationPlayer.play("MenuGoLeft")
 
 var SettingsUP = false
 func _on_settings_pressed() -> void:
