@@ -5,13 +5,34 @@
 [ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
 [ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://b16vpb8pi0bel" path="res://Assets/Others/Menu_Assets/Continue.png" id="10_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
 [ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://dj5jf4w7aeq3r" path="res://Assets/Others/Menu_Assets/MenuSign.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://d0ct1mxw87rj6" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://d0ifrjks7f015" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://c2bo237k5k4hn" path="res://Assets/Others/Menu_Assets/MenuButtonPosGrass.png" id="14_2x1g0"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
+
+[sub_resource type="GDScript" id="GDScript_8e205"]
+script/source = "extends Sprite2D
+
+@export var intensidade: float = 3
+@export var suavizacao: float = 3
+
+@onready var posicao_original = position
+
+func _process(delta):
+	var centro_tela = get_viewport_rect().size / 2
+	var direcao_mouse = (get_global_mouse_position() - centro_tela).normalized()
+	
+	var alvo = posicao_original + (direcao_mouse * intensidade)
+	
+	position = position.lerp(alvo, suavizacao * delta)
+"
 
 [sub_resource type="Animation" id="Animation_rrcx7"]
 resource_name = "MenuGoLeft"
@@ -25,7 +46,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3, 1),
 "transitions": PackedFloat32Array(1, 0.8408965, 0.43527532),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(15, 0), Vector2(-1919, 0)]
+"values": [Vector2(0, 0), Vector2(15, 0), Vector2(-2225.96, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_fh7cp"]
@@ -48,23 +69,6 @@ _data = {
 &"MenuGoLeft": SubResource("Animation_rrcx7"),
 &"RESET": SubResource("Animation_fh7cp")
 }
-
-[sub_resource type="GDScript" id="GDScript_8e205"]
-script/source = "extends Sprite2D
-
-@export var intensidade: float = 3
-@export var suavizacao: float = 3
-
-@onready var posicao_original = position
-
-func _process(delta):
-	var centro_tela = get_viewport_rect().size / 2
-	var direcao_mouse = (get_global_mouse_position() - centro_tela).normalized()
-	
-	var alvo = posicao_original + (direcao_mouse * intensidade)
-	
-	position = position.lerp(alvo, suavizacao * delta)
-"
 
 [sub_resource type="Theme" id="Theme_fh7cp"]
 
@@ -128,7 +132,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1.5157168, 0.49999997),
 "update": 0,
-"values": [Vector2(535, 1143), Vector2(535, 220)]
+"values": [Vector2(-1690.045, 1143), Vector2(-1690.045, 220)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2x1g0"]
@@ -148,11 +152,6 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rrcx7")
-
-[node name="MainMenu_Left" type="Node2D" parent="." unique_id=1897760061]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainMenu_Left" unique_id=49713634]
-libraries/ = SubResource("AnimationLibrary_8e205")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1612498522]
 position = Vector2(-200.00024, 540)
@@ -176,11 +175,6 @@ position = Vector2(872.00006, 223.99998)
 scale = Vector2(0.23157604, 0.21833767)
 texture = ExtResource("5_rrcx7")
 
-[node name="MenuSign" type="Sprite2D" parent="." unique_id=1992748751]
-position = Vector2(1480.3594, 818.50476)
-scale = Vector2(0.38569227, 0.36701456)
-texture = ExtResource("13_8e205")
-
 [node name="StartGame_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1389504441]
 stream = ExtResource("10_rrcx7")
 bus = &"SFX"
@@ -202,33 +196,69 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_font_sizes/font_size = 19
 text = "© Nke812 & T0MS v0.2 "
 
-[node name="Buttons" type="Node2D" parent="." unique_id=1671538779]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1713408079]
+position = Vector2(961, 540)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=49713634]
+root_node = NodePath("../../MainMenu_Left")
+libraries/ = SubResource("AnimationLibrary_8e205")
+
+[node name="MainMenu_Left" type="Node2D" parent="." unique_id=1897760061]
+
+[node name="Play" type="Sprite2D" parent="MainMenu_Left" unique_id=1144862689]
+position = Vector2(-1543, 421.99997)
+scale = Vector2(0.23935539, 0.23935539)
+texture = ExtResource("13_7467j")
+
+[node name="Settings" type="Sprite2D" parent="MainMenu_Left" unique_id=704492610]
+modulate = Color(1.2112623, 1.2112623, 1.2112623, 1)
+position = Vector2(-1317.0001, 462)
+scale = Vector2(0.100390576, 0.100390576)
+texture = ExtResource("13_8e205")
+
+[node name="Continue" type="Sprite2D" parent="MainMenu_Left" unique_id=190557816]
+position = Vector2(-1851, 723)
+scale = Vector2(0.2501862, 0.2501862)
+texture = ExtResource("10_2x1g0")
+
+[node name="Achievements" type="Sprite2D" parent="MainMenu_Left" unique_id=498535095]
+position = Vector2(-1018, 790)
+scale = Vector2(0.19882807, 0.19882807)
+texture = ExtResource("11_riqfo")
+
+[node name="MenuButtonPosGrass" type="Sprite2D" parent="MainMenu_Left" unique_id=1454186594]
+position = Vector2(-200.5, 540)
+scale = Vector2(0.49988323, 0.5)
+texture = ExtResource("14_2x1g0")
+
+[node name="Buttons" type="Node2D" parent="MainMenu_Left" unique_id=1671538779]
 position = Vector2(1312.3594, 538.50476)
 
-[node name="Start" type="Button" parent="Buttons" unique_id=1809978150]
-offset_left = 12.640625
-offset_top = 27.49525
-offset_right = 284.91052
-offset_bottom = 121.11592
-rotation = -0.08726646
+[node name="Start" type="Button" parent="MainMenu_Left/Buttons" unique_id=1809978150]
+offset_left = -2989.3591
+offset_top = -177.50475
+offset_right = -2737.3591
+offset_bottom = -101.524506
+rotation = -0.15882497
 pivot_offset = Vector2(0.275, 0)
 pivot_offset_ratio = Vector2(-0.04, -0.27)
 theme = SubResource("Theme_fh7cp")
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.74509805, 0.64705884, 0.45490196, 1)
 theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_colors/font_hover_color = Color(0.82979083, 0.87201846, 0.94867545, 1)
+theme_override_colors/font_outline_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 34
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
-text = "COMEÇAR"
-metadata/_edit_use_anchors_ = true
+text = "Novo Jogo"
 
-[node name="Settings" type="Button" parent="Buttons" unique_id=747610635]
-offset_left = 42.64058
-offset_top = 191.49524
-offset_right = 315.64056
-offset_bottom = 274.85236
+[node name="Settings" type="Button" parent="MainMenu_Left/Buttons" unique_id=747610635]
+offset_left = -2682.3594
+offset_top = -114.50476
+offset_right = -2581.164
+offset_bottom = -28.944977
 rotation = 0.010471975
 theme = SubResource("Theme_8e205")
 theme_type_variation = &"FlatButton"
@@ -238,10 +268,8 @@ theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
 theme_override_fonts/font = ExtResource("15_2x1g0")
 theme_override_font_sizes/font_size = 39
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8e205")
-text = "DEFINIÇÕES"
-metadata/_edit_use_anchors_ = true
 
-[node name="Exit" type="Button" parent="Buttons" unique_id=2058117749]
+[node name="Exit" type="Button" parent="MainMenu_Left/Buttons" unique_id=2058117749]
 offset_left = 34.640614
 offset_top = 385.49527
 offset_right = 301.13403
@@ -267,8 +295,8 @@ anchor_right = 0.501115
 anchor_bottom = 1.2312326
 offset_left = -426.24994
 offset_top = -185.5
-offset_right = 468.7857
-offset_bottom = 420.49988
+offset_right = 468.78326
+offset_bottom = 420.50024
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -376,12 +404,10 @@ script = ExtResource("13_fh7cp")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2x1g0")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1713408079]
-position = Vector2(961, 540)
-
-[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Options/ExitMenu" to="." method="_on_exit_menu_pressed"]
 [connection signal="value_changed" from="Options/MusicControl" to="Options/MusicControl" method="_on_value_changed"]
 [connection signal="value_changed" from="Options/SFXControl" to="Options/SFXControl" method="_on_SFXvalue_changed"]
