@@ -20,6 +20,7 @@ Em um mundo onde o etéreo invade o tangível, os **Bunnies** são a última lin
 
 
 ## Stack Técnica & Equipa
+<img width="1500" height="500" alt="Ghosts" src="https://github.com/user-attachments/assets/21f04d57-f89d-4710-a555-29ca17123256" />
 
 * **Motor:** Godot Engine (v4.x)
 * **Artes/Som:** Criados especificamente para o projeto (Krita/FL Studio).
