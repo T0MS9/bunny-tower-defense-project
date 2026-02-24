@@ -236,16 +236,15 @@ scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("3_6whob")
 
 [node name="Pause" type="Button" parent="HUD" unique_id=712995413]
-offset_left = 1819.3772
+offset_left = 1805.9882
 offset_top = 52.694607
 offset_right = 1911.5928
-offset_bottom = 144.91019
+offset_bottom = 158.29922
 theme_override_font_sizes/font_size = 76
 icon = ExtResource("4_qhmcd")
 flat = true
 icon_alignment = 1
 expand_icon = true
-metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Panel" parent="HUD" unique_id=1541666312]
 visible = false
