@@ -10,7 +10,7 @@ func take_dmg(dmg):
 
 
 func _process(delta: float):
-	if $PauseMenu.visible || $Options.visible || $GameOver.visible == true:
+	if $Options.visible || $GameOver.visible == true:
 		get_tree().paused = true
 		
 	else:
@@ -19,14 +19,14 @@ func _process(delta: float):
 
 #Botão Pausa
 func _on_button_pressed() -> void:
-	$PauseMenu.visible = true
+	$"Options".visible = true
 	$Pause.visible = false
 
 
 
 #Botões do Menu Pausa
 func _on_continue_pressed():
-	$PauseMenu.visible = false
+	$"Options".visible = false
 	$Pause.visible = true
 
 func _on_options_pressed():
@@ -42,10 +42,8 @@ func _on_back_menu_pressed():
 
 #Botão das Definições da Pausa
 func _on_exit_menu_pressed() -> void:
-	$PauseMenu.visible = true
-	$Options.visible = false
-	
-	
+	$"Options".visible = false
+	$Pause.visible = true
 	
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()

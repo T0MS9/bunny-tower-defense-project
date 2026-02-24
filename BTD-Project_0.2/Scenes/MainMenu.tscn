@@ -7,17 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
 [ext_resource type="AudioStream" uid="uid://cc1b1h51tmd2f" path="res://Assets/Music/Main Theme.mp3" id="7_riqfo"]
 [ext_resource type="Texture2D" uid="uid://b16vpb8pi0bel" path="res://Assets/Others/Menu_Assets/Continue.png" id="10_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://b8rn0oafs20qj" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://d0ct1mxw87rj6" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
 [ext_resource type="Texture2D" uid="uid://dygqb8vuudxgm" path="res://Assets/Others/Menu_Assets/Beastiario.png" id="12_riqfo"]
 [ext_resource type="Texture2D" uid="uid://bslr6mph8ceg4" path="res://Assets/Others/Menu_Assets/ExitSign.png" id="12_yxkem"]
 [ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
-[ext_resource type="Texture2D" uid="uid://dnf1s142qe46j" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
+[ext_resource type="Texture2D" uid="uid://d0ifrjks7f015" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://c2bo237k5k4hn" path="res://Assets/Others/Menu_Assets/MenuButtonPosGrass.png" id="14_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://c5a3nj8tuk2gh" path="res://Assets/Others/Menu_Assets/SillyBunny.png" id="14_pjscj"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="15_2x1g0"]
+[ext_resource type="AudioStream" uid="uid://bw3e6j7dp3dh2" path="res://Assets/SFX/Squeaky.mp3" id="15_pjscj"]
 
 [sub_resource type="GDScript" id="GDScript_8e205"]
 script/source = "extends Sprite2D
@@ -36,17 +38,80 @@ func _process(delta):
 	position = position.lerp(alvo, suavizacao * delta)
 "
 
-[sub_resource type="Theme" id="Theme_fh7cp"]
+[sub_resource type="Animation" id="Animation_65hh5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1022, 281)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.622449, 0.622449)]
+}
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrcx7"]
+[sub_resource type="Animation" id="Animation_6byu3"]
+resource_name = "Squeaky"
+length = 0.13333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.021074383, 0.063223146, 0.096556485, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1022, 281), Vector2(-1020.375, 290.8444), Vector2(-1022, 281), Vector2(-1023.875, 273.8444), Vector2(-1022, 281)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.021074383, 0.063223146, 0.096556485, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.622449, 0.622449), Vector2(0.739796, 0.5214809), Vector2(0.622449, 0.622449), Vector2(0.56972796, 0.69583994), Vector2(0.622449, 0.622449)]
+}
 
-[sub_resource type="Theme" id="Theme_8e205"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8e205"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_leunp"]
+_data = {
+&"RESET": SubResource("Animation_65hh5"),
+&"Squeaky": SubResource("Animation_6byu3")
+}
 
 [sub_resource type="Theme" id="Theme_7467j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7467j"]
+
+[sub_resource type="Theme" id="Theme_fh7cp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrcx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjscj"]
+
+[sub_resource type="Theme" id="Theme_8e205"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8e205"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh7cp"]
 content_margin_left = 324.0
@@ -179,15 +244,14 @@ texture = ExtResource("5_rrcx7")
 
 [node name="StartGame_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1389504441]
 stream = ExtResource("10_rrcx7")
-max_distance = 115850.0
 bus = &"SFX"
 
-[node name="MainMenu_Music" type="AudioStreamPlayer2D" parent="." unique_id=1363445705]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2123186058]
 stream = ExtResource("7_riqfo")
-pitch_scale = 1.04
+volume_db = -17.0
 autoplay = true
-max_distance = 115850.0
 bus = &"Music"
+parameters/looping = true
 
 [node name="MainMenu_Left" type="Node2D" parent="." unique_id=1897760061]
 
@@ -195,12 +259,6 @@ bus = &"Music"
 position = Vector2(-1543, 421.99997)
 scale = Vector2(0.23935539, 0.23935539)
 texture = ExtResource("13_7467j")
-
-[node name="Settings" type="Sprite2D" parent="MainMenu_Left" unique_id=704492610]
-modulate = Color(1.2112623, 1.2112623, 1.2112623, 1)
-position = Vector2(-1317.0001, 462)
-scale = Vector2(0.100390576, 0.100390576)
-texture = ExtResource("13_8e205")
 
 [node name="Continue" type="Sprite2D" parent="MainMenu_Left" unique_id=190557816]
 position = Vector2(-1851, 723)
@@ -212,16 +270,42 @@ position = Vector2(-1018, 790)
 scale = Vector2(0.19882807, 0.19882807)
 texture = ExtResource("11_riqfo")
 
+[node name="Bestiario" type="Sprite2D" parent="MainMenu_Left" unique_id=2123686087]
+position = Vector2(-737, 507)
+scale = Vector2(0.23955074, 0.23955074)
+texture = ExtResource("12_riqfo")
+
+[node name="Settings" type="Sprite2D" parent="MainMenu_Left" unique_id=704492610]
+modulate = Color(1.2112623, 1.2112623, 1.2112623, 1)
+position = Vector2(-1317.0001, 462)
+scale = Vector2(0.100390576, 0.100390576)
+texture = ExtResource("13_8e205")
+
 [node name="Voltar" type="Sprite2D" parent="MainMenu_Left" unique_id=2129277340]
 position = Vector2(-548.7606, 948.9198)
 rotation = -0.10139324
 scale = Vector2(0.62985647, 0.62985665)
 texture = ExtResource("12_yxkem")
 
-[node name="Bestiario" type="Sprite2D" parent="MainMenu_Left" unique_id=2123686087]
-position = Vector2(-737, 507)
-scale = Vector2(0.23955074, 0.23955074)
-texture = ExtResource("12_riqfo")
+[node name="SillyBunny" type="Sprite2D" parent="MainMenu_Left" unique_id=2111699117]
+position = Vector2(-1022, 281)
+scale = Vector2(0.622449, 0.622449)
+texture = ExtResource("14_pjscj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainMenu_Left/SillyBunny" unique_id=2036453141]
+root_node = NodePath("../easter egg")
+libraries/ = SubResource("AnimationLibrary_leunp")
+
+[node name="easter egg" type="Button" parent="MainMenu_Left/SillyBunny" unique_id=971236860]
+offset_left = -41.770508
+offset_top = -78.72131
+offset_right = 53.016357
+offset_bottom = 85.14752
+flat = true
+
+[node name="Squeaky" type="AudioStreamPlayer2D" parent="MainMenu_Left/SillyBunny" unique_id=903571009]
+stream = ExtResource("15_pjscj")
+bus = &"SFX"
 
 [node name="MenuButtonPosGrass" type="Sprite2D" parent="MainMenu_Left" unique_id=1454186594]
 position = Vector2(-200.00002, 540)
@@ -230,6 +314,23 @@ texture = ExtResource("14_2x1g0")
 
 [node name="Buttons" type="Node2D" parent="MainMenu_Left" unique_id=1671538779]
 position = Vector2(1312.3594, 538.50476)
+
+[node name="BIG_Start" type="Button" parent="MainMenu_Left/Buttons" unique_id=2058117749]
+offset_left = -1307.3594
+offset_top = -717.50476
+offset_right = 622.6406
+offset_bottom = 543.49524
+theme = SubResource("Theme_7467j")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.36, 0.36, 0.36, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7467j")
+text = "CLIQUE NA TELA 
+PARA COMEÇAR!"
 
 [node name="Start" type="Button" parent="MainMenu_Left/Buttons" unique_id=1809978150]
 offset_left = -2985.3596
@@ -265,31 +366,27 @@ theme_override_colors/font_color = Color(0.4, 0.3372549, 0.21568628, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
 theme_override_colors/font_hover_color = Color(0.9024597, 0.83626944, 0.70885265, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.4, 0.3372549, 0.21568628, 1)
-theme_override_colors/font_disabled_color = Color(0.4, 0.3372549, 0.21568628, 1)
+theme_override_colors/font_disabled_color = Color(0.4, 0.3372549, 0.21568628, 0.3529412)
 theme_override_fonts/font = ExtResource("15_2x1g0")
 theme_override_font_sizes/font_size = 58
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pjscj")
+disabled = true
 text = "CONTINUAR"
 
-[node name="Voltar" type="Button" parent="MainMenu_Left/Buttons" unique_id=1228099272]
-offset_left = -2169.3591
-offset_top = 227.49518
-offset_right = -1657.2913
-offset_bottom = 404.40778
-rotation = -0.15882497
-pivot_offset = Vector2(0.275, 0)
-pivot_offset_ratio = Vector2(-0.04, -0.27)
-theme = SubResource("Theme_fh7cp")
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(0.4117647, 0.16470589, 0.11764706, 1)
-theme_override_colors/font_pressed_color = Color(0.34870425, 0.047726788, 4.5724212e-07, 1)
-theme_override_colors/font_hover_color = Color(1, 0.40784314, 0.2901961, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.23692933, 0.08181054, 0.052301213, 1)
-theme_override_colors/font_disabled_color = Color(0.18663281, 0.058169007, 0.03395324, 1)
-theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 58
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
-text = "VOLTAR"
+[node name="Bestiario" type="Button" parent="MainMenu_Left/Buttons" unique_id=750961617]
+offset_left = -2171.3594
+offset_top = -143.50476
+offset_right = -1932.8177
+offset_bottom = 85.49524
+flat = true
+
+[node name="Achievements" type="Button" parent="MainMenu_Left/Buttons" unique_id=689583089]
+offset_left = -2429.3594
+offset_top = 151.49524
+offset_right = -2237.3594
+offset_bottom = 350.49524
+flat = true
 
 [node name="Settings" type="Button" parent="MainMenu_Left/Buttons" unique_id=747610635]
 offset_left = -2682.3594
@@ -306,22 +403,26 @@ theme_override_fonts/font = ExtResource("15_2x1g0")
 theme_override_font_sizes/font_size = 39
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8e205")
 
-[node name="Exit" type="Button" parent="MainMenu_Left/Buttons" unique_id=2058117749]
-offset_left = -1307.3594
-offset_top = -711.50476
-offset_right = 605.6406
-offset_bottom = 540.49524
-theme = SubResource("Theme_7467j")
+[node name="Voltar" type="Button" parent="MainMenu_Left/Buttons" unique_id=1228099272]
+offset_left = -2169.3591
+offset_top = 227.49521
+offset_right = -1657.2913
+offset_bottom = 404.4078
+rotation = -0.15882497
+pivot_offset = Vector2(0.275, 0)
+pivot_offset_ratio = Vector2(-0.04, -0.27)
+theme = SubResource("Theme_fh7cp")
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.36, 0.36, 0.36, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 15
+theme_override_colors/font_color = Color(0.4117647, 0.16470589, 0.11764706, 1)
+theme_override_colors/font_pressed_color = Color(0.34870425, 0.047726788, 4.5724212e-07, 1)
+theme_override_colors/font_hover_color = Color(1, 0.40784314, 0.2901961, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23692933, 0.08181054, 0.052301213, 1)
+theme_override_colors/font_disabled_color = Color(0.4117647, 0.16470589, 0.11764706, 1)
 theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7467j")
-text = "CLIQUE NA TELA 
-PARA COMEÇAR!"
+theme_override_font_sizes/font_size = 58
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
+disabled = true
+text = "VOLTAR"
 
 [node name="Options" type="Panel" parent="." unique_id=1317177484]
 layout_mode = 1
@@ -382,7 +483,7 @@ offset_right = 650.0
 offset_bottom = 222.0
 max_value = 1.0
 step = 0.05
-value = 1.0
+value = 0.75
 script = ExtResource("11_if7li")
 audio_bus_name = "Music"
 
@@ -407,7 +508,7 @@ offset_right = 650.0
 offset_bottom = 303.0
 max_value = 1.0
 step = 0.05
-value = 1.0
+value = 0.75
 script = ExtResource("11_if7li")
 audio_bus_name = "SFX"
 
@@ -454,15 +555,21 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_font_sizes/font_size = 19
 text = "© Nke812 & T0MS v0.2 "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=49713634]
+[node name="MenuGoLeft" type="AnimationPlayer" parent="Camera2D" unique_id=49713634]
 root_node = NodePath("../../MainMenu_Left")
 libraries/ = SubResource("AnimationLibrary_8e205")
 
+[connection signal="pressed" from="MainMenu_Left/SillyBunny/easter egg" to="." method="_on_easter_egg_pressed"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/BIG_Start" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="MainMenu_Left/Buttons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MainMenu_Left/Buttons/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="mouse_entered" from="MainMenu_Left/Buttons/Bestiario" to="." method="_on_bestiario_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu_Left/Buttons/Bestiario" to="." method="_on_bestiario_mouse_exited"]
+[connection signal="mouse_entered" from="MainMenu_Left/Buttons/Achievements" to="." method="_on_achievements_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu_Left/Buttons/Achievements" to="." method="_on_achievements_mouse_exited"]
 [connection signal="mouse_entered" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_mouse_exited"]
 [connection signal="pressed" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="MainMenu_Left/Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="Options/ExitMenu" to="." method="_on_exit_menu_pressed"]
 [connection signal="value_changed" from="Options/MusicControl" to="Options/MusicControl" method="_on_value_changed"]
 [connection signal="value_changed" from="Options/SFXControl" to="Options/SFXControl" method="_on_SFXvalue_changed"]
