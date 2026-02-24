@@ -1,20 +1,24 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
 [ext_resource type="Script" uid="uid://dfto0bmxbs4h6" path="res://main_menu.gd" id="1_rrcx7"]
-[ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
-[ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
-[ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://cf2qs2fcpxqa0" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="4_65hh5"]
+[ext_resource type="Texture2D" uid="uid://ileb1pej7c20" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
+[ext_resource type="Texture2D" uid="uid://gtfbe4tsacce" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="5_6byu3"]
 [ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://df2mmdfu0s8m6" path="res://Assets/Bunnies/Anarchist.png" id="6_6byu3"]
+[ext_resource type="Texture2D" uid="uid://r8qky2h2ppl8" path="res://Assets/Bunnies/Ghoulish.png" id="6_leunp"]
 [ext_resource type="AudioStream" uid="uid://cc1b1h51tmd2f" path="res://Assets/Music/Main Theme.mp3" id="7_riqfo"]
 [ext_resource type="Texture2D" uid="uid://b16vpb8pi0bel" path="res://Assets/Others/Menu_Assets/Continue.png" id="10_2x1g0"]
-[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
-[ext_resource type="AudioStream" uid="uid://dmr4232x0klnn" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
+[ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://d0ct1mxw87rj6" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://b8rn0oafs20qj" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
 [ext_resource type="Texture2D" uid="uid://dygqb8vuudxgm" path="res://Assets/Others/Menu_Assets/Beastiario.png" id="12_riqfo"]
-[ext_resource type="Texture2D" uid="uid://bslr6mph8ceg4" path="res://Assets/Others/Menu_Assets/ExitSign.png" id="12_yxkem"]
+[ext_resource type="Texture2D" uid="uid://ck1q1t6nr52re" path="res://Assets/Others/Menu_Assets/ExitSign.png" id="12_yxkem"]
 [ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
-[ext_resource type="Texture2D" uid="uid://d0ifrjks7f015" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
+[ext_resource type="Texture2D" uid="uid://dnf1s142qe46j" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://c2bo237k5k4hn" path="res://Assets/Others/Menu_Assets/MenuButtonPosGrass.png" id="14_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://c5a3nj8tuk2gh" path="res://Assets/Others/Menu_Assets/SillyBunny.png" id="14_pjscj"]
@@ -231,6 +235,37 @@ scale = Vector2(0.5055556, 0.5055556)
 texture = ExtResource("4_7467j")
 script = SubResource("GDScript_8e205")
 
+[node name="Shadow" type="Sprite2D" parent="." unique_id=122466430]
+position = Vector2(-1869.0001, 566)
+scale = Vector2(0.731953, 0.7319527)
+texture = ExtResource("4_65hh5")
+script = SubResource("GDScript_8e205")
+
+[node name="Shadow2" type="Sprite2D" parent="." unique_id=897962616]
+position = Vector2(-423.2612, 583.8581)
+scale = Vector2(0.45685586, 0.4568555)
+texture = ExtResource("4_65hh5")
+script = SubResource("GDScript_8e205")
+
+[node name="Lucky" type="Sprite2D" parent="." unique_id=17800647]
+position = Vector2(-1865, 352)
+scale = Vector2(0.22993079, 0.22993074)
+texture = ExtResource("5_6byu3")
+script = SubResource("GDScript_8e205")
+
+[node name="Ghoulish" type="Sprite2D" parent="." unique_id=129117945]
+position = Vector2(-2098, 1065)
+rotation = 0.14433616
+scale = Vector2(0.303, 0.303)
+texture = ExtResource("6_leunp")
+script = SubResource("GDScript_8e205")
+
+[node name="Anarchist" type="Sprite2D" parent="." unique_id=2009762930]
+position = Vector2(-422.99994, 405)
+scale = Vector2(0.18002096, 0.18002085)
+texture = ExtResource("6_6byu3")
+script = SubResource("GDScript_8e205")
+
 [node name="Ghosts" type="Sprite2D" parent="." unique_id=294911566]
 position = Vector2(-194.66675, 537)
 scale = Vector2(0.50277776, 0.50277776)
@@ -276,7 +311,7 @@ scale = Vector2(0.23955074, 0.23955074)
 texture = ExtResource("12_riqfo")
 
 [node name="Settings" type="Sprite2D" parent="MainMenu_Left" unique_id=704492610]
-modulate = Color(1.2112623, 1.2112623, 1.2112623, 1)
+modulate = Color(0.9056963, 0.9056962, 0.9056962, 1)
 position = Vector2(-1317.0001, 462)
 scale = Vector2(0.100390576, 0.100390576)
 texture = ExtResource("13_8e205")
@@ -297,10 +332,10 @@ root_node = NodePath("../easter egg")
 libraries/ = SubResource("AnimationLibrary_leunp")
 
 [node name="easter egg" type="Button" parent="MainMenu_Left/SillyBunny" unique_id=971236860]
-offset_left = -41.770508
-offset_top = -78.72131
-offset_right = 53.016357
-offset_bottom = 85.14752
+offset_left = -88.3607
+offset_top = -94.78689
+offset_right = 96.39345
+offset_bottom = 99.606544
 flat = true
 
 [node name="Squeaky" type="AudioStreamPlayer2D" parent="MainMenu_Left/SillyBunny" unique_id=903571009]
