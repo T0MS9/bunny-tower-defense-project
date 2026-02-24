@@ -39,3 +39,8 @@ func _on_exit_pressed() -> void:
 
 func _on_settings_mouse_entered() -> void:
 	$MainMenu_Left/Settings.modulate = Color(1.211, 1.211, 1.211)
+
+
+func _on_voltar_pressed() -> void:
+	$Camera2D/AnimationPlayer.play_backwards("MenuGoLeft")
+	

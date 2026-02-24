@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
 [ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://cc1b1h51tmd2f" path="res://Assets/Music/Main Theme.mp3" id="7_riqfo"]
 [ext_resource type="Texture2D" uid="uid://b16vpb8pi0bel" path="res://Assets/Others/Menu_Assets/Continue.png" id="10_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
 [ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
-[ext_resource type="AudioStream" uid="uid://deivf0icuqfsf" path="res://Assets/Music/MainTheme.mp3" id="11_fh7cp"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
 [ext_resource type="Texture2D" uid="uid://b8rn0oafs20qj" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
 [ext_resource type="Texture2D" uid="uid://dygqb8vuudxgm" path="res://Assets/Others/Menu_Assets/Beastiario.png" id="12_riqfo"]
+[ext_resource type="Texture2D" uid="uid://bslr6mph8ceg4" path="res://Assets/Others/Menu_Assets/ExitSign.png" id="12_yxkem"]
 [ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
 [ext_resource type="Texture2D" uid="uid://dnf1s142qe46j" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
@@ -34,42 +35,6 @@ func _process(delta):
 	
 	position = position.lerp(alvo, suavizacao * delta)
 "
-
-[sub_resource type="Animation" id="Animation_rrcx7"]
-resource_name = "MenuGoLeft"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Camera2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1),
-"transitions": PackedFloat32Array(1, 0.8408965, 0.43527532),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(15, 0), Vector2(-2225.96, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_fh7cp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Camera2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8e205"]
-_data = {
-&"MenuGoLeft": SubResource("Animation_rrcx7"),
-&"RESET": SubResource("Animation_fh7cp")
-}
 
 [sub_resource type="Theme" id="Theme_fh7cp"]
 
@@ -142,6 +107,42 @@ _data = {
 &"Settings_Anim": SubResource("Animation_7467j")
 }
 
+[sub_resource type="Animation" id="Animation_rrcx7"]
+resource_name = "MenuGoLeft"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 0.8408965, 0.43527532),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(15, 0), Vector2(-2225.96, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fh7cp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8e205"]
+_data = {
+&"MenuGoLeft": SubResource("Animation_rrcx7"),
+&"RESET": SubResource("Animation_fh7cp")
+}
+
 [node name="MainMenu" type="Control" unique_id=85335859]
 process_mode = 3
 layout_mode = 3
@@ -172,37 +173,21 @@ texture = ExtResource("5_2x1g0")
 script = SubResource("GDScript_8e205")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1630119654]
-position = Vector2(872.00006, 223.99998)
+position = Vector2(944.00006, 223.99998)
 scale = Vector2(0.23157604, 0.21833767)
 texture = ExtResource("5_rrcx7")
 
 [node name="StartGame_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1389504441]
 stream = ExtResource("10_rrcx7")
+max_distance = 115850.0
 bus = &"SFX"
 
 [node name="MainMenu_Music" type="AudioStreamPlayer2D" parent="." unique_id=1363445705]
-stream = ExtResource("11_fh7cp")
+stream = ExtResource("7_riqfo")
+pitch_scale = 1.04
 autoplay = true
+max_distance = 115850.0
 bus = &"Music"
-parameters/looping = true
-
-[node name="Label" type="Label" parent="." unique_id=800705017]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 1047.0
-offset_right = 260.0
-offset_bottom = 1079.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
-theme_override_constants/shadow_offset_x = 2
-theme_override_font_sizes/font_size = 19
-text = "© Nke812 & T0MS v0.2 "
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1713408079]
-position = Vector2(961, 540)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=49713634]
-root_node = NodePath("../../MainMenu_Left")
-libraries/ = SubResource("AnimationLibrary_8e205")
 
 [node name="MainMenu_Left" type="Node2D" parent="." unique_id=1897760061]
 
@@ -227,13 +212,19 @@ position = Vector2(-1018, 790)
 scale = Vector2(0.19882807, 0.19882807)
 texture = ExtResource("11_riqfo")
 
+[node name="Voltar" type="Sprite2D" parent="MainMenu_Left" unique_id=2129277340]
+position = Vector2(-548.7606, 948.9198)
+rotation = -0.10139324
+scale = Vector2(0.62985647, 0.62985665)
+texture = ExtResource("12_yxkem")
+
 [node name="Bestiario" type="Sprite2D" parent="MainMenu_Left" unique_id=2123686087]
 position = Vector2(-737, 507)
 scale = Vector2(0.23955074, 0.23955074)
 texture = ExtResource("12_riqfo")
 
 [node name="MenuButtonPosGrass" type="Sprite2D" parent="MainMenu_Left" unique_id=1454186594]
-position = Vector2(-200.5, 540)
+position = Vector2(-200.00002, 540)
 scale = Vector2(0.49988323, 0.5)
 texture = ExtResource("14_2x1g0")
 
@@ -280,6 +271,26 @@ theme_override_font_sizes/font_size = 58
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
 text = "CONTINUAR"
 
+[node name="Voltar" type="Button" parent="MainMenu_Left/Buttons" unique_id=1228099272]
+offset_left = -2169.3591
+offset_top = 227.49518
+offset_right = -1657.2913
+offset_bottom = 404.40778
+rotation = -0.15882497
+pivot_offset = Vector2(0.275, 0)
+pivot_offset_ratio = Vector2(-0.04, -0.27)
+theme = SubResource("Theme_fh7cp")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.4117647, 0.16470589, 0.11764706, 1)
+theme_override_colors/font_pressed_color = Color(0.34870425, 0.047726788, 4.5724212e-07, 1)
+theme_override_colors/font_hover_color = Color(1, 0.40784314, 0.2901961, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23692933, 0.08181054, 0.052301213, 1)
+theme_override_colors/font_disabled_color = Color(0.18663281, 0.058169007, 0.03395324, 1)
+theme_override_fonts/font = ExtResource("15_2x1g0")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rrcx7")
+text = "VOLTAR"
+
 [node name="Settings" type="Button" parent="MainMenu_Left/Buttons" unique_id=747610635]
 offset_left = -2682.3594
 offset_top = -114.50476
@@ -296,21 +307,21 @@ theme_override_font_sizes/font_size = 39
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8e205")
 
 [node name="Exit" type="Button" parent="MainMenu_Left/Buttons" unique_id=2058117749]
-offset_left = 34.640614
-offset_top = 385.49527
-offset_right = 301.13403
-offset_bottom = 458.94785
-rotation = -0.017453292
+offset_left = -1307.3594
+offset_top = -711.50476
+offset_right = 605.6406
+offset_bottom = 540.49524
 theme = SubResource("Theme_7467j")
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.59, 0.47042665, 0.2124, 1)
-theme_override_colors/font_hover_color = Color(1, 0.8576667, 0.39, 1)
+theme_override_colors/font_pressed_color = Color(0.36, 0.36, 0.36, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("15_2x1g0")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 40
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_7467j")
-text = "SAIR"
-metadata/_edit_use_anchors_ = true
+text = "CLIQUE NA TELA 
+PARA COMEÇAR!"
 
 [node name="Options" type="Panel" parent="." unique_id=1317177484]
 layout_mode = 1
@@ -430,7 +441,25 @@ script = ExtResource("13_fh7cp")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2x1g0")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1713408079]
+position = Vector2(961, 540)
+
+[node name="Copyright" type="Label" parent="Camera2D" unique_id=897554632]
+offset_left = -945.0
+offset_top = 504.0
+offset_right = -690.0
+offset_bottom = 536.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
+theme_override_constants/shadow_offset_x = 2
+theme_override_font_sizes/font_size = 19
+text = "© Nke812 & T0MS v0.2 "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=49713634]
+root_node = NodePath("../../MainMenu_Left")
+libraries/ = SubResource("AnimationLibrary_8e205")
+
 [connection signal="pressed" from="MainMenu_Left/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu_Left/Buttons/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="mouse_entered" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_mouse_entered"]
 [connection signal="pressed" from="MainMenu_Left/Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenu_Left/Buttons/Exit" to="." method="_on_exit_pressed"]
