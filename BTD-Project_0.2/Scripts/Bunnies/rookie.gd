@@ -10,4 +10,5 @@ func _on_timer_timeout() -> void:
 
 func atacar(alvo):
 	if alvo.has_method("DMGED"):
+		$Rookie/AnimationPlayer.play("RookieAttack")
 		alvo.DMGED(1)

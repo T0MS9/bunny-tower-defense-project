@@ -10,7 +10,8 @@ radius = 37.01351
 rotates = false
 loop = false
 
-[node name="Ghaztling" type="CharacterBody2D" parent="." unique_id=334833914]
+[node name="Ghaztling" type="CharacterBody2D" parent="." unique_id=334833914 groups=["Ghostlings"]]
+position = Vector2(1, 0)
 script = ExtResource("1_43je4")
 
 [node name="Ghaztling" type="Sprite2D" parent="Ghaztling" unique_id=1236887099]

@@ -21,11 +21,11 @@ func DMGED(quantidade):
 	
 	vida -= quantidade
 	$Brute_TakeDMG.play("Brute_TakeDMG")
-	moedas.text = str(valor_atual + 10000000)
+	moedas.text = str(valor_atual + 1)
 	
 	if vida <= 0:
 		moedas.text = str(valor_atual + 4)
-		
+		speed = 0
 		$Brute_TakeDMG.play("Brute_TakeDMG") 
 		await $Brute_TakeDMG.animation_finished
 		get_parent().queue_free()

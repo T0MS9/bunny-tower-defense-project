@@ -3,6 +3,43 @@
 [ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1_c36il"]
 [ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="2_xbbb2"]
 
+[sub_resource type="Animation" id="Animation_c36il"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rookie:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xbbb2"]
+resource_name = "RookieAttack"
+length = 0.13333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rookie:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.20245819323134212, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_55yyg"]
+_data = {
+&"RESET": SubResource("Animation_c36il"),
+&"RookieAttack": SubResource("Animation_xbbb2")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_55yyg"]
 radius = 57.0
 height = 164.0
@@ -15,9 +52,13 @@ position = Vector2(0, -4)
 script = ExtResource("1_c36il")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
-position = Vector2(97.937485, -33.08731)
-scale = Vector2(0.11124287, 0.11124287)
+position = Vector2(97.937485, -27.587305)
+scale = Vector2(0.11124287, 0.10587178)
 texture = ExtResource("2_xbbb2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=1122360598]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_55yyg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=406183586]
 position = Vector2(102.937485, -4.0873413)
@@ -29,5 +70,3 @@ position = Vector2(-37, -80)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=24073726]
 position = Vector2(140, 76)
 shape = SubResource("CircleShape2D_a4dix")
-
-[node name="Node" type="Node" parent="." unique_id=2024319811]

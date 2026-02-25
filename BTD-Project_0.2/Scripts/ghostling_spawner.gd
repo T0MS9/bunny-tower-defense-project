@@ -7,7 +7,7 @@ extends Node2D
 var tempPath
 
 func random_ghostling() -> int:
-	return randi_range(2, 3)
+	return randi_range(1, 3)
 
 func _on_timer_timeout():
 	match random_ghostling():

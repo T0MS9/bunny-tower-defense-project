@@ -58,7 +58,3 @@ func _on_sigminha_pressed() -> void:
 	else:
 		$HUD_Shop/Shop_Appear.play_backwards("Shop_Appear")
 		HUD_is_Up = false
-
-
-func _on_attack_pressed() -> void:
-	$"../Rookie/AnimationPlayer".play("bunny_attack")
