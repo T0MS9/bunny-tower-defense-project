@@ -9,7 +9,7 @@
 rotates = false
 loop = false
 
-[node name="Ghostling" type="CharacterBody2D" parent="." unique_id=1513647972]
+[node name="Ghostling" type="CharacterBody2D" parent="." unique_id=1513647972 groups=["Ghostlings"]]
 position = Vector2(1, 0)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_3hqvp")

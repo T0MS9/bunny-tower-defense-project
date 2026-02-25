@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btew3t801ag51"]
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1_hdtmh"]
-[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
+[ext_resource type="Texture2D" uid="uid://titpwkyb1v5h" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="3_opqqp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
@@ -88,7 +88,7 @@ shadow_offset = Vector2(0.745, 1.05)
 rotates = false
 loop = false
 
-[node name="Brute" type="CharacterBody2D" parent="." unique_id=1513647972]
+[node name="Brute" type="CharacterBody2D" parent="." unique_id=1513647972 groups=["Ghostlings"]]
 position = Vector2(1, 0)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_hdtmh")

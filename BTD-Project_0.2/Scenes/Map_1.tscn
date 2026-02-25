@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="3_6whob"]
 [ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="4_qhmcd"]
-[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
+[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="4_u7krg"]
 [ext_resource type="PackedScene" uid="uid://dqclnvpdade1k" path="res://Scenes/Enemies/Ghostling/ghaztling.tscn" id="4_w4m1r"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="6_wjtap"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_v7gqg"]
@@ -14,15 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="12_lycfg"]
 [ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="13_0w8u8"]
 [ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="14_gtlmr"]
-[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
-[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
-[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
-[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
-[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
+[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="14_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="16_gwne5"]
+[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_hpu6p"]
+[ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="17_op2xg"]
+[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18_op2xg"]
 [ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="21_0w8u8"]
-[ext_resource type="Texture2D" uid="uid://b1j551hw7x0ax" path="res://Assets/Others/UI_Assets/Radius.png" id="22_0w8u8"]
-[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="22_hi2tb"]
+[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="22_hi2tb"]
+[ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="23_hi2tb"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="24_3svpn"]
 
 [sub_resource type="Curve2D" id="Curve2D_lycfg"]
@@ -159,42 +159,12 @@ _data = {
 &"RESET": SubResource("Animation_op2xg")
 }
 
-[sub_resource type="Animation" id="Animation_03fgm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Rookie:skew")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3svpn"]
+radius = 57.0
+height = 164.0
 
-[sub_resource type="Animation" id="Animation_uu23e"]
-resource_name = "bunny_attack"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Rookie:skew")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1.6817931, 0.5547847, 0.659755),
-"update": 0,
-"values": [0.0, 0.23911011, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny2ev"]
-_data = {
-&"RESET": SubResource("Animation_03fgm"),
-&"bunny_attack": SubResource("Animation_uu23e")
-}
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xd0k"]
+radius = 221.0
 
 [node name="Mapa_1" type="Node2D" unique_id=41714579]
 position = Vector2(-36.000004, -42.000004)
@@ -578,44 +548,28 @@ position = Vector2(-1067.235, 718.47)
 scale = Vector2(0.55052364, 0.5468554)
 texture = ExtResource("18_op2xg")
 
-[node name="Rookie" type="Sprite2D" parent="." unique_id=513665682]
-position = Vector2(645.5089, 425.1497)
-scale = Vector2(0.1, 0.1)
+[node name="Rookie" type="StaticBody2D" parent="." unique_id=116314991]
+position = Vector2(573.6527, 347.3054)
+script = ExtResource("23_hi2tb")
+
+[node name="Timer" type="Timer" parent="Rookie" unique_id=1270975195]
+autostart = true
+
+[node name="Rookie" type="Sprite2D" parent="Rookie" unique_id=1246597562]
+position = Vector2(97.937485, -33.08731)
+scale = Vector2(0.11124287, 0.11124287)
 texture = ExtResource("21_0w8u8")
 
-[node name="sigminha" type="Button" parent="Rookie" unique_id=1177221275]
-offset_left = -536.4773
-offset_top = -632.69965
-offset_right = 624.20337
-offset_bottom = 939.44586
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("9_1nvmp")
-theme_override_font_sizes/font_size = 272
-theme_override_icons/icon = ExtResource("22_0w8u8")
-text = "Sigma
-"
-flat = true
-icon_alignment = 1
-expand_icon = true
-metadata/_edit_use_anchors_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rookie" unique_id=1902372182]
+position = Vector2(102.937485, -4.0873413)
+shape = SubResource("CapsuleShape2D_3svpn")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=900058621]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_ny2ev")
+[node name="Area2D" type="Area2D" parent="Rookie" unique_id=1080544580]
+position = Vector2(-37, -80)
 
-[node name="attack" type="Button" parent="." unique_id=767841997]
-offset_left = 579.64075
-offset_top = 297.00598
-offset_right = 853.64075
-offset_bottom = 405.73663
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("9_1nvmp")
-theme_override_font_sizes/font_size = 24
-theme_override_icons/icon = ExtResource("22_0w8u8")
-text = "Attack"
-flat = true
-icon_alignment = 1
-expand_icon = true
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Rookie/Area2D" unique_id=1155365210]
+position = Vector2(140, 76)
+shape = SubResource("CircleShape2D_7xd0k")
 
 [connection signal="timeout" from="GhostlingSpawner/Timer" to="GhostlingSpawner" method="_on_timer_timeout"]
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]
@@ -625,5 +579,4 @@ expand_icon = true
 [connection signal="toggled" from="HUD/Options/Fullscreen_CB" to="HUD/Options/Fullscreen_CB" method="_on_toggled"]
 [connection signal="pressed" from="HUD/GameOver/Restart" to="HUD" method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
-[connection signal="pressed" from="Rookie/sigminha" to="HUD" method="_on_sigminha_pressed"]
-[connection signal="pressed" from="attack" to="HUD" method="_on_attack_pressed"]
+[connection signal="timeout" from="Rookie/Timer" to="Rookie" method="_on_timer_timeout"]
