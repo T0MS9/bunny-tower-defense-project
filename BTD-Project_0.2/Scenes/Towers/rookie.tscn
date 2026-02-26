@@ -41,15 +41,18 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_55yyg"]
-radius = 57.0
-height = 164.0
+radius = 37.326958
+height = 99.867
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4dix"]
-radius = 221.0
+radius = 196.01021
 
 [node name="Rookie" type="StaticBody2D" unique_id=264265458]
 position = Vector2(0, -4)
 script = ExtResource("1_c36il")
+
+[node name="Timer" type="Timer" parent="." unique_id=549134753]
+autostart = true
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(97.937485, -27.587305)
@@ -61,7 +64,9 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_55yyg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=406183586]
-position = Vector2(102.937485, -4.0873413)
+position = Vector2(107.93747, 42.912655)
+rotation = 1.5707964
+scale = Vector2(0.94, 0.94)
 shape = SubResource("CapsuleShape2D_55yyg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1183441845]
@@ -70,3 +75,5 @@ position = Vector2(-37, -80)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=24073726]
 position = Vector2(140, 76)
 shape = SubResource("CircleShape2D_a4dix")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
