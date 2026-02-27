@@ -51,6 +51,8 @@ radius = 196.01021
 position = Vector2(0, -4)
 script = ExtResource("1_c36il")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
+
 [node name="Timer" type="Timer" parent="." unique_id=549134753]
 autostart = true
 
@@ -63,17 +65,22 @@ texture = ExtResource("2_xbbb2")
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_55yyg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=406183586]
+[node name="HitBox" type="Area2D" parent="." unique_id=1941780108 groups=["no_place"]]
 position = Vector2(107.93747, 42.912655)
 rotation = 1.5707964
 scale = Vector2(0.94, 0.94)
+collision_layer = 3
+collision_mask = 3
+
+[node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=406183586]
 shape = SubResource("CapsuleShape2D_55yyg")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1183441845]
+[node name="Range" type="Area2D" parent="." unique_id=1183441845]
 position = Vector2(-37, -80)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=24073726]
+[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=24073726]
 position = Vector2(140, 76)
 shape = SubResource("CircleShape2D_a4dix")
+debug_color = Color(0, 0, 0, 0.41960785)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
 [ext_resource type="PackedScene" uid="uid://dqclnvpdade1k" path="res://Scenes/Enemies/Ghostling/ghaztling.tscn" id="4_w4m1r"]
 [ext_resource type="PackedScene" uid="uid://cvtf3eidvbt76" path="res://Scenes/HUD.tscn" id="6_teiq6"]
-[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
 
 [sub_resource type="Curve2D" id="Curve2D_lycfg"]
 _data = {
@@ -43,17 +43,21 @@ loop = false
 position = Vector2(-2.3952446, 2.3952103)
 
 [node name="BushPosition" type="Sprite2D" parent="." unique_id=1478967233]
-visible = false
 position = Vector2(1193.4265, 696.52686)
 scale = Vector2(0.59924597, 0.59924597)
 texture = ExtResource("17_dtr0u")
 
-[node name="CanvasLayer" parent="." unique_id=1805092987 instance=ExtResource("6_teiq6")]
+[node name="Area_Path" type="Area2D" parent="." unique_id=655402903 groups=["no_place"]]
+collision_layer = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2045750682]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Path" unique_id=2045750682]
+scale = Vector2(0.99999994, 0.99999994)
 polygon = PackedVector2Array(40.718567, 417.96408, 43.113777, 508.98203, 456.2874, 507.78442, 482.63474, 507.78442, 510.17963, 501.79642, 525.74854, 491.01797, 542.51495, 477.8443, 558.0838, 461.07785, 608.38324, 275.4491, 621.5569, 267.06586, 1627.5449, 256.2874, 1641.9161, 262.27545, 1655.0898, 537.72455, 1649.1018, 559.28143, 1637.1257, 573.65265, 1622.7545, 577.2455, 1605.988, 584.4311, 978.4431, 577.2455, 952.09576, 588.0239, 929.3413, 598.80237, 905.3892, 588.0239, 871.85626, 583.2335, 844.31134, 573.65265, 822.75446, 560.479, 813.17365, 538.9221, 804.7904, 516.16766, 804.7904, 494.61078, 811.976, 476.6467, 833.5329, 457.48505, 859.88025, 449.1018, 934.1317, 450.2994, 952.09576, 459.88025, 967.6647, 473.0539, 1089.8203, 470.6587, 1087.4252, 452.6946, 1079.0419, 429.94012, 1056.2875, 404.79044, 1037.1257, 394.012, 995.2096, 386.82635, 773.6527, 388.02396, 753.2934, 404.79044, 734.1317, 432.33533, 723.3533, 477.8443, 726.9461, 664.67065, 737.72455, 677.8443, 744.91016, 688.62274, 964.07184, 695.80835, 982.0359, 702.99396, 1088.6227, 705.38916, 1111.3772, 689.8203, 1717.3652, 683.8323, 1741.3174, 663.473, 1754.491, 633.5329, 1758.0839, 233.53294, 1736.527, 201.19762, 1704.1917, 192.81438, 1633.533, 186.82635, 574.8503, 165.26947, 556.8862, 179.64072, 538.9222, 200, 471.8563, 400, 455.0898, 414.37125, 432.33533, 421.5569)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=2115293809]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area_Path" unique_id=2115293809]
+scale = Vector2(0.99999994, 0.99999994)
 polygon = PackedVector2Array(1001.1976, 843.1137, 1001.1976, 950.8982, 1033.533, 967.6646, 1101.7964, 978.44305, 1411.9761, 982.0359, 1829.9401, 984.4311, 1831.1377, 897.006, 1233.533, 900.59875, 1140.1198, 910.1796, 1094.6107, 908.982, 1075.4491, 879.0419, 1075.4491, 841.91614)
+
+[node name="HUD" parent="." unique_id=1805092987 instance=ExtResource("6_teiq6")]
 
 [connection signal="timeout" from="GhostlingSpawner/Timer" to="GhostlingSpawner" method="_on_timer_timeout"]
