@@ -19,17 +19,8 @@ position = Vector2(3.0000002, -12.440002)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_6gqum")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ghaztling" unique_id=2141100714]
+[node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghaztling" unique_id=2141100714]
+visible = false
 position = Vector2(1, -6)
 scale = Vector2(0.98, 0.98)
 shape = SubResource("CircleShape2D_p0wji")
-
-[node name="Button" type="Button" parent="Ghaztling" unique_id=866011822]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-offset_left = -32.0
-offset_top = -39.0
-offset_right = 36.0
-offset_bottom = 27.0
-
-[connection signal="mouse_entered" from="Ghaztling/Button" to="Ghaztling" method="_on_button_mouse_entered"]

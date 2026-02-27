@@ -480,7 +480,9 @@ scale = Vector2(0.99999994, 0.99999994)
 skew = 1.569051
 polygon = PackedVector2Array(813999.1, 813614.5, 826031.44, 825646.8, 824540.5, 825646.8, 812508.1, 813614.5)
 
-[node name="Polygon2D" type="Polygon2D" parent="HUD/Limits" unique_id=1849579987]
+[node name="Settings" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=228766173]
+position = Vector2(1474, 28.000004)
+polygon = PackedVector2Array(-94.99988, -14.999998, -94.99988, 78, 19.000122, 78, 19.000122, -14.999998)
 
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1878578739]
 position = Vector2(2157.9224, 765.2696)
@@ -579,6 +581,7 @@ texture_normal = ExtResource("19_8ys6w")
 texture_disabled = ExtResource("20_8ys6w")
 ignore_texture_size = true
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]
 [connection signal="pressed" from="HUD/Options/BackMenu" to="HUD" method="_on_back_menu_pressed"]

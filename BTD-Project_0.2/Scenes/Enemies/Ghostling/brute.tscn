@@ -98,7 +98,7 @@ position = Vector2(5, 6.25)
 scale = Vector2(0.083, 0.083)
 texture = ExtResource("2_hdtmh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Brute" unique_id=708407390]
+[node name="HitBoxGhostling" type="CollisionShape2D" parent="Brute" unique_id=708407390]
 position = Vector2(4.9999995, 13.75)
 scale = Vector2(0.99999994, 0.8369582)
 shape = SubResource("CircleShape2D_hdtmh")

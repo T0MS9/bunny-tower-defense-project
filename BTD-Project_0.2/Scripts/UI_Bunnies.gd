@@ -22,7 +22,6 @@ func _process(_delta: float) -> void:
 		# 2. ATUALIZAMOS A MEMÓRIA
 		local_proibido = false
 		for area in areas_em_cima:
-			print("Estou a tocar na área: ", area.name)
 			if area.is_in_group("no_place"):
 				local_proibido = true
 				break
@@ -38,7 +37,6 @@ func _process(_delta: float) -> void:
 			if not local_proibido:
 				largar_torre()
 			else:
-				print("Local inválido! A apagar torre...")
 				temp_tower.queue_free()
 				temp_tower = null
 
@@ -70,6 +68,7 @@ func largar_torre():
 			range_node.monitorable = true
 			
 			moedas_label.text = str(moedas_atuais - 75)
+			range_node.get_node("CollisionRange").visible = true
 			temp_tower = null
 		else:
 			temp_tower.queue_free()

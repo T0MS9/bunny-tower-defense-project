@@ -12,3 +12,8 @@ func atacar(alvo):
 	if alvo.has_method("DMGED"):
 		$Rookie/AnimationPlayer.play("RookieAttack")
 		alvo.DMGED(1)
+
+
+func _on_button_pressed() -> void:
+	
+	queue_free()

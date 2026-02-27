@@ -83,4 +83,12 @@ position = Vector2(140, 76)
 shape = SubResource("CircleShape2D_a4dix")
 debug_color = Color(0, 0, 0, 0.41960785)
 
+[node name="Button" type="Button" parent="." unique_id=1525124063]
+offset_left = 64.0
+offset_top = -58.0
+offset_right = 146.0
+offset_bottom = 52.0
+flat = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

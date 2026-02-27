@@ -3,7 +3,45 @@
 [ext_resource type="Script" uid="uid://d1obqfb6h1piv" path="res://Scripts/Enemies/Ghostling/ghostling.gd" id="1_3hqvp"]
 [ext_resource type="Texture2D" uid="uid://8b3eprhl7oqb" path="res://Assets/Enemies/Ghostlings/Ghostling.png" id="2_hyln6"]
 
+[sub_resource type="Animation" id="Animation_hyln6"]
+resource_name = "Brute_TakeDMG"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Brute/Brute:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.23921569, 0.23529412, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Brute/Brute:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.083, 0.083), Vector2(0.083, 0.07262598), Vector2(0.083, 0.083)]
+}
+
+[sub_resource type="Animation" id="Animation_8sqdy"]
+resource_name = "ghostling_TakeDMG"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_754id"]
+_data = {
+&"Brute_TakeDMG": SubResource("Animation_hyln6"),
+&"ghostling_TakeDMG": SubResource("Animation_8sqdy")
+}
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_hyln6"]
+radius = 9.177325
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
 rotates = false
@@ -19,16 +57,10 @@ position = Vector2(2.5000002, 1.250001)
 scale = Vector2(0.096, 0.096)
 texture = ExtResource("2_hyln6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ghostling" unique_id=708407390]
-position = Vector2(-1.249995, -5.6249995)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ghostling/Ghostling" unique_id=944319890]
+libraries/ = SubResource("AnimationLibrary_754id")
+
+[node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghostling" unique_id=708407390]
+position = Vector2(-1.249995, 1.8750002)
 scale = Vector2(8.445, 8.445)
 shape = SubResource("CircleShape2D_hyln6")
-
-[node name="Button" type="Button" parent="Ghostling" unique_id=705459695]
-modulate = Color(1, 1, 1, 0)
-offset_left = -80.0
-offset_top = -73.75
-offset_right = 77.499985
-offset_bottom = 62.499985
-
-[connection signal="mouse_entered" from="Ghostling/Button" to="Ghostling" method="_on_button_mouse_entered"]
