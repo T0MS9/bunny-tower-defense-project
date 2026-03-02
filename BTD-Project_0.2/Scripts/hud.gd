@@ -38,7 +38,7 @@ func _on_back_menu_pressed():
 
 
 #Botão das Definições da Pausa
-func _on_exit_menu_pressed() -> void:
+func _on_exit_settings_pressed() -> void:
 	$"Options".visible = false
 	$Pause.visible = true
 	
