@@ -2,24 +2,36 @@
 
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="1_w0blg"]
 [ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="2_lqayy"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3_lrioy"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3_lrioy"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="4_8ys6w"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="5_8kn8h"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="6_ync2q"]
-[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="7_7bkcm"]
+[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="7_7bkcm"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_6kyvd"]
 [ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="9_b1hwh"]
 [ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="10_ew2rj"]
 [ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="11_2b6re"]
 [ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="12_15qt1"]
-[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="13_wy4oo"]
-[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
-[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
-[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
-[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
+[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="13_wy4oo"]
+[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
+[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
+[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
+[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
 [ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="18_lrioy"]
 [ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="19_8ys6w"]
+[ext_resource type="Texture2D" uid="uid://dut106yptn0k7" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="19_eukkl"]
 [ext_resource type="Texture2D" uid="uid://cw32myafyva10" path="res://Assets/Bunnies/RookieDisable.png" id="20_8ys6w"]
+[ext_resource type="Texture2D" uid="uid://ban2y67qi6gmd" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="20_esw7j"]
+[ext_resource type="Texture2D" uid="uid://cb2o60u26pvij" path="res://Assets/Bunnies/Lucky.png" id="20_tvuu7"]
+[ext_resource type="Texture2D" uid="uid://dwdyptxttt1b0" path="res://Assets/Others/HUD_Assets/Start.png" id="21_8kn8h"]
+[ext_resource type="Texture2D" uid="uid://brvkk8eh3jr6u" path="res://Assets/Bunnies/LuckyDisable.png" id="21_esw7j"]
+[ext_resource type="Texture2D" uid="uid://clp3vwvpiht1c" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22_1slhg"]
+[ext_resource type="Texture2D" uid="uid://cx66sdl26r7of" path="res://Assets/Others/HUD_Assets/StartPressed.png" id="22_ync2q"]
+[ext_resource type="Texture2D" uid="uid://bqifqdi0hicud" path="res://Assets/Others/HUD_Assets/Pause.png" id="23_6kyvd"]
+[ext_resource type="Texture2D" uid="uid://cts04b62b4llr" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="23_esw7j"]
+[ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="24_b1hwh"]
+[ext_resource type="Texture2D" uid="uid://b2pvy1ylh8v27" path="res://Assets/Others/HUD_Assets/Restart.png" id="29_ij8d5"]
+[ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="30_ljo2x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ornx7"]
 content_margin_left = 324.0
@@ -260,7 +272,7 @@ offset_right = 650.0
 offset_bottom = 222.0
 max_value = 1.0
 step = 0.05
-value = 1.0
+value = 0.25
 script = ExtResource("5_8kn8h")
 audio_bus_name = "Music"
 
@@ -285,7 +297,7 @@ offset_right = 650.0
 offset_bottom = 303.0
 max_value = 1.0
 step = 0.05
-value = 1.0
+value = 0.25
 script = ExtResource("5_8kn8h")
 audio_bus_name = "SFX"
 
@@ -446,7 +458,7 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 max_value = 99999999.0
 step = 1.0
-value = 130.0
+value = 190.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=1396536025]
@@ -462,27 +474,27 @@ position = Vector2(52.999992, 59.000004)
 position = Vector2(1093.0211, -318)
 scale = Vector2(0.9999999, 0.9999998)
 skew = 1.56907
-polygon = PackedVector2Array(180309.63, 179911.94, 192341.94, 191944.27, 190850.94, 191944.27, 178818.63, 179911.94)
+polygon = PackedVector2Array(-71218.28, -72407.375, 186544.53, 185362.81, 189313.11, 191155.4, -73662.016, -71828.11)
 
 [node name="Left" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=1794759592]
 position = Vector2(1, 0)
 scale = Vector2(0.9999998, 0.9999998)
-polygon = PackedVector2Array(-42.000008, 3.814698e-06, 3.8146973e-06, 3.8146973e-06, 3.8146977e-06, 1080.0001, -43, 1080.0001)
+polygon = PackedVector2Array(-759.0002, -1.9999967, 3.8146973e-06, 3.8146973e-06, -1.9999967, 1721.0004, -724.0002, 1721.0004)
 
 [node name="Right" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=2044825819]
 position = Vector2(-11877.241, -4)
 scale = Vector2(7.8909883, 1)
-polygon = PackedVector2Array(1693.8613, 4.000004, 1748, 3, 1748, 1084, 1693.988, 1084)
+polygon = PackedVector2Array(1693.8613, 4.000004, 1792.3281, 4.000004, 1792.0746, 1130, 1693.8613, 1131)
 
 [node name="Down" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=1688730896]
 position = Vector2(1105.0054, -341.00003)
 scale = Vector2(0.99999994, 0.99999994)
 skew = 1.569051
-polygon = PackedVector2Array(813999.1, 813614.5, 826031.44, 825646.8, 824540.5, 825646.8, 812508.1, 813614.5)
+polygon = PackedVector2Array(811426.4, 810176.7, 1210791.5, 1209535.4, 1182625.9, 1183751.9, 812508.1, 813614.5)
 
 [node name="Settings" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=228766173]
 position = Vector2(1474, 28.000004)
-polygon = PackedVector2Array(-94.99988, -14.999998, -94.99988, 78, 19.000122, 78, 19.000122, -14.999998)
+polygon = PackedVector2Array(-94.99988, -24.999998, -94.99988, 78, 19.000122, 78, 18.000122, -24.999998)
 
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1878578739]
 position = Vector2(2157.9224, 765.2696)
@@ -572,16 +584,130 @@ position = Vector2(53, 59.00001)
 scale = Vector2(1.0000001, 1.0000001)
 script = ExtResource("18_lrioy")
 
-[node name="Rookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=1551678627]
-offset_left = 1517.0
-offset_top = 143.0
+[node name="BoxLucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=1210332222]
+offset_left = 1715.0
+offset_top = 135.0
+offset_right = 1920.0
+offset_bottom = 406.0
+texture_normal = ExtResource("19_eukkl")
+texture_disabled = ExtResource("20_esw7j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Lucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=647250284]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062975615
+anchor_top = 0.08130996
+anchor_right = 0.9069756
+anchor_bottom = 0.92231
+offset_left = 0.09028816
+offset_top = -0.035015106
+offset_right = 0.07029724
+offset_bottom = 0.021972656
+texture_normal = ExtResource("20_tvuu7")
+texture_disabled = ExtResource("21_esw7j")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=2133094998]
+position = Vector2(124, 257)
+scale = Vector2(0.285, 0.285)
+texture = ExtResource("23_esw7j")
+
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=1440656706]
+layout_mode = 0
+offset_left = 86.99999
+offset_top = 248.0
+offset_right = 137.0
+offset_bottom = 272.0
+rotation = -0.061086524
+theme_override_colors/font_color = Color(0.87, 0.5945, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_7bkcm")
+theme_override_font_sizes/font_size = 23
+text = "200"
+
+[node name="BoxRookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=211386483]
+offset_left = 1514.0
+offset_top = 135.0
 offset_right = 1719.0
-offset_bottom = 409.18228
+offset_bottom = 406.0
+texture_normal = ExtResource("22_1slhg")
+texture_disabled = ExtResource("20_esw7j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Rookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=1551678627]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063
+anchor_top = 0.049000002
+anchor_right = 0.95600003
+anchor_bottom = 0.93900007
+offset_left = 0.08500004
+offset_top = 0.12247372
+offset_right = 0.019989014
+offset_bottom = 0.07772827
 texture_normal = ExtResource("19_8ys6w")
 texture_disabled = ExtResource("20_8ys6w")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=479539679]
+position = Vector2(135, 260)
+scale = Vector2(0.285, 0.285)
+texture = ExtResource("23_esw7j")
+
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=571155390]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 251.0
+offset_right = 145.0
+offset_bottom = 275.0
+rotation = -0.061086524
+theme_override_colors/font_color = Color(0.87, 0.5945, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_7bkcm")
+theme_override_font_sizes/font_size = 23
+text = "125"
+
+[node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499]
+offset_left = 1588.0
+offset_top = 932.0001
+offset_right = 1951.368
+offset_bottom = 1023.0001
+texture_normal = ExtResource("21_8kn8h")
+texture_pressed = ExtResource("22_ync2q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PauseRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=988899051]
+visible = false
+offset_left = 1587.9998
+offset_top = 933.0001
+offset_right = 1951.0002
+offset_bottom = 1023.0006
+texture_normal = ExtResource("23_6kyvd")
+texture_pressed = ExtResource("24_b1hwh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Restart" type="TextureButton" parent="HUD/UI_Selection" unique_id=388178164]
+offset_left = 1588.0001
+offset_top = 1032.0001
+offset_right = 1951.3683
+offset_bottom = 1123.0001
+texture_normal = ExtResource("29_ij8d5")
+texture_pressed = ExtResource("30_ljo2x")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="HUD/Pause" to="HUD" method="_on_button_pressed"]
 [connection signal="pressed" from="HUD/Options/BackMenu" to="HUD" method="_on_back_menu_pressed"]
@@ -591,4 +717,8 @@ metadata/_edit_use_anchors_ = true
 [connection signal="toggled" from="HUD/Options/Fullscreen_CB" to="HUD/Options/Fullscreen_CB" method="_on_toggled"]
 [connection signal="pressed" from="HUD/GameOver/Restart" to="HUD" method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxLucky/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxRookie/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
+[connection signal="pressed" from="HUD/UI_Selection/StartRound" to="HUD" method="_on_start_round_pressed"]
+[connection signal="pressed" from="HUD/UI_Selection/PauseRound" to="HUD" method="_on_pause_round_pressed"]
+[connection signal="pressed" from="HUD/UI_Selection/Restart" to="HUD" method="_on_restart_pressed"]

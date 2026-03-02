@@ -20,3 +20,4 @@ func _process(_delta: float) -> void:
 				if child is CharacterBody2D:
 					child.set_deferred("collision_layer", 1)
 					child.set_deferred("collision_mask", 1)
+					

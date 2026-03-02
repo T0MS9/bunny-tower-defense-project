@@ -1,18 +1,15 @@
 extends Node2D
 
-
 func take_dmg(dmg):
 	$PGB_V.value -= dmg
-	
 	if $PGB_V.value == 0:
 		$GameOver.visible = true
 		$Pause.visible = false
 
-
 func _process(delta: float):
+	
 	if $Options.visible || $GameOver.visible == true:
 		get_tree().paused = true
-		
 	else:
 		get_tree().paused = false
 
@@ -45,16 +42,19 @@ func _on_exit_menu_pressed() -> void:
 	$"Options".visible = false
 	$Pause.visible = true
 	
+	
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
-
-
-var HUD_is_Up = false
-func _on_sigminha_pressed() -> void:
-	if HUD_is_Up == false:
-		$HUD_Shop/Shop_Appear.play("Shop_Appear")
-		HUD_is_Up = true
 	
-	else:
-		$HUD_Shop/Shop_Appear.play_backwards("Shop_Appear")
-		HUD_is_Up = false
+
+func _on_start_round_pressed() -> void:
+	$"../../GhostlingSpawner/Timer".start()
+	$UI_Selection/StartRound.visible = false
+	$UI_Selection/PauseRound.visible = true
+
+func _on_pause_round_pressed() -> void:
+	$"../../GhostlingSpawner/Timer".stop()
+	$UI_Selection/StartRound.visible = true
+	$UI_Selection/PauseRound.visible = false
+	
+	get_tree().call_group("Ghostlings", "queue_free")

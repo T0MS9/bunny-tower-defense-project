@@ -53,11 +53,11 @@ script = ExtResource("1_c36il")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
-[node name="Timer" type="Timer" parent="." unique_id=549134753]
+[node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
 autostart = true
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
-position = Vector2(97.937485, -27.587305)
+position = Vector2(-9.062502, -27.587305)
 scale = Vector2(0.11124287, 0.10587178)
 texture = ExtResource("2_xbbb2")
 
@@ -73,22 +73,48 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=406183586]
+position = Vector2(-3.0985658, 114.827095)
 shape = SubResource("CapsuleShape2D_55yyg")
 
 [node name="Range" type="Area2D" parent="." unique_id=1183441845]
 position = Vector2(-37, -80)
 
 [node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=24073726]
-position = Vector2(140, 76)
+position = Vector2(37, 80)
 shape = SubResource("CircleShape2D_a4dix")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="Button" type="Button" parent="." unique_id=1525124063]
-offset_left = 64.0
-offset_top = -58.0
-offset_right = 146.0
-offset_bottom = 52.0
+[node name="Button" type="Button" parent="." unique_id=1166274923]
+offset_left = 48.0
+offset_top = -212.0
+offset_right = 130.0
+offset_bottom = -102.0
+text = "DMG
+400$
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=657454956]
+offset_left = -133.0
+offset_top = -213.0
+offset_right = -51.0
+offset_bottom = -103.0
+text = "SPEED
+ATK
+
+500$"
+metadata/_edit_use_anchors_ = true
+
+[node name="insp" type="Button" parent="." unique_id=1525124063]
+offset_left = -55.0
+offset_top = -81.0
+offset_right = 51.0
+offset_bottom = 74.0
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="insp" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="insp" to="." method="_on_button_mouse_exited"]
