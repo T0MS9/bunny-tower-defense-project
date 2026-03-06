@@ -2,90 +2,14 @@
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1_hdtmh"]
 [ext_resource type="Texture2D" uid="uid://crxax7n5st0cg" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
-[ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="3_opqqp"]
+[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_opqqp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
-radius = 73.792366
-
-[sub_resource type="Animation" id="Animation_k2pjp"]
-resource_name = "Brute_TakeDMG"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brute/Brute:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.23921569, 0.23529412, 1), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brute/Brute:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.083, 0.083), Vector2(0.083, 0.07262598), Vector2(0.083, 0.083)]
-}
-
-[sub_resource type="Animation" id="Animation_opqqp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Brute/Brute:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Brute/Brute:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.083, 0.083)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_opqqp"]
-_data = {
-&"Brute_TakeDMG": SubResource("Animation_k2pjp"),
-&"RESET": SubResource("Animation_opqqp")
-}
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdtmh"]
-bg_color = Color(0.9999998, 0.1516906, 0.2572231, 0.7607843)
-border_width_left = 26
-border_width_top = 5
-border_width_bottom = 5
-border_color = Color(0.56, 0.2128, 0.2128, 1)
-border_blend = true
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-corner_detail = 7
-shadow_color = Color(0, 0, 0, 0.39607844)
-shadow_size = 4
-shadow_offset = Vector2(0.745, 1.05)
+radius = 827.63617
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=1689450392]
 position = Vector2(2, 0)
+scale = Vector2(0.096, 0.096)
 rotates = false
 loop = false
 
@@ -96,40 +20,14 @@ script = ExtResource("1_hdtmh")
 
 [node name="Brute" type="Sprite2D" parent="Brute" unique_id=886288773]
 position = Vector2(5, 6.25)
-scale = Vector2(0.083, 0.083)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_hdtmh")
 
 [node name="HitBoxGhostling" type="CollisionShape2D" parent="Brute" unique_id=708407390]
-position = Vector2(4.9999995, 13.75)
+position = Vector2(5, 117.91687)
 scale = Vector2(0.99999994, 0.8369582)
 shape = SubResource("CircleShape2D_hdtmh")
 
-[node name="Button" type="Button" parent="Brute" unique_id=705459695]
-modulate = Color(1, 1, 1, 0)
-offset_left = -71.25
-offset_top = -50.00005
-offset_right = 52.443962
-offset_bottom = 63.108044
-scale = Vector2(1.1924591, 1.2267026)
-metadata/_edit_use_anchors_ = true
-
-[node name="Brute_TakeDMG" type="AnimationPlayer" parent="Brute" unique_id=790073864]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Brute" unique_id=790073864]
 root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_opqqp")
-
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=411919945]
-offset_left = -48.0
-offset_top = -75.0
-offset_right = 69.0
-offset_bottom = -44.0
-theme_override_colors/font_color = Color(1.224, 1.224, 1.224, 1)
-theme_override_colors/font_outline_color = Color(0.0069834725, 2.8201613e-10, 0.0011421968, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_opqqp")
-theme_override_font_sizes/font_size = 31
-theme_override_styles/fill = SubResource("StyleBoxFlat_hdtmh")
-max_value = 5.0
-value = 5.0
-rounded = true
-
-[connection signal="mouse_entered" from="Brute/Button" to="Brute" method="_on_button_mouse_entered"]
+libraries/Animations = ExtResource("3_opqqp")

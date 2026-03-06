@@ -2,10 +2,6 @@ extends CharacterBody2D
 
 @export var speed = 200
 var vida = 5
-
-func _process(delta: float) -> void:
-	# Atualiza a tua barra de vida visual
-	$"../ProgressBar".value = vida
 	
 func _physics_process(delta):
 	var pf = get_parent() as PathFollow2D
@@ -34,7 +30,7 @@ func DMGED(quantidade):
 	var valor_atual = int(moedas.text)
 	
 	vida -= quantidade
-	$Brute_TakeDMG.play("Brute_TakeDMG")
+	$AnimationPlayer.play("Animations/ghostling_TakeDMG")
 	
 	# --- RECOMPENSA POR HIT ---
 	# Ganha 1 moeda a cada hit, independente do dano
@@ -49,7 +45,6 @@ func DMGED(quantidade):
 		# Lógica de morte
 		speed = 0
 		set_physics_process(false) 
-		$Brute_TakeDMG.play("Brute_TakeDMG") 
-		await $Brute_TakeDMG.animation_finished
-		
+		$AnimationPlayer.play("Animations/ghostling_TakeDMG")
+		await $AnimationPlayer.animation_finished
 		get_parent().queue_free()
