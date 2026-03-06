@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btew3t801ag51"]
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1_hdtmh"]
-[ext_resource type="Texture2D" uid="uid://8kimganq4508" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
+[ext_resource type="Texture2D" uid="uid://crxax7n5st0cg" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2_hdtmh"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="3_opqqp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
@@ -17,7 +17,7 @@ tracks/0/path = NodePath("Brute/Brute:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 0.23921569, 0.23529412, 1), Color(1, 1, 1, 1)]
@@ -29,7 +29,7 @@ tracks/1/path = NodePath("Brute/Brute:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.052995406, 0.1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0.083, 0.083), Vector2(0.083, 0.07262598), Vector2(0.083, 0.083)]

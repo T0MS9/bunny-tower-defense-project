@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://dqclnvpdade1k"]
 
 [ext_resource type="Script" uid="uid://dw7s3gvxrvfn3" path="res://Scripts/Enemies/Ghostling/ghastling.gd" id="1_43je4"]
-[ext_resource type="Texture2D" uid="uid://bl0sostc1x77b" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
+[ext_resource type="Texture2D" uid="uid://jr6dwkssgl1i" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0wji"]
 radius = 37.01351
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=1495579962 groups=["HP"]]
+scale = Vector2(0.096, 0.096)
 rotates = false
 loop = false
 
@@ -20,7 +21,6 @@ scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_6gqum")
 
 [node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghaztling" unique_id=2141100714]
-visible = false
 position = Vector2(1, -6)
 scale = Vector2(0.98, 0.98)
 shape = SubResource("CircleShape2D_p0wji")

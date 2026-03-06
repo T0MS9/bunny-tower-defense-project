@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://btew3t801ag51"]
 
 [ext_resource type="Script" uid="uid://d1obqfb6h1piv" path="res://Scripts/Enemies/Ghostling/ghostling.gd" id="1_3hqvp"]
-[ext_resource type="Texture2D" uid="uid://fwrh6m1qh1qg" path="res://Assets/Enemies/Ghostlings/Ghostling.png" id="2_hyln6"]
+[ext_resource type="Texture2D" uid="uid://c52f41s5mx2rs" path="res://Assets/Enemies/Ghostlings/Ghostling.png" id="2_hyln6"]
+[ext_resource type="AnimationLibrary" uid="uid://dnrjmw4r3e01r" path="res://TakeDMG_Ghostlings.res" id="3_8sqdy"]
 
 [sub_resource type="Animation" id="Animation_hyln6"]
 resource_name = "Brute_TakeDMG"
@@ -31,12 +32,65 @@ tracks/1/keys = {
 "values": [Vector2(0.083, 0.083), Vector2(0.083, 0.07262598), Vector2(0.083, 0.083)]
 }
 
+[sub_resource type="Animation" id="Animation_754id"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.096, 0.096)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_8sqdy"]
 resource_name = "ghostling_TakeDMG"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.096, 0.096), Vector2(0.096, 0.086), Vector2(0.096, 0.096)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.23921569, 0.23529412, 1), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_754id"]
 _data = {
 &"Brute_TakeDMG": SubResource("Animation_hyln6"),
+&"RESET": SubResource("Animation_754id"),
 &"ghostling_TakeDMG": SubResource("Animation_8sqdy")
 }
 
@@ -59,6 +113,7 @@ texture = ExtResource("2_hyln6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ghostling/Ghostling" unique_id=944319890]
 libraries/ = SubResource("AnimationLibrary_754id")
+libraries/global2 = ExtResource("3_8sqdy")
 
 [node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghostling" unique_id=708407390]
 position = Vector2(-1.249995, 1.8750002)
