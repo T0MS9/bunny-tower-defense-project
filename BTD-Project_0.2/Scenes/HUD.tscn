@@ -2,35 +2,35 @@
 
 [ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="1_w0blg"]
 [ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="2_lqayy"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3_lrioy"]
+[ext_resource type="Texture2D" uid="uid://edx860otffmv" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3_lrioy"]
 [ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="4_8ys6w"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="5_8kn8h"]
 [ext_resource type="Texture2D" uid="uid://che8gaxewwtmb" path="res://Assets/Others/UI_Assets/Exit.png" id="5_ij8d5"]
 [ext_resource type="Texture2D" uid="uid://c8ptqbmxfllat" path="res://Assets/Others/UI_Assets/X.png" id="6_ljo2x"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="6_ync2q"]
-[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="7_7bkcm"]
+[ext_resource type="FontFile" uid="uid://dpb1125hu3fhk" path="res://FontText/Candy Planet.ttf" id="7_7bkcm"]
 [ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_6kyvd"]
 [ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="9_b1hwh"]
 [ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="10_ew2rj"]
 [ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="11_2b6re"]
 [ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="12_15qt1"]
-[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="13_wy4oo"]
-[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
-[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
-[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
-[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
+[ext_resource type="Texture2D" uid="uid://lc0r2jd1vrn2" path="res://Assets/Others/HUD_Assets/EventSign.png" id="13_wy4oo"]
+[ext_resource type="Texture2D" uid="uid://c3rf2rypiwqos" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
+[ext_resource type="Texture2D" uid="uid://c7thhk6mk1jcj" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
+[ext_resource type="Texture2D" uid="uid://tx0ykh3avw74" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
+[ext_resource type="Texture2D" uid="uid://b4vepe04mp4sm" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
 [ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="18_lrioy"]
-[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="19_8ys6w"]
+[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="19_8ys6w"]
 [ext_resource type="Texture2D" uid="uid://dut106yptn0k7" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="19_eukkl"]
 [ext_resource type="Texture2D" uid="uid://cw32myafyva10" path="res://Assets/Bunnies/RookieDisable.png" id="20_8ys6w"]
-[ext_resource type="Texture2D" uid="uid://brogtr3kv8yag" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="20_esw7j"]
-[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="20_tvuu7"]
+[ext_resource type="Texture2D" uid="uid://ban2y67qi6gmd" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="20_esw7j"]
+[ext_resource type="Texture2D" uid="uid://cb2o60u26pvij" path="res://Assets/Bunnies/Lucky.png" id="20_tvuu7"]
 [ext_resource type="Texture2D" uid="uid://dwdyptxttt1b0" path="res://Assets/Others/HUD_Assets/Start.png" id="21_8kn8h"]
 [ext_resource type="Texture2D" uid="uid://brvkk8eh3jr6u" path="res://Assets/Bunnies/LuckyDisable.png" id="21_esw7j"]
 [ext_resource type="Texture2D" uid="uid://clp3vwvpiht1c" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22_1slhg"]
 [ext_resource type="Texture2D" uid="uid://cx66sdl26r7of" path="res://Assets/Others/HUD_Assets/StartPressed.png" id="22_ync2q"]
 [ext_resource type="Texture2D" uid="uid://bqifqdi0hicud" path="res://Assets/Others/HUD_Assets/Pause.png" id="23_6kyvd"]
-[ext_resource type="Texture2D" uid="uid://d2yb01obfxojq" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="23_esw7j"]
+[ext_resource type="Texture2D" uid="uid://cts04b62b4llr" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="23_esw7j"]
 [ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="24_b1hwh"]
 [ext_resource type="Texture2D" uid="uid://b2pvy1ylh8v27" path="res://Assets/Others/HUD_Assets/Restart.png" id="29_ij8d5"]
 [ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="30_ljo2x"]
@@ -155,16 +155,15 @@ scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("1_w0blg")
 
 [node name="Pause" type="Button" parent="HUD" unique_id=2089806370]
-offset_left = 1437.0001
-offset_top = 61.000004
-offset_right = 1542.6047
-offset_bottom = 166.60461
+offset_left = 1464.0001
+offset_top = 56.000004
+offset_right = 1545.6047
+offset_bottom = 137.60461
 theme_override_font_sizes/font_size = 76
 icon = ExtResource("2_lqayy")
 flat = true
 icon_alignment = 1
 expand_icon = true
-metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Panel" parent="HUD" unique_id=2036140806]
 visible = false
@@ -371,10 +370,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Vida" type="Label" parent="HUD" unique_id=1231903724]
 process_mode = 3
-offset_left = 176.87427
-offset_top = 100.59888
-offset_right = 302.62277
-offset_bottom = 165.59885
+offset_left = 165.87427
+offset_top = 93.59888
+offset_right = 291.62277
+offset_bottom = 158.59885
 theme = SubResource("Theme_c4wnb")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -386,8 +385,8 @@ script = ExtResource("8_6kyvd")
 metadata/_edit_use_anchors_ = true
 
 [node name="Heart" type="Sprite2D" parent="HUD" unique_id=1880252046]
-position = Vector2(113.77246, 119.760345)
-scale = Vector2(0.15173654, 0.15173654)
+position = Vector2(105.83234, 111.82022)
+scale = Vector2(0.12905048, 0.12905048)
 texture = ExtResource("9_b1hwh")
 
 [node name="HeartBroke" type="Sprite2D" parent="HUD" unique_id=869311774]
@@ -397,16 +396,16 @@ scale = Vector2(0.152, 0.152)
 texture = ExtResource("10_ew2rj")
 
 [node name="Coin" type="Sprite2D" parent="HUD" unique_id=771336608]
-position = Vector2(113.77252, 227.54474)
-scale = Vector2(0.152, 0.152)
+position = Vector2(102.78626, 216.55849)
+scale = Vector2(0.120610684, 0.120610684)
 texture = ExtResource("11_2b6re")
 
 [node name="Moedas" type="Label" parent="HUD" unique_id=432508488]
 process_mode = 3
-offset_left = 176.87418
-offset_top = 202.024
-offset_right = 302.62268
-offset_bottom = 267.02402
+offset_left = 165.87418
+offset_top = 194.024
+offset_right = 291.62268
+offset_bottom = 259.02402
 theme = SubResource("Theme_7plk7")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
@@ -426,7 +425,7 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 max_value = 99999999.0
 step = 1.0
-value = 190.0
+value = 9990.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=1396536025]
@@ -442,27 +441,28 @@ position = Vector2(52.999992, 59.000004)
 position = Vector2(1093.0211, -318)
 scale = Vector2(0.9999999, 0.9999998)
 skew = 1.56907
-polygon = PackedVector2Array(-71218.28, -72407.375, 186544.53, 185362.81, 189313.11, 191155.4, -73662.016, -71828.11)
+polygon = PackedVector2Array(-70564.016, -71828.11, 185468.02, 184204.3, 182353.02, 184204.3, -72520.5, -70669.59)
 
 [node name="Left" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=1794759592]
 position = Vector2(1, 0)
 scale = Vector2(0.9999998, 0.9999998)
-polygon = PackedVector2Array(-759.0002, -1.9999967, 3.8146973e-06, 3.8146973e-06, -1.9999967, 1721.0004, -724.0002, 1721.0004)
+polygon = PackedVector2Array(-759.0002, 3.814698e-06, 3.8146973e-06, 3.8146973e-06, -1.9999967, 1721.0004, -759.0002, 1721.0004)
 
 [node name="Right" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=2044825819]
 position = Vector2(-11877.241, -4)
 scale = Vector2(7.8909883, 1)
-polygon = PackedVector2Array(1693.8613, 4.000004, 1792.3281, 4.000004, 1792.0746, 1130, 1693.8613, 1131)
+polygon = PackedVector2Array(1693.8613, 4.000004, 1803.8602, 4.000004, 1804.1136, 1086, 1693.8613, 1085)
 
 [node name="Down" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=1688730896]
 position = Vector2(1105.0054, -341.00003)
 scale = Vector2(0.99999994, 0.99999994)
 skew = 1.569051
-polygon = PackedVector2Array(811426.4, 810176.7, 1210791.5, 1209535.4, 1182625.9, 1183751.9, 812508.1, 813614.5)
+polygon = PackedVector2Array(816586.06, 815333.4, 1182712, 1181460, 1180926, 1182032.9, 812508.1, 813614.5)
 
 [node name="Settings" type="CollisionPolygon2D" parent="HUD/Limits" unique_id=228766173]
-position = Vector2(1474, 28.000004)
-polygon = PackedVector2Array(-94.99988, -24.999998, -94.99988, 78, 19.000122, 78, 18.000122, -24.999998)
+position = Vector2(1479.0001, 16.000008)
+scale = Vector2(0.67519164, 0.67317224)
+polygon = PackedVector2Array(-101.05957, -24.795378, -101.05957, 91.073944, 18.906494, 91.073944, 19, -25.00001)
 
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1878578739]
 position = Vector2(2157.9224, 765.2696)

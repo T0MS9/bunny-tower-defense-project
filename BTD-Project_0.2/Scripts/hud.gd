@@ -47,10 +47,10 @@ func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
 	
 
-func _on_start_round_pressed() -> void:
-	$"../../GhostlingSpawner/Timer".start()
-	$UI_Selection/StartRound.visible = false
-	$UI_Selection/PauseRound.visible = true
+#func _on_start_round_pressed() -> void:
+	#$"../../GhostlingSpawner/Timer".start()
+	#$UI_Selection/StartRound.visible = false
+	#$UI_Selection/PauseRound.visible = true
 
 func _on_pause_round_pressed() -> void:
 	$"../../GhostlingSpawner/Timer".stop()

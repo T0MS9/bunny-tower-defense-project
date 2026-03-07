@@ -48,6 +48,7 @@ height = 99.867
 radius = 196.01021
 
 [node name="Rookie" type="StaticBody2D" unique_id=264265458]
+y_sort_enabled = true
 position = Vector2(0, -4)
 script = ExtResource("1_c36il")
 

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ck54h7hm2nb4k"]
+
+[ext_resource type="Script" uid="uid://cuh6bt4t0j161" path="res://Scripts/Enemies/Ghostling/ghoul.gd" id="1_xj2dx"]
+[ext_resource type="Texture2D" uid="uid://cj5wh7laeo0vj" path="res://Assets/Enemies/Ghostlings/Ghoul.png" id="2_b7p1r"]
+[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_gt3ln"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrukc"]
+radius = 35.0
+height = 110.0
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=945220788]
+rotates = false
+loop = false
+
+[node name="Ghoul" type="CharacterBody2D" parent="." unique_id=1159223801 groups=["Ghostlings"]]
+position = Vector2(1, 0)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_xj2dx")
+
+[node name="Ghoul" type="Sprite2D" parent="Ghoul" unique_id=1107085541]
+position = Vector2(2.5000002, 1.250001)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("2_b7p1r")
+
+[node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghoul" unique_id=1645084352]
+position = Vector2(1.1920929e-07, 1.2499998)
+scale = Vector2(1.2499999, 1.2499999)
+shape = SubResource("CapsuleShape2D_xrukc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ghoul" unique_id=205048655]
+root_node = NodePath("../Ghoul")
+libraries/Animations = ExtResource("3_gt3ln")

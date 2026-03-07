@@ -32,6 +32,22 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://dfdo8udp78a56"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Assets/Bunnies/": "gray",
+"res://Assets/Enemies/": "blue",
+"res://FontText/": "orange",
+"res://Scenes/": "teal",
+"res://Scenes/Enemies/": "blue",
+"res://Scenes/Towers/": "gray",
+"res://Scripts/": "green",
+"res://Scripts/Bunnies/": "gray",
+"res://Scripts/Enemies/": "blue",
+"res://z. Others/": "gray"
+}
+
 [global_group]
 
 HP=""
