@@ -6,8 +6,10 @@ extends CharacterBody2D
 func _physics_process(delta):
 	var pf = get_parent() as PathFollow2D
 	pf.progress += speed * delta
-	if $"..".progress_ratio == 1:
-		get_tree().call_group("HP", "take_dmg", 1)
+	
+#codigo q perder vidas quando chega ao fim (NGM)
+	if $"..".progress_ratio >= 0.99:
+		get_tree().call_group("HP", "take_dmg", 3)
 		get_parent().queue_free()
 
 

@@ -7,18 +7,10 @@ func _physics_process(delta):
 	var pf = get_parent() as PathFollow2D
 	pf.progress += speed * delta
 
+#codigo q perder vidas quando chega ao fim (NGM)
 	if $"..".progress_ratio >= 0.99:
-		perder_vida_base()
-
-func perder_vida_base():
-	var moedas = get_tree().current_scene.find_child("Moedas")
-	var valor_atual = int(moedas.text)
-
-	get_tree().call_group("HP", "take_dmg", 1)
-	
-	moedas.text = str(valor_atual + 1)
-
-	get_parent().queue_free()
+		get_tree().call_group("HP", "take_dmg", 2)
+		get_parent().queue_free()
 
 func DMGED(quantidade):
 	var moedas = get_tree().current_scene.find_child("Moedas")
