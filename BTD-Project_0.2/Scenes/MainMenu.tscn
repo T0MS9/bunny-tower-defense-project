@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://co48p2eyjxms8"]
 
 [ext_resource type="Script" uid="uid://dfto0bmxbs4h6" path="res://main_menu.gd" id="1_rrcx7"]
-[ext_resource type="Texture2D" uid="uid://f3xuahwb0aub" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
-[ext_resource type="Texture2D" uid="uid://bicsm385687ff" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
-[ext_resource type="Texture2D" uid="uid://c01l13a5lp18d" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://cf2qs2fcpxqa0" path="res://Assets/Others/Menu_Assets/MenuBackground.png" id="2_8e205"]
+[ext_resource type="Texture2D" uid="uid://ileb1pej7c20" path="res://Assets/Others/Menu_Assets/MenuBunnies.png" id="4_7467j"]
+[ext_resource type="Texture2D" uid="uid://gtfbe4tsacce" path="res://Assets/Others/Menu_Assets/MenuGhosts.png" id="5_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://bcu77vkia7yw" path="res://Assets/Others/Menu_Assets/GameLogo.png" id="5_rrcx7"]
 [ext_resource type="AudioStream" uid="uid://cc1b1h51tmd2f" path="res://Assets/Music/Main Theme.mp3" id="7_riqfo"]
 [ext_resource type="Texture2D" uid="uid://b16vpb8pi0bel" path="res://Assets/Others/Menu_Assets/Continue.png" id="10_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="10_7467j"]
 [ext_resource type="AudioStream" uid="uid://cxe2c4hpb31p8" path="res://Assets/SFX/game-start-6104.mp3" id="10_rrcx7"]
 [ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="11_if7li"]
-[ext_resource type="Texture2D" uid="uid://d0ct1mxw87rj6" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
+[ext_resource type="Texture2D" uid="uid://b8rn0oafs20qj" path="res://Assets/Others/Menu_Assets/Achievements.png" id="11_riqfo"]
 [ext_resource type="Texture2D" uid="uid://dygqb8vuudxgm" path="res://Assets/Others/Menu_Assets/Beastiario.png" id="12_riqfo"]
 [ext_resource type="Texture2D" uid="uid://ck1q1t6nr52re" path="res://Assets/Others/Menu_Assets/ExitSign.png" id="12_yxkem"]
 [ext_resource type="Texture2D" uid="uid://v6cpx701f0e0" path="res://Assets/Others/Menu_Assets/Settings.png" id="13_8e205"]
-[ext_resource type="Texture2D" uid="uid://d0ifrjks7f015" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
+[ext_resource type="Texture2D" uid="uid://dnf1s142qe46j" path="res://Assets/Others/Menu_Assets/Play.png" id="13_7467j"]
 [ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="13_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://c2bo237k5k4hn" path="res://Assets/Others/Menu_Assets/MenuButtonPosGrass.png" id="14_2x1g0"]
 [ext_resource type="Texture2D" uid="uid://c5a3nj8tuk2gh" path="res://Assets/Others/Menu_Assets/SillyBunny.png" id="14_pjscj"]
@@ -244,13 +244,11 @@ texture = ExtResource("5_rrcx7")
 
 [node name="StartGame_Sound" type="AudioStreamPlayer2D" parent="." unique_id=1389504441]
 stream = ExtResource("10_rrcx7")
-bus = &"SFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2123186058]
 stream = ExtResource("7_riqfo")
 volume_db = -17.0
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 
 [node name="MainMenu_Left" type="Node2D" parent="." unique_id=1897760061]
@@ -305,7 +303,6 @@ flat = true
 
 [node name="Squeaky" type="AudioStreamPlayer2D" parent="MainMenu_Left/SillyBunny" unique_id=903571009]
 stream = ExtResource("15_pjscj")
-bus = &"SFX"
 
 [node name="MenuButtonPosGrass" type="Sprite2D" parent="MainMenu_Left" unique_id=1454186594]
 position = Vector2(-200.00002, 540)

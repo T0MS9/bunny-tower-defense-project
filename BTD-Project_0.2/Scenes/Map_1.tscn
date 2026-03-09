@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cf5i2ng5uq7i"]
 
-[ext_resource type="Script" uid="uid://deemh3xh6l078" path="res://Scenes/map_1.gd" id="1_gtlmr"]
+[ext_resource type="Script" uid="uid://deemh3xh6l078" path="res://Scripts/map_1.gd" id="1_gtlmr"]
 [ext_resource type="Script" uid="uid://cj5vuu45ii5tk" path="res://Scripts/ghostling_spawner.gd" id="2_0e48y"]
 [ext_resource type="AudioStream" uid="uid://cql1rug0rv5p8" path="res://Assets/Music/Graveyard Groove.mp3" id="2_so52r"]
-[ext_resource type="Texture2D" uid="uid://d3xcag3erc7ei" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
+[ext_resource type="Texture2D" uid="uid://bgehk1b1jwja5" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
 [ext_resource type="PackedScene" uid="uid://cvtf3eidvbt76" path="res://Scenes/HUD.tscn" id="6_teiq6"]
-[ext_resource type="Texture2D" uid="uid://e36qpqy7rsjv" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
+[ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
 
 [sub_resource type="Curve2D" id="Curve2D_lycfg"]
 _data = {
@@ -36,10 +36,10 @@ autostart = true
 
 [node name="Map" type="Sprite2D" parent="." unique_id=2040754683]
 y_sort_enabled = true
-position = Vector2(1015.5689, -83.83232)
+position = Vector2(1017.9642, -29.940002)
 scale = Vector2(0.5990241, 0.59902424)
 texture = ExtResource("2_yi2un")
-offset = Vector2(296.5122, 1303.1171)
+offset = Vector2(292.51355, 1213.1501)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1947152330]
 y_sort_enabled = true
@@ -55,9 +55,10 @@ loop = false
 
 [node name="BushPosition" type="Sprite2D" parent="." unique_id=1478967233]
 y_sort_enabled = true
-position = Vector2(1193.4265, 696.52686)
+position = Vector2(1114.9702, 888.6228)
 scale = Vector2(0.59924597, 0.59924597)
 texture = ExtResource("17_dtr0u")
+offset = Vector2(130.9253, -320.56262)
 
 [node name="Area_Path" type="Area2D" parent="." unique_id=655402903 groups=["no_place"]]
 y_sort_enabled = true

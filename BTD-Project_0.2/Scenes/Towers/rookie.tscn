@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpsi13nm48dib"]
 
 [ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1_c36il"]
-[ext_resource type="Texture2D" uid="uid://bxjdpn2byoavy" path="res://Assets/Bunnies/Rookie.png" id="2_xbbb2"]
+[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="2_xbbb2"]
 
 [sub_resource type="Animation" id="Animation_c36il"]
 length = 0.001
