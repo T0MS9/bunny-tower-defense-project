@@ -391,8 +391,8 @@ texture = ExtResource("9_b1hwh")
 
 [node name="HeartBroke" type="Sprite2D" parent="HUD" unique_id=869311774]
 visible = false
-position = Vector2(113.772, 119.76)
-scale = Vector2(0.152, 0.152)
+position = Vector2(105.786, 111.774)
+scale = Vector2(0.12918285, 0.12918285)
 texture = ExtResource("10_ew2rj")
 
 [node name="Coin" type="Sprite2D" parent="HUD" unique_id=771336608]

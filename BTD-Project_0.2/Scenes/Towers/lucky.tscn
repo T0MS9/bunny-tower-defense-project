@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1_dl7t5"]
-[ext_resource type="Texture2D" uid="uid://cb2o60u26pvij" path="res://Assets/Bunnies/Lucky.png" id="2_phvx5"]
+[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="2_phvx5"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -79,7 +79,6 @@ script = ExtResource("1_dl7t5")
 
 [node name="Timer" type="Timer" parent="." unique_id=2011954952 groups=["Timers"]]
 wait_time = 3.0
-autostart = true
 
 [node name="Lucky" type="Sprite2D" parent="." unique_id=73068581]
 position = Vector2(-9.062502, -27.587305)

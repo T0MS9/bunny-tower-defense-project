@@ -8,9 +8,11 @@ extends Node2D
 # Dica: É melhor usar moedas_barra.value em vez de converter o texto sempre
 @onready var moedas_atuais = int(moedas_label.text)
 
+#só para o Lucky e talvez o 
+var tipo_torre_atual = ""
+
 var temp_tower = null
 var local_proibido = false 
-# --- NOVA VARIÁVEL PARA O CUSTO ---
 var custo_da_torre_atual = 0
 
 
@@ -62,6 +64,7 @@ func _on_rookie_button_down() -> void:
 
 func _on_lucky_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 200:
+		tipo_torre_atual = "lucky"
 		temp_tower = lucky_scene.instantiate()
 		custo_da_torre_atual = 200 # <--- Define o custo aqui
 		configurar_torre_temp()
@@ -78,7 +81,10 @@ func configurar_torre_temp():
 	get_tree().current_scene.add_child(temp_tower)
 
 func largar_torre():
-
+	if tipo_torre_atual == "lucky":
+		temp_tower.get_node("Timer").start()
+		
+		
 	if temp_tower:
 		# --- AQUI ESTÁ A ADAPTAÇÃO ---
 		# Verifica se ainda temos moedas baseadas no custo definido ao clicar

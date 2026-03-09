@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqclnvpdade1k"]
 
 [ext_resource type="Script" uid="uid://dw7s3gvxrvfn3" path="res://Scripts/Enemies/Ghostling/ghastling.gd" id="1_43je4"]
-[ext_resource type="Texture2D" uid="uid://divr8sdumf82b" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
+[ext_resource type="Texture2D" uid="uid://jr6dwkssgl1i" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
 [ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_5no51"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0wji"]

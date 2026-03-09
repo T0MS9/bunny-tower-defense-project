@@ -6,8 +6,10 @@ extends Node2D
 	preload("res://Scenes/Enemies/Ghostling/ghazt.tscn"),
 	preload("res://Scenes/Enemies/Ghostling/ghoul.tscn"),
 ]
+
 @onready var HardGhostlings = [
-	preload("res://Scenes/Enemies/Ghostling/brute.tscn")
+	preload("res://Scenes/Enemies/Ghostling/brute.tscn"),
+	preload("res://Scenes/Enemies/Ghostling/enhanced_ghaztling.tscn")
 ]
 
 func _on_timer_timeout():

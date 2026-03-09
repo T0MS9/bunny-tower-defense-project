@@ -85,27 +85,6 @@ position = Vector2(37, 80)
 shape = SubResource("CircleShape2D_a4dix")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="Button" type="Button" parent="." unique_id=1166274923]
-offset_left = 48.0
-offset_top = -212.0
-offset_right = 130.0
-offset_bottom = -102.0
-text = "DMG
-400$
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="Button2" type="Button" parent="." unique_id=657454956]
-offset_left = -133.0
-offset_top = -213.0
-offset_right = -51.0
-offset_bottom = -103.0
-text = "SPEED
-ATK
-
-500$"
-metadata/_edit_use_anchors_ = true
-
 [node name="insp" type="Button" parent="." unique_id=1525124063]
 offset_left = -55.0
 offset_top = -81.0
@@ -115,7 +94,5 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="insp" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="insp" to="." method="_on_button_mouse_exited"]
