@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var rookie_scene = preload("res://Scenes/Towers/rookie.tscn")
 @onready var lucky_scene = preload("res://Scenes/Towers/lucky.tscn")
+@onready var slasher_scene = preload("res://Scenes/Towers/slasher.tscn")
+
 
 @onready var moedas_label = $"../../Moedas"
 @onready var moedas_barra = $"../../PGB_M"
@@ -27,6 +29,9 @@ func _process(_delta: float) -> void:
 	
 	$BoxLucky/Lucky.disabled = (moedas_atuais < 200)
 	$BoxLucky.disabled = (moedas_atuais < 200)
+	
+	$BoxSlasher/Slasher.disabled = (moedas_atuais < 160)
+	$BoxSlasher.disabled = (moedas_atuais < 160)
 	
 	if temp_tower != null:
 		temp_tower.global_position = get_global_mouse_position()
@@ -60,6 +65,13 @@ func _on_rookie_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 125:
 		temp_tower = rookie_scene.instantiate()
 		custo_da_torre_atual = 125 # <--- Define o custo aqui
+		configurar_torre_temp()
+		
+		
+func _on_slasher_button_down() -> void:
+	if temp_tower == null and moedas_atuais >= 160:
+		temp_tower = slasher_scene.instantiate()
+		custo_da_torre_atual = 160 # <--- Define o custo aqui
 		configurar_torre_temp()
 
 func _on_lucky_button_down() -> void:
