@@ -108,4 +108,13 @@ position = Vector2(37, 79)
 shape = SubResource("CircleShape2D_q08p7")
 debug_color = Color(0, 0, 0, 0.41960785)
 
+[node name="insp" type="Button" parent="." unique_id=478641266]
+offset_left = -49.0
+offset_top = -89.0
+offset_right = 58.0
+offset_bottom = 74.0
+flat = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="insp" to="." method="_on_insp_mouse_entered"]
+[connection signal="mouse_exited" from="insp" to="." method="_on_insp_mouse_exited"]

@@ -15,11 +15,11 @@ func _draw() -> void:
 			var raio_final = shape.radius * $Range/CollisionRange.scale.x
 			draw_circle(Vector2.ZERO, raio_final, Color(0.46, 0.46, 0.46, 0.443))
 
-func _on_button_mouse_entered() -> void:
+func _on_insp_mouse_entered() -> void:
 	mostrar_range = true
 	queue_redraw()
 
-func _on_button_mouse_exited() -> void:
+func _on_insp_mouse_exited() -> void:
 	mostrar_range = false
 	queue_redraw()
 
