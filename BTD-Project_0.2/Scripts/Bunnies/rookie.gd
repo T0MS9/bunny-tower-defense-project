@@ -28,6 +28,7 @@ func _on_timer_timeout() -> void:
 	for corpo in corpos:
 		if corpo.is_in_group("Ghostlings"):
 			atacar(corpo)
+			break
 
 func atacar(alvo):
 	if alvo.has_method("DMGED"):

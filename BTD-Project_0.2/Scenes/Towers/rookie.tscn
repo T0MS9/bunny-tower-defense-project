@@ -86,10 +86,10 @@ shape = SubResource("CircleShape2D_a4dix")
 debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="insp" type="Button" parent="." unique_id=1525124063]
-offset_left = -55.0
-offset_top = -81.0
-offset_right = 51.0
-offset_bottom = 74.0
+offset_left = -46.0
+offset_top = -79.0
+offset_right = 60.0
+offset_bottom = 76.0
 flat = true
 metadata/_edit_use_anchors_ = true
 
