@@ -90,6 +90,7 @@ func _on_lucky_button_down() -> void:
 		
 func _on_gooey_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 90:
+		tipo_torre_atual = "gooey"
 		temp_tower = gooey_scene.instantiate()
 		custo_da_torre_atual = 90 # <--- Define o custo aqui
 		configurar_torre_temp()

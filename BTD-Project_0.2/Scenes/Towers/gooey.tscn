@@ -40,12 +40,12 @@ _data = {
 &"RESET": SubResource("Animation_ye2iy")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hhwlc"]
-radius = 22.0
-height = 63.999996
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8q63j"]
+radius = 37.326958
+height = 99.867
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wskal"]
-radius = 238.0021
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjj1g"]
+radius = 238.0084
 
 [node name="Gooey" type="StaticBody2D" unique_id=264265458]
 y_sort_enabled = true
@@ -55,7 +55,8 @@ script = ExtResource("1_8q63j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
-autostart = true
+wait_time = 3.5
+one_shot = true
 
 [node name="Gooey" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(-9.062502, -27.587305)
@@ -65,22 +66,24 @@ texture = ExtResource("2_cjj1g")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gooey" unique_id=942570530]
 libraries/ = SubResource("AnimationLibrary_lbqu6")
 
-[node name="HitBox" type="Area2D" parent="." unique_id=1847531973 groups=["no_place"]]
-position = Vector2(0, -3.8146973e-06)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=668736513]
-position = Vector2(-3.0000002, 55.000008)
+[node name="HitBox" type="Area2D" parent="." unique_id=1210907078 groups=["no_place"]]
+position = Vector2(107.93747, 42.91265)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_hhwlc")
+scale = Vector2(0.94, 0.94)
+collision_layer = 3
+collision_mask = 3
 
-[node name="Range" type="Area2D" parent="." unique_id=482248264]
-position = Vector2(0, -3.8146973e-06)
+[node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=1656721606]
+position = Vector2(-3.0985658, 114.827095)
+shape = SubResource("CapsuleShape2D_8q63j")
+
+[node name="Range" type="Area2D" parent="." unique_id=1824610563]
+position = Vector2(-36.999996, -79.99999)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=1173007971]
-position = Vector2(0, 3.8146973e-06)
-shape = SubResource("CircleShape2D_wskal")
+[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=692409470]
+position = Vector2(37, 80)
+shape = SubResource("CircleShape2D_cjj1g")
 debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="insp" type="Button" parent="." unique_id=1525124063]
