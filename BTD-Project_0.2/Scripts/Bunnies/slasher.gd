@@ -5,11 +5,6 @@ var mostrar_range = false
 var contagem_ult = 0
 var dmg_Slasher = 3
 
-
-#@onready encontra os nós assim que o jogo começa
-@onready var moedas_label = get_tree().current_scene.find_child("Moedas", true, false)
-@onready var moedas_barra = get_tree().current_scene.find_child("PGB_M", true, false)
-
 @onready var SlasherNormal = preload("res://Assets/Bunnies/Slasher.png")
 @onready var SlasherUlt = preload("res://Assets/Others/Abilities & Utilities/SlasherUlt.png")
 
@@ -56,7 +51,6 @@ func atacar(alvo):
 			$Slasher.texture = SlasherNormal
 			alvo.DMGED(dmg_Slasher)
 			
-		print(contagem_ult)
 		# RESET: Agora ele tem de recarregar
 		pronto_para_atacar = false
 		$Timer.start() # Recomeça o cooldown de 2.5s

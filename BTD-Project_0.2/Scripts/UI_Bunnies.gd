@@ -3,6 +3,7 @@ extends Node2D
 @onready var rookie_scene = preload("res://Scenes/Towers/rookie.tscn")
 @onready var lucky_scene = preload("res://Scenes/Towers/lucky.tscn")
 @onready var slasher_scene = preload("res://Scenes/Towers/slasher.tscn")
+@onready var gooey_scene = preload("res://Scenes/Towers/gooey.tscn")
 
 
 @onready var moedas_label = $"../../Moedas"
@@ -33,6 +34,9 @@ func _process(_delta: float) -> void:
 	$BoxSlasher/Slasher.disabled = (moedas_atuais < 160)
 	$BoxSlasher.disabled = (moedas_atuais < 160)
 	
+	$BoxGooey/Gooey.disabled = (moedas_atuais < 90)
+	$BoxGooey.disabled = (moedas_atuais < 90)
+	
 	if temp_tower != null:
 		temp_tower.global_position = get_global_mouse_position()
 		
@@ -61,12 +65,15 @@ func _process(_delta: float) -> void:
 				temp_tower = null
 				custo_da_torre_atual = 0
 
+
+#Config dos botões dos Bunnies
+#///////////////////////////////////////////////////////////////
+
 func _on_rookie_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 125:
 		temp_tower = rookie_scene.instantiate()
 		custo_da_torre_atual = 125 # <--- Define o custo aqui
 		configurar_torre_temp()
-		
 		
 func _on_slasher_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 160:
@@ -80,6 +87,14 @@ func _on_lucky_button_down() -> void:
 		temp_tower = lucky_scene.instantiate()
 		custo_da_torre_atual = 200 # <--- Define o custo aqui
 		configurar_torre_temp()
+		
+func _on_gooey_button_down() -> void:
+	if temp_tower == null and moedas_atuais >= 90:
+		temp_tower = gooey_scene.instantiate()
+		custo_da_torre_atual = 90 # <--- Define o custo aqui
+		configurar_torre_temp()
+	
+#///////////////////////////////////////////////////////////////
 
 # Função auxiliar para não repetir código de configuração
 func configurar_torre_temp():

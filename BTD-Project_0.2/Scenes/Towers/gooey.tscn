@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cflli26dslt1p"]
+
+[ext_resource type="Script" uid="uid://b4i63c7s3pbvr" path="res://Scripts/Bunnies/gooey.gd" id="1_8q63j"]
+[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="2_cjj1g"]
+
+[sub_resource type="Animation" id="Animation_72gkk"]
+resource_name = "Gooey_Attack"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.11519173, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ye2iy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lbqu6"]
+_data = {
+&"Gooey_Attack": SubResource("Animation_72gkk"),
+&"RESET": SubResource("Animation_ye2iy")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hhwlc"]
+radius = 22.0
+height = 63.999996
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wskal"]
+radius = 238.0021
+
+[node name="Gooey" type="StaticBody2D" unique_id=264265458]
+y_sort_enabled = true
+position = Vector2(0, -4)
+script = ExtResource("1_8q63j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
+
+[node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
+autostart = true
+
+[node name="Gooey" type="Sprite2D" parent="." unique_id=799830229]
+position = Vector2(-9.062502, -27.587305)
+scale = Vector2(0.11124287, 0.10587178)
+texture = ExtResource("2_cjj1g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gooey" unique_id=942570530]
+libraries/ = SubResource("AnimationLibrary_lbqu6")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1847531973 groups=["no_place"]]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=668736513]
+position = Vector2(-3.0000002, 55.000008)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hhwlc")
+
+[node name="Range" type="Area2D" parent="." unique_id=482248264]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=1173007971]
+position = Vector2(0, 3.8146973e-06)
+shape = SubResource("CircleShape2D_wskal")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="insp" type="Button" parent="." unique_id=1525124063]
+offset_left = -46.0
+offset_top = -79.0
+offset_right = 60.0
+offset_bottom = 76.0
+flat = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="insp" to="." method="_on_insp_mouse_entered"]
+[connection signal="mouse_exited" from="insp" to="." method="_on_insp_mouse_exited"]

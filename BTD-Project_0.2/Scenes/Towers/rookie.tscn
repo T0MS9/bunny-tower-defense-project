@@ -55,7 +55,7 @@ script = ExtResource("1_c36il")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
-autostart = true
+one_shot = true
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(-9.062502, -27.587305)

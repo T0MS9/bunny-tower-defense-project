@@ -12,7 +12,8 @@ extends Node2D
 ]
 
 func _on_timer_timeout():
-	var All_Ghostlings = EasyGhostlings + HardGhostlings
+	var All_Ghostlings = EasyGhostlings 
+	#+ HardGhostlings
 	
 	var Ghostling = All_Ghostlings.pick_random()
 	var tempPath = Ghostling.instantiate()

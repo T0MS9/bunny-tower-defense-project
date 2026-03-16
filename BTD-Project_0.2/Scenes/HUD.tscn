@@ -34,8 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="24_b1hwh"]
 [ext_resource type="Texture2D" uid="uid://bewynet5sfny3" path="res://Assets/Bunnies/Slasher.png" id="29_7gk6a"]
 [ext_resource type="Texture2D" uid="uid://b2pvy1ylh8v27" path="res://Assets/Others/HUD_Assets/Restart.png" id="29_ij8d5"]
+[ext_resource type="Texture2D" uid="uid://cqguy8kumyt65" path="res://Assets/Others/HUD_Assets/BunnyBoxStun.png" id="29_ulk2q"]
 [ext_resource type="Texture2D" uid="uid://bfyreavg6683s" path="res://Assets/Bunnies/SlasherDisable.png" id="30_g4dvh"]
 [ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="30_ljo2x"]
+[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="30_vdgmp"]
 [ext_resource type="Texture2D" uid="uid://ccwyjijlk56k" path="res://Assets/Bunnies/GooeyDisable.png" id="33_j3rjm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ornx7"]
@@ -361,10 +363,10 @@ theme_override_font_sizes/font_size = 46
 text = "Voltar ao Menu"
 
 [node name="PGB_V" type="ProgressBar" parent="HUD" unique_id=633366904]
-offset_left = 1414.3713
-offset_top = -81.43712
-offset_right = 1632.3356
-offset_bottom = 27.544922
+offset_left = 72.0
+offset_top = -505.00006
+offset_right = 289.96423
+offset_bottom = -396.018
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 step = 1.0
@@ -420,15 +422,15 @@ script = ExtResource("12_15qt1")
 metadata/_edit_use_anchors_ = true
 
 [node name="PGB_M" type="ProgressBar" parent="HUD" unique_id=1840660125]
-offset_left = 1644.3116
-offset_top = -81.43713
-offset_right = 1862.2759
-offset_bottom = 27.544907
+offset_left = 301.9403
+offset_top = -505.00006
+offset_right = 519.90466
+offset_bottom = -396.018
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
-max_value = 190.0
+max_value = 9999999.0
 step = 1.0
-value = 190.0
+value = 290.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=1396536025]
@@ -653,7 +655,7 @@ offset_left = 1715.0
 offset_top = 416.0
 offset_right = 1920.0
 offset_bottom = 687.0
-texture_normal = ExtResource("20_esw7j")
+texture_normal = ExtResource("29_ulk2q")
 texture_disabled = ExtResource("20_esw7j")
 ignore_texture_size = true
 stretch_mode = 0
@@ -669,7 +671,7 @@ offset_left = 0.09028816
 offset_top = -0.035015106
 offset_right = 0.07029724
 offset_bottom = 0.021972656
-texture_normal = ExtResource("33_j3rjm")
+texture_normal = ExtResource("30_vdgmp")
 texture_disabled = ExtResource("33_j3rjm")
 ignore_texture_size = true
 stretch_mode = 0
@@ -693,7 +695,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
-text = "---"
+text = "90"
 
 [node name="BoxSlasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=1524848138]
 offset_left = 1514.0
@@ -777,6 +779,7 @@ stretch_mode = 0
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxLucky/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxRookie/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxGooey/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxSlasher/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
 [connection signal="pressed" from="HUD/UI_Selection/StartRound" to="HUD" method="_on_start_round_pressed"]
 [connection signal="pressed" from="HUD/UI_Selection/PauseRound" to="HUD" method="_on_pause_round_pressed"]
