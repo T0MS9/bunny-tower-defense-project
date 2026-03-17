@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed = 550
 @export var vida = 1
 
-const GOSMA_SPRITE = preload("res://Assets/Others/Abilities & Utilities/GooAttack.png")
+const GOSMA_SPRITE = preload("res://Assets/Enemies/Ghostlings/Ghaztling_Slimed.png")
 
 
 func _physics_process(delta):

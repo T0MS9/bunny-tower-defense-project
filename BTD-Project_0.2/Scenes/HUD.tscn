@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
 [ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
 [ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
+[ext_resource type="Script" uid="uid://b51nkp55iw5n2" path="res://Scripts/hud_shop.gd" id="16_vdgmp"]
 [ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
 [ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="18_lrioy"]
 [ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="19_8ys6w"]
@@ -472,6 +473,7 @@ polygon = PackedVector2Array(-101.05957, -24.795378, -101.05957, 91.073944, 18.9
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1878578739]
 position = Vector2(2157.9224, 765.2696)
 scale = Vector2(1.078842, 1.078842)
+script = ExtResource("16_vdgmp")
 
 [node name="Shop_Appear" type="AnimationPlayer" parent="HUD/HUD_Shop" unique_id=750646598]
 active = false
@@ -493,9 +495,18 @@ autoplay = &"BG_shop"
 speed_scale = 0.155
 
 [node name="HudShopFrame" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=470288902]
-position = Vector2(-1262.8525, 471.27332)
+position = Vector2(-1262.8525, 472.20032)
 scale = Vector2(0.43589035, 0.38)
 texture = ExtResource("17_1slhg")
+
+[node name="disable_shop" type="Button" parent="HUD" unique_id=82156049]
+visible = false
+offset_left = 52.99999
+offset_top = 58.0
+offset_right = 1546.0
+offset_bottom = 1138.0
+disabled = true
+flat = true
 
 [node name="UI_Selection" type="Node2D" parent="HUD" unique_id=1560998102]
 scale = Vector2(0.99999994, 0.99999994)
@@ -777,6 +788,7 @@ stretch_mode = 0
 [connection signal="toggled" from="HUD/Options/Fullscreen_CB" to="HUD/Options/Fullscreen_CB" method="_on_toggled"]
 [connection signal="pressed" from="HUD/GameOver/Restart" to="HUD" method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
+[connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxLucky/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxRookie/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxGooey/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
