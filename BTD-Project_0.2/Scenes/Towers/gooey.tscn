@@ -55,7 +55,7 @@ script = ExtResource("1_8q63j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
-wait_time = 3.5
+wait_time = 1.5
 one_shot = true
 
 [node name="Gooey" type="Sprite2D" parent="." unique_id=799830229]

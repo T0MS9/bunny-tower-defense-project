@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1_dl7t5"]
 [ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="2_phvx5"]
+[ext_resource type="Texture2D" uid="uid://dwtvxvdpwughw" path="res://Assets/Others/HUD_Assets/Skin.png" id="3_phvx5"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -130,4 +131,14 @@ offset_bottom = -26.0
 pivot_offset = Vector2(106, 63)
 size_flags_horizontal = 4
 
+[node name="TextureButton" type="TextureButton" parent="." unique_id=667224735]
+offset_left = 18.0
+offset_top = -137.0
+offset_right = 112.0
+offset_bottom = -43.0
+texture_normal = ExtResource("3_phvx5")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

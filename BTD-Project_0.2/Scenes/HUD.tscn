@@ -431,7 +431,7 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 max_value = 9999999.0
 step = 1.0
-value = 290.0
+value = 490.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=1396536025]
@@ -613,7 +613,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
-text = "200"
+text = "130"
 
 [node name="BoxRookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=211386483]
 offset_left = 1514.0
@@ -747,7 +747,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
-text = "160"
+text = "140"
 
 [node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499]
 offset_left = 1588.0

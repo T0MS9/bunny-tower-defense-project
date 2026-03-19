@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var moedas_node = $HUD/PGB_M
+
+
 var font = load("res://FontText/Coiny-Regular.ttf")
 var font_size = 40
 var valor_lucky = 5
@@ -17,7 +19,16 @@ func label_money():
 	
 	# 1. Texto e Estilo
 	label_M.text = "+" + str(valor_lucky) + "$"
-	label_M.modulate = Color(1.0, 0.902, 0.392, 1.0)
+	
+	
+# Usamos o .resource_path para comparar o texto do caminho do ficheiro
+	if $Lucky.texture.resource_path == "res://Assets/Bunnies/Lucky.png":
+		label_M.modulate = Color(1.0, 0.902, 0.392, 1.0) # Amarelo/Dourado
+	
+	elif $Lucky.texture.resource_path == "res://Assets/Bunnies/Skins/ZeRon.png":
+		label_M.modulate = Color(0.957, 0.478, 0.965, 1.0) # Rosa/Roxo
+		
+		
 	label_M.add_theme_font_override("font", font)
 	label_M.add_theme_font_size_override("font_size", 40)
 	
@@ -37,3 +48,13 @@ func label_money():
 	tween.parallel().tween_property(label_M, "position:y", label_M.position.y - 20, 1.0)
 	
 	tween.finished.connect(label_M.queue_free)
+
+
+
+
+func _on_texture_button_pressed() -> void:
+	if $Lucky.texture.resource_path == "res://Assets/Bunnies/Lucky.png":
+		$Lucky.texture = load("res://Assets/Bunnies/Skins/ZeRon.png")
+	
+	elif $Lucky.texture.resource_path == "res://Assets/Bunnies/Skins/ZeRon.png":
+		$Lucky.texture = load("res://Assets/Bunnies/Lucky.png")

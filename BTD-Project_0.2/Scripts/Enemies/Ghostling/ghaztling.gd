@@ -30,11 +30,10 @@ func DMGED(quantidade):
 		get_parent().queue_free()
 		
 		
-func gooey_stun(TimeSlimed: float):
+func gooey_stun(tempo: float):
 	$AnimationPlayer.play("Animations/ghostling_TakeSlime")
 	$Ghaztling.texture = slimed
 	speed = speed_base / 3
 	
-	await get_tree().create_timer(TimeSlimed).timeout
-	$Ghaztling.texture = load("res://Assets/Enemies/Ghostlings/Ghaztling.png")
-	speed = speed_base
+	await get_tree().create_timer(tempo).timeout
+	speed = speed_base 

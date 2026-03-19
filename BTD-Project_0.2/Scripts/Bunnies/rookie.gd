@@ -37,26 +37,26 @@ func _draw() -> void:
 			var raio_final = shape.radius * $Range/CollisionRange.scale.x
 			draw_circle(Vector2.ZERO, raio_final, Color(0.46, 0.46, 0.46, 0.443))
 
-#func _on_button_mouse_entered() -> void:
-	#mostrar_range = true
-	#queue_redraw()
-#
-#func _on_button_mouse_exited() -> void:
-	#mostrar_range = false
-	#queue_redraw()
+func _on_button_mouse_entered() -> void:
+	mostrar_range = true
+	queue_redraw()
+
+func _on_button_mouse_exited() -> void:
+	mostrar_range = false
+	queue_redraw()
 	
 	
 
 
  	
-
-func _on_button_pressed() -> void:
-	var anim = get_node_or_null("Shop_Appear") # Tenta encontrar o nó
-	
-	if anim != null:
-		anim.play("Shop_Appear")
-	else:
-		print("ERRO: O nó Shop_Appear não foi encontrado! Verifica o caminho.")
-	
-	mostrar_range = true
-	queue_redraw()
+#
+#func _on_button_pressed() -> void:
+	#var anim = get_node_or_null("Shop_Appear") # Tenta encontrar o nó
+	#
+	#if anim != null:
+		#anim.play("Shop_Appear")
+	#else:
+		#print("ERRO: O nó Shop_Appear não foi encontrado! Verifica o caminho.")
+	#
+	#mostrar_range = true
+	#queue_redraw()

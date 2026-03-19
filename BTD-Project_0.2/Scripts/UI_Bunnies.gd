@@ -28,11 +28,11 @@ func _process(_delta: float) -> void:
 	$BoxRookie/Rookie.disabled = (moedas_atuais < 125)
 	$BoxRookie.disabled = (moedas_atuais < 125)
 	
-	$BoxLucky/Lucky.disabled = (moedas_atuais < 200)
-	$BoxLucky.disabled = (moedas_atuais < 200)
+	$BoxLucky/Lucky.disabled = (moedas_atuais < 130)
+	$BoxLucky.disabled = (moedas_atuais < 130)
 	
-	$BoxSlasher/Slasher.disabled = (moedas_atuais < 160)
-	$BoxSlasher.disabled = (moedas_atuais < 160)
+	$BoxSlasher/Slasher.disabled = (moedas_atuais < 140)
+	$BoxSlasher.disabled = (moedas_atuais < 140)
 	
 	$BoxGooey/Gooey.disabled = (moedas_atuais < 90)
 	$BoxGooey.disabled = (moedas_atuais < 90)
@@ -76,16 +76,16 @@ func _on_rookie_button_down() -> void:
 		configurar_torre_temp()
 		
 func _on_slasher_button_down() -> void:
-	if temp_tower == null and moedas_atuais >= 160:
+	if temp_tower == null and moedas_atuais >= 140:
 		temp_tower = slasher_scene.instantiate()
-		custo_da_torre_atual = 160 # <--- Define o custo aqui
+		custo_da_torre_atual = 140 # <--- Define o custo aqui
 		configurar_torre_temp()
 
 func _on_lucky_button_down() -> void:
-	if temp_tower == null and moedas_atuais >= 200:
+	if temp_tower == null and moedas_atuais >= 130:
 		tipo_torre_atual = "lucky"
 		temp_tower = lucky_scene.instantiate()
-		custo_da_torre_atual = 200 # <--- Define o custo aqui
+		custo_da_torre_atual = 130 # <--- Define o custo aqui
 		configurar_torre_temp()
 		
 func _on_gooey_button_down() -> void:
