@@ -659,7 +659,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
-text = "125"
+text = "70"
 
 [node name="BoxGooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=838694241]
 offset_left = 1715.0
