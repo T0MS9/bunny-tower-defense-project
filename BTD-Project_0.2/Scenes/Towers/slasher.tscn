@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bewynet5sfny3" path="res://Assets/Bunnies/Slasher.png" id="1_p7k4v"]
 [ext_resource type="Script" uid="uid://cy6418q070xvu" path="res://Scripts/Bunnies/slasher.gd" id="1_r1clt"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_2dfxu"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -81,6 +82,14 @@ script = ExtResource("1_r1clt")
 [node name="Timer" type="Timer" parent="." unique_id=1837819135 groups=["Timers"]]
 wait_time = 2.0
 one_shot = true
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=76819889]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5411765)
+y_sort_enabled = true
+position = Vector2(8.999999, 68.999985)
+scale = Vector2(0.32291666, 0.32291666)
+texture = ExtResource("2_2dfxu")
 
 [node name="Slasher" type="Sprite2D" parent="." unique_id=800201561]
 position = Vector2(-9.062502, -27.587305)

@@ -36,7 +36,7 @@ func DMGED(quantidade):
 		get_parent().queue_free()
 		
 func gooey_stun(TimeSlimed: float):
-	$AnimationPlayer.play("Animations/ghostling_TakeSlime")
+	#$AnimationPlayer.play("Animations/ghostling_TakeSlime")
 	$Ghazt.texture = slimed
 	speed = speed_base / 3
 	

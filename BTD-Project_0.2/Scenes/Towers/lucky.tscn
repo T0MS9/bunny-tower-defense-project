@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1_dl7t5"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_btyo5"]
 [ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="2_phvx5"]
 [ext_resource type="Texture2D" uid="uid://dwtvxvdpwughw" path="res://Assets/Others/HUD_Assets/Skin.png" id="3_phvx5"]
 
@@ -94,6 +95,14 @@ script = ExtResource("1_dl7t5")
 
 [node name="Timer" type="Timer" parent="." unique_id=2011954952 groups=["Timers"]]
 wait_time = 3.5
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=616189137]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5411765)
+y_sort_enabled = true
+position = Vector2(-10.999998, 71.99998)
+scale = Vector2(0.32291666, 0.32291666)
+texture = ExtResource("2_btyo5")
 
 [node name="Lucky" type="Sprite2D" parent="." unique_id=73068581]
 position = Vector2(-9.062502, -27.587305)

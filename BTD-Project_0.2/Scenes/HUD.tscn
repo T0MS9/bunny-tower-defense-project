@@ -568,17 +568,24 @@ position = Vector2(53, 59.00001)
 scale = Vector2(1.0000001, 1.0000001)
 script = ExtResource("18_lrioy")
 
-[node name="BoxLucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=1210332222]
-offset_left = 1715.0
-offset_top = 135.0
+[node name="ScrollContainer" type="ScrollContainer" parent="HUD/UI_Selection/Bunnies" unique_id=1163235928]
+offset_left = 1517.0
+offset_top = 139.0
 offset_right = 1920.0
-offset_bottom = 406.0
+offset_bottom = 852.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/UI_Selection/Bunnies/ScrollContainer" unique_id=510536466]
+layout_mode = 2
+
+[node name="BoxLucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1210332222]
+visible = false
+layout_mode = 2
 texture_normal = ExtResource("19_eukkl")
 texture_disabled = ExtResource("20_esw7j")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Lucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=647250284]
+[node name="Lucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxLucky" unique_id=647250284]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.062975615
@@ -595,12 +602,12 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=2133094998]
+[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxLucky" unique_id=2133094998]
 position = Vector2(124, 257)
 scale = Vector2(0.285, 0.285)
 texture = ExtResource("23_esw7j")
 
-[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxLucky" unique_id=1440656706]
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxLucky" unique_id=1440656706]
 layout_mode = 0
 offset_left = 86.99999
 offset_top = 248.0
@@ -615,17 +622,15 @@ theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
 text = "130"
 
-[node name="BoxRookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=211386483]
-offset_left = 1514.0
-offset_top = 135.0
-offset_right = 1719.0
-offset_bottom = 406.0
+[node name="BoxRookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=211386483]
+visible = false
+layout_mode = 2
 texture_normal = ExtResource("22_1slhg")
 texture_disabled = ExtResource("20_esw7j")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Rookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=1551678627]
+[node name="Rookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxRookie" unique_id=1551678627]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.063
@@ -641,12 +646,12 @@ texture_disabled = ExtResource("20_8ys6w")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=479539679]
+[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxRookie" unique_id=479539679]
 position = Vector2(135, 260)
 scale = Vector2(0.285, 0.285)
 texture = ExtResource("23_esw7j")
 
-[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxRookie" unique_id=571155390]
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxRookie" unique_id=571155390]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 251.0
@@ -661,17 +666,15 @@ theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
 text = "70"
 
-[node name="BoxGooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=838694241]
-offset_left = 1715.0
-offset_top = 416.0
-offset_right = 1920.0
-offset_bottom = 687.0
+[node name="BoxGooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=838694241]
+visible = false
+layout_mode = 2
 texture_normal = ExtResource("29_ulk2q")
 texture_disabled = ExtResource("20_esw7j")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Gooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxGooey" unique_id=1498628199]
+[node name="Gooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxGooey" unique_id=1498628199]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.01419394
@@ -688,12 +691,12 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="PriceTagGooey" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxGooey" unique_id=1211689677]
+[node name="PriceTagGooey" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxGooey" unique_id=1211689677]
 position = Vector2(124, 257)
 scale = Vector2(0.285, 0.285)
 texture = ExtResource("23_esw7j")
 
-[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxGooey" unique_id=755812201]
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxGooey" unique_id=755812201]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 248.0
@@ -708,17 +711,15 @@ theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
 text = "90"
 
-[node name="BoxSlasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies" unique_id=1524848138]
-offset_left = 1514.0
-offset_top = 415.0
-offset_right = 1719.0
-offset_bottom = 686.0
+[node name="BoxSlasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1524848138]
+visible = false
+layout_mode = 2
 texture_normal = ExtResource("22_1slhg")
 texture_disabled = ExtResource("20_esw7j")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Slasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies/BoxSlasher" unique_id=1392270325]
+[node name="Slasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxSlasher" unique_id=1392270325]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 0.22772217
@@ -729,12 +730,12 @@ texture_disabled = ExtResource("30_g4dvh")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/BoxSlasher" unique_id=356490860]
+[node name="PriceTagLucky" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxSlasher" unique_id=356490860]
 position = Vector2(135, 260)
 scale = Vector2(0.285, 0.285)
 texture = ExtResource("23_esw7j")
 
-[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/BoxSlasher" unique_id=1436536107]
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxSlasher" unique_id=1436536107]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 251.0
@@ -748,6 +749,66 @@ theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("7_7bkcm")
 theme_override_font_sizes/font_size = 23
 text = "140"
+
+[node name="Label" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=963874322]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label2" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1311575822]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label3" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=248934111]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label4" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1100666451]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label5" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=831043921]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label6" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=434952456]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label7" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=737386671]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label8" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1749945760]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label9" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=2079607551]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label10" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1437650618]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label11" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=1106056845]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
+
+[node name="Label12" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer" unique_id=437068252]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "grtbrthbrtbnytbnytb"
 
 [node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499]
 offset_left = 1588.0
@@ -789,10 +850,10 @@ stretch_mode = 0
 [connection signal="pressed" from="HUD/GameOver/Restart" to="HUD" method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
 [connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxLucky/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxRookie/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxGooey/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/BoxSlasher/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxLucky/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxRookie/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxGooey/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/VBoxContainer/BoxSlasher/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
 [connection signal="pressed" from="HUD/UI_Selection/StartRound" to="HUD" method="_on_start_round_pressed"]
 [connection signal="pressed" from="HUD/UI_Selection/PauseRound" to="HUD" method="_on_pause_round_pressed"]
 [connection signal="pressed" from="HUD/UI_Selection/Restart" to="HUD" method="_on_restart_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpsi13nm48dib"]
 
 [ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1_c36il"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_55yyg"]
 [ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="2_xbbb2"]
 
 [sub_resource type="Animation" id="Animation_c36il"]
@@ -55,6 +56,14 @@ script = ExtResource("1_c36il")
 
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
 one_shot = true
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=687256872]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5411765)
+y_sort_enabled = true
+position = Vector2(2.842171e-14, 69)
+scale = Vector2(0.32291666, 0.32291666)
+texture = ExtResource("2_55yyg")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(-9.062502, -27.587305)

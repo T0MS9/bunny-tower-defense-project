@@ -11,9 +11,13 @@ extends Node2D
 	preload("res://Scenes/Enemies/Ghostling/brute.tscn"),
 ]
 
+@onready var UndeadGhostlings = [
+	preload("res://Scenes/Enemies/Ghostling/undead_ghostling.tscn"),
+]
+
 func _on_timer_timeout():
-	var All_Ghostlings = EasyGhostlings 
-	#+ HardGhostlings
+	var All_Ghostlings = UndeadGhostlings
+	#EasyGhostlings + HardGhostlings
 	
 	var Ghostling = All_Ghostlings.pick_random()
 	var tempPath = Ghostling.instantiate()

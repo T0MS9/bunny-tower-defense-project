@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cflli26dslt1p"]
 
 [ext_resource type="Script" uid="uid://b4i63c7s3pbvr" path="res://Scripts/Bunnies/gooey.gd" id="1_8q63j"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_8ko8t"]
 [ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="2_cjj1g"]
 
 [sub_resource type="Animation" id="Animation_72gkk"]
@@ -57,6 +58,14 @@ script = ExtResource("1_8q63j")
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
 wait_time = 1.5
 one_shot = true
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=679138837]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5411765)
+y_sort_enabled = true
+position = Vector2(-0.99999994, 68.99999)
+scale = Vector2(0.32291666, 0.32291666)
+texture = ExtResource("2_8ko8t")
 
 [node name="Gooey" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(-9.062502, -27.587305)

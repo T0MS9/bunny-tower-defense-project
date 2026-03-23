@@ -12,7 +12,6 @@ var dmg_Slasher = 3
 func _process(delta: float) -> void:
 	$ProgressBar.value = contagem_ult
 	$ProgressBar/ProgressBar.value = contagem_ult
-	print(contagem_ult)
 	# Se o timer acabou (time_left == 0) e não estamos recarregando
 	if $Timer.is_stopped():
 		pronto_para_atacar = true

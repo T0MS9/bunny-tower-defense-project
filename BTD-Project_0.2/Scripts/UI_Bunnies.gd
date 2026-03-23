@@ -25,17 +25,17 @@ func _process(_delta: float) -> void:
 	moedas_atuais = int(moedas_label.text)
 	
 	# Gestão do Botão (Atualizado para usar os custos corretos)
-	$BoxRookie/Rookie.disabled = (moedas_atuais < 70)
-	$BoxRookie.disabled = (moedas_atuais < 70)
-	
-	$BoxLucky/Lucky.disabled = (moedas_atuais < 130)
-	$BoxLucky.disabled = (moedas_atuais < 130)
-	
-	$BoxSlasher/Slasher.disabled = (moedas_atuais < 140)
-	$BoxSlasher.disabled = (moedas_atuais < 140)
-	
-	$BoxGooey/Gooey.disabled = (moedas_atuais < 90)
-	$BoxGooey.disabled = (moedas_atuais < 90)
+	#$BoxRookie/Rookie.disabled = (moedas_atuais < 70)
+	#$BoxRookie.disabled = (moedas_atuais < 70)
+	#
+	#$BoxLucky/Lucky.disabled = (moedas_atuais < 130)
+	#$BoxLucky.disabled = (moedas_atuais < 130)
+	#
+	#$BoxSlasher/Slasher.disabled = (moedas_atuais < 140)
+	#$BoxSlasher.disabled = (moedas_atuais < 140)
+	#
+	#$BoxGooey/Gooey.disabled = (moedas_atuais < 90)
+	#$BoxGooey.disabled = (moedas_atuais < 90)
 	
 	if temp_tower != null:
 		temp_tower.global_position = get_global_mouse_position()
@@ -112,11 +112,11 @@ func largar_torre():
 	if tipo_torre_atual == "lucky":
 		temp_tower.get_node("Timer").start()
 		
-		
 	if temp_tower:
 		# --- AQUI ESTÁ A ADAPTAÇÃO ---
 		# Verifica se ainda temos moedas baseadas no custo definido ao clicar
-		if moedas_atuais >= custo_da_torre_atual: 
+		if moedas_atuais >= custo_da_torre_atual:
+			temp_tower.get_node("Shadow").visible = true
 			temp_tower.modulate.a = 1.0
 			temp_tower.process_mode = Node.PROCESS_MODE_INHERIT
 			
