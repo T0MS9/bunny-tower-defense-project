@@ -25,17 +25,17 @@ func _process(_delta: float) -> void:
 	moedas_atuais = int(moedas_label.text)
 	
 	# Gestão do Botão (Atualizado para usar os custos corretos)
-	#$BoxRookie/Rookie.disabled = (moedas_atuais < 70)
-	#$BoxRookie.disabled = (moedas_atuais < 70)
-	#
-	#$BoxLucky/Lucky.disabled = (moedas_atuais < 130)
-	#$BoxLucky.disabled = (moedas_atuais < 130)
-	#
-	#$BoxSlasher/Slasher.disabled = (moedas_atuais < 140)
-	#$BoxSlasher.disabled = (moedas_atuais < 140)
-	#
-	#$BoxGooey/Gooey.disabled = (moedas_atuais < 90)
-	#$BoxGooey.disabled = (moedas_atuais < 90)
+	$ScrollContainer/GridContainer/Rookie_BG_dps.disabled = (moedas_atuais < 70)
+	$ScrollContainer/GridContainer/Rookie_BG_dps/Rookie.disabled = (moedas_atuais < 70)
+	
+	$ScrollContainer/GridContainer/Lucky_BG_support.disabled = (moedas_atuais < 130)
+	$ScrollContainer/GridContainer/Lucky_BG_support/Lucky.disabled = (moedas_atuais < 130)
+	
+	$ScrollContainer/GridContainer/Slasher_BG_dps.disabled = (moedas_atuais < 140)
+	$ScrollContainer/GridContainer/Slasher_BG_dps/Slasher.disabled = (moedas_atuais < 140)
+	
+	$ScrollContainer/GridContainer/Gooey_BG_stun.disabled = (moedas_atuais < 90)
+	$ScrollContainer/GridContainer/Gooey_BG_stun/Gooey.disabled = (moedas_atuais < 90)
 	
 	if temp_tower != null:
 		temp_tower.global_position = get_global_mouse_position()

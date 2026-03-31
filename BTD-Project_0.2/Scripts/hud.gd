@@ -56,4 +56,3 @@ func _on_pause_round_pressed() -> void:
 	$"../../GhostlingSpawner/Timer".stop()
 	$UI_Selection/StartRound.visible = true
 	$UI_Selection/PauseRound.visible = false
-	
