@@ -63,9 +63,10 @@ one_shot = true
 visible = false
 self_modulate = Color(1, 1, 1, 0.5411765)
 y_sort_enabled = true
-position = Vector2(-0.99999994, 68.99999)
-scale = Vector2(0.32291666, 0.32291666)
+position = Vector2(-1.4210855e-14, -28.999998)
+scale = Vector2(0.32291663, 0.32291663)
 texture = ExtResource("2_8ko8t")
+offset = Vector2(-3.0967743, 303.48386)
 
 [node name="Gooey" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(-9.062502, -27.587305)

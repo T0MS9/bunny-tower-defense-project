@@ -49,6 +49,7 @@ height = 99.867
 radius = 196.01021
 
 [node name="Rookie" type="StaticBody2D" unique_id=264265458]
+y_sort_enabled = true
 position = Vector2(0, -4)
 script = ExtResource("1_c36il")
 
@@ -66,9 +67,11 @@ scale = Vector2(0.32291666, 0.32291666)
 texture = ExtResource("2_55yyg")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
-position = Vector2(-9.062502, -27.587305)
+y_sort_enabled = true
+position = Vector2(1, 72.99999)
 scale = Vector2(0.11124287, 0.10587178)
 texture = ExtResource("2_xbbb2")
+offset = Vector2(-90.45525, -950.086)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=1122360598]
 root_node = NodePath("../..")

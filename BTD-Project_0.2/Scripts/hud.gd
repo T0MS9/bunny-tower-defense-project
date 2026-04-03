@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var spawner = get_node("../../GhostlingSpawner")
+
 func take_dmg(dmg):
 	$PGB_V.value -= dmg
 	if $PGB_V.value == 0:
@@ -7,7 +9,6 @@ func take_dmg(dmg):
 		$Pause.visible = false
 
 func _process(delta: float):
-	
 	if $Options.visible || $GameOver.visible == true:
 		get_tree().paused = true
 	else:
@@ -48,11 +49,14 @@ func _on_restart_pressed() -> void:
 	
 
 func _on_start_round_pressed() -> void:
-	$"../../GhostlingSpawner/Timer".start()
-	$UI_Selection/StartRound.visible = false
-	$UI_Selection/PauseRound.visible = true
-
-func _on_pause_round_pressed() -> void:
-	$"../../GhostlingSpawner/Timer".stop()
-	$UI_Selection/StartRound.visible = true
-	$UI_Selection/PauseRound.visible = false
+	spawner.iniciar_vaga()
+	#$UI_Selection/StartRound.disabled = true
+	
+	
+	#$UI_Selection/StartRound.visible = false
+	#$UI_Selection/PauseRound.visible = true
+#
+#func _on_pause_round_pressed() -> void:
+	#$"../../GhostlingSpawner/Timer".stop()
+	#$UI_Selection/StartRound.visible = true
+	#$UI_Selection/PauseRound.visible = false

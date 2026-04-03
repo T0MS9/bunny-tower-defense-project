@@ -97,7 +97,6 @@ script = ExtResource("1_dl7t5")
 wait_time = 3.5
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=616189137]
-visible = false
 self_modulate = Color(1, 1, 1, 0.5411765)
 y_sort_enabled = true
 position = Vector2(-10.999998, 71.99998)

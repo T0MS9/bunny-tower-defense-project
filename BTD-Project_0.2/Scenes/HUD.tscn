@@ -571,7 +571,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_constants/shadow_offset_x = 4
 theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 65
-text = "1"
+text = "0"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -949,6 +949,7 @@ offset_right = 1951.368
 offset_bottom = 1023.0001
 texture_normal = ExtResource("21_8kn8h")
 texture_pressed = ExtResource("22_ync2q")
+texture_disabled = ExtResource("22_ync2q")
 ignore_texture_size = true
 stretch_mode = 0
 

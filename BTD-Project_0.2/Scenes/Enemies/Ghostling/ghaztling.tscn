@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqclnvpdade1k"]
 
-[ext_resource type="Script" uid="uid://dw7s3gvxrvfn3" path="res://Scripts/Enemies/Ghostling/ghastling.gd" id="1_43je4"]
+[ext_resource type="Script" uid="uid://bnhdxhtvlwpvu" path="res://Scripts/Enemies/Ghostling/ghastling.gd" id="1_43je4"]
 [ext_resource type="Texture2D" uid="uid://jr6dwkssgl1i" path="res://Assets/Enemies/Ghostlings/Ghaztling.png" id="2_6gqum"]
 [ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_5no51"]
 
@@ -17,6 +17,7 @@ position = Vector2(1, 0)
 script = ExtResource("1_43je4")
 
 [node name="Ghaztling" type="Sprite2D" parent="Ghaztling" unique_id=1236887099]
+y_sort_enabled = true
 position = Vector2(3.0000002, -12.440002)
 scale = Vector2(0.435, 0.435)
 texture = ExtResource("2_6gqum")

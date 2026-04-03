@@ -87,9 +87,10 @@ one_shot = true
 visible = false
 self_modulate = Color(1, 1, 1, 0.5411765)
 y_sort_enabled = true
-position = Vector2(8.999999, 68.999985)
+position = Vector2(2.0000005, -29)
 scale = Vector2(0.32291666, 0.32291666)
 texture = ExtResource("2_2dfxu")
+offset = Vector2(21.677416, 303.48383)
 
 [node name="Slasher" type="Sprite2D" parent="." unique_id=800201561]
 position = Vector2(-9.062502, -27.587305)
@@ -126,6 +127,7 @@ offset_bottom = 74.0
 flat = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=2075950372]
+visible = false
 offset_left = -49.0
 offset_top = -178.0
 offset_right = 50.0

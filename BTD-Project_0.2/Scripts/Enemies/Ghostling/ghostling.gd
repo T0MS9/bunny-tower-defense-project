@@ -27,7 +27,13 @@ func DMGED(quantidade):
 		set_physics_process(false) 
 		$AnimationPlayer.play("Animations/ghostling_TakeDMG")
 		await $AnimationPlayer.animation_finished
-		get_parent().queue_free()
+		
+		var vivo = get_tree().get_first_node_in_group("Ghostlings")
+		
+		if vivo:
+			vivo.inimigo_morreu()
+			
+	get_parent().queue_free()
 		
 func gooey_stun(TimeSlimed: float):
 	#$AnimationPlayer.play("Animations/ghostling_TakeSlime")

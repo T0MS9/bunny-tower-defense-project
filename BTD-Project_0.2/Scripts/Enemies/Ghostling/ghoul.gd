@@ -33,6 +33,7 @@ func DMGED(quantidade):
 		set_physics_process(false) 
 		$AnimationPlayer.play("Animations/ghostling_TakeDMG")
 		await $AnimationPlayer.animation_finished
+		get_node("../../GhostlingSpawner").inimigo_morreu()
 		get_parent().queue_free()
 
 

@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://cj5vuu45ii5tk" path="res://Scripts/ghostling_spawner.gd" id="2_0e48y"]
 [ext_resource type="AudioStream" uid="uid://cql1rug0rv5p8" path="res://Assets/Music/Graveyard Groove.mp3" id="2_so52r"]
 [ext_resource type="Texture2D" uid="uid://bgehk1b1jwja5" path="res://Assets/Others/Map_Assets/MapGrasslands.png" id="2_yi2un"]
+[ext_resource type="Texture2D" uid="uid://b8rqdrn3rchnv" path="res://Assets/Others/Map_Assets/Bush01.png" id="5_eyd2i"]
+[ext_resource type="Texture2D" uid="uid://cdli8nji4eumo" path="res://Assets/Others/Map_Assets/Bush02.png" id="6_lrrde"]
 [ext_resource type="PackedScene" uid="uid://cvtf3eidvbt76" path="res://Scenes/HUD.tscn" id="6_teiq6"]
+[ext_resource type="Texture2D" uid="uid://fc1bvorhy6fq" path="res://Assets/Others/Map_Assets/Bush03.png" id="7_mfwcg"]
 [ext_resource type="Texture2D" uid="uid://dsbfkidhd0mxu" path="res://Assets/Others/Map_Assets/Pieces/BushPosition.png" id="17_dtr0u"]
 
 [sub_resource type="Curve2D" id="Curve2D_lycfg"]
@@ -57,10 +60,42 @@ loop = false
 
 [node name="BushPosition" type="Sprite2D" parent="." unique_id=1478967233]
 y_sort_enabled = true
-position = Vector2(1114.9702, 888.6228)
+position = Vector2(1114.9701, 888.62274)
 scale = Vector2(0.59924597, 0.59924597)
 texture = ExtResource("17_dtr0u")
 offset = Vector2(130.9253, -320.56262)
+
+[node name="Bushes" type="Node2D" parent="." unique_id=2130574630]
+visible = false
+position = Vector2(1017.9641, -29.940006)
+scale = Vector2(0.5990241, 0.59902424)
+
+[node name="Bush01" type="Sprite2D" parent="Bushes" unique_id=888204372]
+y_sort_enabled = true
+position = Vector2(-1299.5188, 1221.5472)
+scale = Vector2(0.5674879, 0.5674877)
+texture = ExtResource("5_eyd2i")
+offset = Vector2(-21.138, -221.94861)
+
+[node name="Bush02" type="Sprite2D" parent="Bushes" unique_id=80848341]
+position = Vector2(-837.6899, 1433.4688)
+scale = Vector2(0.42129713, 0.42129695)
+texture = ExtResource("6_lrrde")
+offset = Vector2(-23.727295, -227.78394)
+
+[node name="Bush03" type="Sprite2D" parent="Bushes" unique_id=2067311173]
+position = Vector2(-1469.4559, 1489.448)
+scale = Vector2(0.38146707, 0.38146707)
+texture = ExtResource("7_mfwcg")
+offset = Vector2(-15.722595, -235.84375)
+
+[node name="Bush04" type="Sprite2D" parent="Bushes" unique_id=1157969287]
+y_sort_enabled = true
+position = Vector2(1199.5557, 1759.3481)
+scale = Vector2(0.46475047, 0.46475047)
+skew = -0.2617994
+texture = ExtResource("7_mfwcg")
+offset = Vector2(-11.1953125, -222.67725)
 
 [node name="Area_Path" type="Area2D" parent="." unique_id=655402903 groups=["no_place"]]
 y_sort_enabled = true
