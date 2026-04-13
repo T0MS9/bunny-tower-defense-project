@@ -942,7 +942,7 @@ theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
-[node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499]
+[node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499 groups=["start_button"]]
 offset_left = 1588.0
 offset_top = 932.0001
 offset_right = 1951.368

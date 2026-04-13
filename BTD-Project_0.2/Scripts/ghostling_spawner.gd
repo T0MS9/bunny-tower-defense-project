@@ -16,14 +16,27 @@ var rodada_atual = 0
 var inimigos_vivos = 0
 var vaga_atual = []
 
+@onready var botao = get_tree().node_in_group("botao_start")
 
-# Assumindo que o HUD e o Spawner são "irmãos" dentro do Mapa
-@onready var start_round: TextureButton = get_node("../HUD/UI_Selection/StartRound")
+# --- NOVA FORMA DE PEGAR O BOTÃO ---
+# Criamos uma função auxiliar para encontrar o botão no grupo
+#func obter_botao_start():
+	#return get_tree().get_first_node_in_group("botao_start")
 
 func _process(_delta):
-	# Verificamos se o botão existe antes de mexer nele (boa prática!)
-	if start_round and inimigos_vivos == 0 and $Timer.is_stopped():
-		start_round.disabled = false
+	var botao_start = get_tree().node_in_group("botao_start")
+	
+	if botao_start:
+		# Este print vai dizer-te no Output se o Godot acha que deve desativar ou não
+		# print("Vivos: ", inimigos_vivos, " | Timer parado: ", $Timer.is_stopped())
+		
+		if inimigos_vivos > 0 or not $Timer.is_stopped():
+			botao_start.disabled = true
+		else:
+			botao_start.disabled = false
+	else:
+		# Se isto aparecer no Output, o grupo "botao_start" não está a ser encontrado!
+		print("ERRO: Botão não encontrado no grupo 'botao_start'")
 
 # --- ESTA FUNÇÃO DEVE SER CHAMADA PELO TEU BOTÃO START ---
 func iniciar_vaga():
