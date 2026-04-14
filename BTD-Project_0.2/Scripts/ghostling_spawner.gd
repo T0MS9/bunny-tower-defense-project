@@ -12,43 +12,49 @@ extends Node2D
 #Undead Ghostlings
 @onready var Undead_Ghostling = preload("res://Scenes/Enemies/Ghostling/undead_ghostling.tscn")
 
-var rodada_atual = 0
+var rodada_atual = 1
 var inimigos_vivos = 0
 var vaga_atual = []
+var ronda_a_decorrer = false
 
-@onready var botao = get_tree().node_in_group("botao_start")
-
-# --- NOVA FORMA DE PEGAR O BOTÃO ---
-# Criamos uma função auxiliar para encontrar o botão no grupo
-#func obter_botao_start():
-	#return get_tree().get_first_node_in_group("botao_start")
 
 func _process(_delta):
-	var botao_start = get_tree().node_in_group("botao_start")
+	var botao_start = get_tree().get_first_node_in_group("start_button")
 	
 	if botao_start:
-		# Este print vai dizer-te no Output se o Godot acha que deve desativar ou não
-		# print("Vivos: ", inimigos_vivos, " | Timer parado: ", $Timer.is_stopped())
-		
 		if inimigos_vivos > 0 or not $Timer.is_stopped():
 			botao_start.disabled = true
 		else:
 			botao_start.disabled = false
-	else:
-		# Se isto aparecer no Output, o grupo "botao_start" não está a ser encontrado!
-		print("ERRO: Botão não encontrado no grupo 'botao_start'")
 
-# --- ESTA FUNÇÃO DEVE SER CHAMADA PELO TEU BOTÃO START ---
+
 func iniciar_vaga():
+	ronda_a_decorrer = true
+	
 	match rodada_atual:
 		1:
 			vaga_atual = [Ghostling, Ghostling, Ghostling, Ghostling, Ghostling]
 		2:
-			vaga_atual = [Ghostling, Ghazt, Ghostling, Ghazt, Brute]
+			vaga_atual = [Ghostling, Ghostling, Ghostling, Ghostling, Ghostling, Ghostling, Ghostling, Ghostling]
 		3:
-			vaga_atual = [Brute, Brute, Ghazt, Ghazt, Ghostling]
-	
+			vaga_atual = [Ghostling, Ghostling, Ghostling, Ghostling, Ghazt, Ghazt, Ghazt]
+		4:
+			vaga_atual = [Ghostling, Ghostling, Ghoul, Ghostling, Ghazt, Ghoul]
+		5:
+			vaga_atual = [Ghazt, Ghazt, Ghazt, Ghoul, Ghaztling, Ghaztling, Ghaztling]
+		6:
+			vaga_atual = [Ghaztling, Ghaztling, Ghaztling, Ghaztling, Ghaztling, Ghaztling, Ghazt, Ghazt, Brute]
+		7:
+			vaga_atual = [Ghoul, Ghoul, Ghazt, Ghaztling, Ghaztling, Ghoul, Ghoul]
+		8:
+			vaga_atual = [Brute, Brute, Ghaztling, Ghaztling, Ghaztling, Ghoul]
+		9:
+			vaga_atual = [Ghazt, Ghazt, Ghostling, Brute, Brute, Brute, Ghoul, Ghoul, Ghazt, Ghaztling, Ghaztling, Ghaztling]
+		10:
+			vaga_atual = [Brute, Ghaztling, Brute, Ghaztling, Brute, Brute, Brute, Brute]
+
 	$Timer.start()
+
 
 func _on_timer_timeout():
 	if vaga_atual.size() > 0:
@@ -61,101 +67,38 @@ func _on_timer_timeout():
 		
 		# 3. Contagem
 		inimigos_vivos += 1
-		print(inimigos_vivos)
 	else:
-		# 4. A fila acabou!
 		$Timer.stop()
-		rodada_atual += 1
-		print("Todos os inimigos da rodada foram enviados!")
 
 
 func inimigo_morreu():
 	inimigos_vivos -= 1
 	print(inimigos_vivos)
+	# 1. SEGURANÇA: Se o número for negativo, força-o a ser 0
+	if inimigos_vivos < 0:
+		inimigos_vivos = 0
+		
+	print("Inimigos no mapa: ", inimigos_vivos)
+	
+	# 2. A CONDIÇÃO COM TRAVA:
+	# Verificamos se a vaga acabou E se ainda não subimos de rodada (ronda_a_decorrer)
+	if vaga_atual.size() == 0 and inimigos_vivos == 0 and ronda_a_decorrer:
+		ronda_a_decorrer = false # BLOQUEIA IMEDIATAMENTE (Ninguém mais entra aqui)
+		
+		rodada_atual += 1
+		atualizar_contador_rondas()
+		
+		# Dar as moedas
+		var moedas_no = get_tree().current_scene.find_child("Moedas", true, false)
+		if moedas_no:
+			moedas_no.text = str(int(moedas_no.text) + 50)
+			
+		print("Ronda finalizada com sucesso! Próxima: ", rodada_atual)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#extends Node2D
-#
-##Easy Ghostlings
-#@onready var Ghostling = preload("res://Scenes/Enemies/Ghostling/ghostling.tscn")
-#@onready var Ghazt = preload("res://Scenes/Enemies/Ghostling/ghazt.tscn")
-#@onready var Ghoul = preload("res://Scenes/Enemies/Ghostling/ghoul.tscn")
-#@onready var Ghaztling = preload("res://Scenes/Enemies/Ghostling/ghaztling.tscn")
-#
-##Hard Ghostlings
-#@onready var Brute = preload("res://Scenes/Enemies/Ghostling/brute.tscn")
-#
-##Undead Ghostlings
-#@onready var Undead_Ghostling = preload("res://Scenes/Enemies/Ghostling/undead_ghostling.tscn")
-#
-#var inimigos_criados = 0  # Contador: começa em 0
-#var inimigos_vivos = 0
-#var rodada_atual = 1
-#
-#func _process(delta: float) -> void:
-	#if inimigos_vivos == 0:
-		#$HUD/UI_Selection/StartRound.disable = false
-#
-#
-#func _on_timer_timeout():
-	#if rodada_atual == 1:
-		#if inimigos_criados < 5:
-#
-			#var novo_fantasma = Ghostling.instantiate()
-			#inimigos_vivos =+ 1
-			#get_node("../Path2D").add_child(novo_fantasma)
-#
-			#inimigos_criados += 1
-			#print("Inimigo número: ", inimigos_criados)
-		#else:
-			#$Timer.stop()
-			#rodada_atual += 1
-			#inimigos_criados = 0
-			#print("Rodada 1 Terminada! O spawner parou.")
-			#
-	#if rodada_atual == 2:
-		#if inimigos_criados < 10:
-#
-			#var novo_fantasma = Ghostling.instantiate()
-			#inimigos_vivos =+ 1
-			#get_node("../Path2D").add_child(novo_fantasma)
-#
-			#inimigos_criados += 1
-			#print("Inimigo número: ", inimigos_criados)
-		#else:
-			#$Timer.stop()
-			#rodada_atual += 1
-			#inimigos_criados = 0
-			#print("Rodada 2 Terminada! O spawner parou.")
+func atualizar_contador_rondas() -> void:
+	var contador_no = get_tree().get_first_node_in_group("Round_Counter")
+	contador_no.text = str(rodada_atual)
+	
+	
+	
+	

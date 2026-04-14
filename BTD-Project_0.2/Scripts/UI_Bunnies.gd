@@ -25,8 +25,8 @@ func _process(_delta: float) -> void:
 	moedas_atuais = int(moedas_label.text)
 	
 	# Gestão do Botão (Atualizado para usar os custos corretos)
-	$ScrollContainer/GridContainer/Rookie_BG_dps.disabled = (moedas_atuais < 70)
-	$ScrollContainer/GridContainer/Rookie_BG_dps/Rookie.disabled = (moedas_atuais < 70)
+	$ScrollContainer/GridContainer/Rookie_BG_dps.disabled = (moedas_atuais < 75)
+	$ScrollContainer/GridContainer/Rookie_BG_dps/Rookie.disabled = (moedas_atuais < 75)
 	
 	$ScrollContainer/GridContainer/Lucky_BG_support.disabled = (moedas_atuais < 130)
 	$ScrollContainer/GridContainer/Lucky_BG_support/Lucky.disabled = (moedas_atuais < 130)
@@ -70,9 +70,9 @@ func _process(_delta: float) -> void:
 #///////////////////////////////////////////////////////////////
 
 func _on_rookie_button_down() -> void:
-	if temp_tower == null and moedas_atuais >= 70:
+	if temp_tower == null and moedas_atuais >= 75:
 		temp_tower = rookie_scene.instantiate()
-		custo_da_torre_atual = 70 # <--- Define o custo aqui
+		custo_da_torre_atual = 75 # <--- Define o custo aqui
 		configurar_torre_temp()
 		
 func _on_slasher_button_down() -> void:

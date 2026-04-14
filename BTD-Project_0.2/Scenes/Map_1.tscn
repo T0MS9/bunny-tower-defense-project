@@ -29,7 +29,7 @@ volume_db = -20.0
 autoplay = true
 parameters/looping = true
 
-[node name="GhostlingSpawner" type="Node2D" parent="." unique_id=2109337534]
+[node name="GhostlingSpawner" type="Node2D" parent="." unique_id=2109337534 groups=["spawner"]]
 y_sort_enabled = true
 position = Vector2(-17.964067, 2.395214)
 script = ExtResource("2_0e48y")

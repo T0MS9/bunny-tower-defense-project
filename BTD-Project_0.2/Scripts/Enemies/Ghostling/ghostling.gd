@@ -17,6 +17,7 @@ func _physics_process(delta):
 func DMGED(quantidade):
 	vida -= quantidade
 	
+	
 	if vida <= 0:
 		var moedas = get_tree().current_scene.find_child("Moedas")
 		var valor_atual = int(moedas.text)
@@ -27,12 +28,10 @@ func DMGED(quantidade):
 		set_physics_process(false) 
 		$AnimationPlayer.play("Animations/ghostling_TakeDMG")
 		await $AnimationPlayer.animation_finished
+
+		var spawner_no = get_tree().get_first_node_in_group("spawner")
+		spawner_no.inimigo_morreu()
 		
-		#var vivo = get_tree().get_first_node_in_group("Ghostlings")
-		
-		#if vivo:
-			#vivo.inimigo_morreu()
-			
 		get_parent().queue_free()
 		
 func gooey_stun(TimeSlimed: float):
