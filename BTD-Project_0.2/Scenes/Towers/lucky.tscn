@@ -94,7 +94,7 @@ script = ExtResource("1_dl7t5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1203637217]
 
 [node name="Timer" type="Timer" parent="." unique_id=2011954952 groups=["Timers"]]
-wait_time = 0.76
+wait_time = 0.08
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=616189137]
 self_modulate = Color(1, 1, 1, 0.5411765)

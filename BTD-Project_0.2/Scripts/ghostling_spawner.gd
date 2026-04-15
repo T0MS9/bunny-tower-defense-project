@@ -28,12 +28,8 @@ func _process(_delta):
 		else:
 			botao_start.disabled = false
 
-
 func iniciar_vaga():
 	ronda_a_decorrer = true
-	
-	var lucky = get_tree().get_first_node_in_group("Lucky_script")
-	lucky.time_start()
 	
 	match rodada_atual:
 		1:
@@ -85,9 +81,6 @@ func inimigo_morreu():
 	
 	if vaga_atual.size() == 0 and inimigos_vivos == 0 and ronda_a_decorrer:
 		ronda_a_decorrer = false
-		
-		var lucky = get_tree().get_first_node_in_group("Lucky_script")
-		lucky.time_stop()
 		
 		rodada_atual += 1
 		atualizar_contador_rondas()

@@ -107,11 +107,20 @@ func configurar_torre_temp():
 	range_node.monitorable = false
 	
 	get_tree().current_scene.add_child(temp_tower)
-
+#temp_tower.get_node("Timer").start()
 func largar_torre():
-	#if tipo_torre_atual == "lucky":
-		#temp_tower.get_node("Timer").start()
+	var spawner = get_tree().get_first_node_in_group("spawner")
+	var lucky = get_tree().get_first_node_in_group("Lucky_script")
+	
+	if tipo_torre_atual == "lucky":
 		
+		if spawner.ronda_a_decorrer:
+			lucky.posicionado = true
+			temp_tower.get_node("Timer").start()
+		else:
+			lucky.posicionado = true
+			temp_tower.get_node("Timer").stop()
+			
 	if temp_tower:
 		# --- AQUI ESTÁ A ADAPTAÇÃO ---
 		# Verifica se ainda temos moedas baseadas no custo definido ao clicar

@@ -6,6 +6,20 @@ extends Node2D
 var font = load("res://FontText/Coiny-Regular.ttf")
 var font_size = 40
 var valor_lucky = 5
+var posicionado = false
+
+
+
+func _process(float):
+	var spawner = get_tree().get_first_node_in_group("spawner")
+
+	if spawner.ronda_a_decorrer == true and posicionado == false:
+		if $Timer.is_stopped():
+			$Timer.start()
+	else:
+		$Timer.stop()
+
+
 
 func _on_timer_timeout() -> void:
 	var moedas = get_tree().current_scene.find_child("Moedas")
