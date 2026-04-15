@@ -9,16 +9,15 @@ var valor_lucky = 5
 var posicionado = false
 
 
-
 func _process(float):
 	var spawner = get_tree().get_first_node_in_group("spawner")
 
-	if spawner.ronda_a_decorrer == true and posicionado == false:
+	if spawner.ronda_a_decorrer and posicionado:
 		if $Timer.is_stopped():
 			$Timer.start()
+			
 	else:
 		$Timer.stop()
-
 
 
 func _on_timer_timeout() -> void:
