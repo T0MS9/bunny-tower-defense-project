@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed_base = 550
 @export var speed = 550
-@export var vida = 1
+@export var vida = 2
 
 const slimed = preload("res://Assets/Enemies/Ghostlings/Ghaztling_Slimed.png")
 
