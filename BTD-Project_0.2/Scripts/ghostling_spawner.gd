@@ -18,6 +18,7 @@ var vaga_atual = []
 var ronda_a_decorrer = false
 
 
+
 func _process(_delta):
 	var botao_start = get_tree().get_first_node_in_group("start_button")
 	
@@ -30,6 +31,9 @@ func _process(_delta):
 
 func iniciar_vaga():
 	ronda_a_decorrer = true
+	
+	var lucky = get_tree().get_first_node_in_group("Lucky_script")
+	lucky.time_start()
 	
 	match rodada_atual:
 		1:
@@ -73,32 +77,25 @@ func _on_timer_timeout():
 
 func inimigo_morreu():
 	inimigos_vivos -= 1
-	print(inimigos_vivos)
-	# 1. SEGURANÇA: Se o número for negativo, força-o a ser 0
+	
 	if inimigos_vivos < 0:
 		inimigos_vivos = 0
 		
 	print("Inimigos no mapa: ", inimigos_vivos)
 	
-	# 2. A CONDIÇÃO COM TRAVA:
-	# Verificamos se a vaga acabou E se ainda não subimos de rodada (ronda_a_decorrer)
 	if vaga_atual.size() == 0 and inimigos_vivos == 0 and ronda_a_decorrer:
-		ronda_a_decorrer = false # BLOQUEIA IMEDIATAMENTE (Ninguém mais entra aqui)
+		ronda_a_decorrer = false
+		
+		var lucky = get_tree().get_first_node_in_group("Lucky_script")
+		lucky.time_stop()
 		
 		rodada_atual += 1
 		atualizar_contador_rondas()
 		
-		# Dar as moedas
-		var moedas_no = get_tree().current_scene.find_child("Moedas", true, false)
+		var moedas_no = get_tree().current_scene.find_child("Moedas")
 		if moedas_no:
-			moedas_no.text = str(int(moedas_no.text) + 50)
-			
-		print("Ronda finalizada com sucesso! Próxima: ", rodada_atual)
+			moedas_no.text = str(int(moedas_no.text) + 50 + rodada_atual - 1)
 
 func atualizar_contador_rondas() -> void:
 	var contador_no = get_tree().get_first_node_in_group("Round_Counter")
 	contador_no.text = str(rodada_atual)
-	
-	
-	
-	

@@ -109,8 +109,8 @@ func configurar_torre_temp():
 	get_tree().current_scene.add_child(temp_tower)
 
 func largar_torre():
-	if tipo_torre_atual == "lucky":
-		temp_tower.get_node("Timer").start()
+	#if tipo_torre_atual == "lucky":
+		#temp_tower.get_node("Timer").start()
 		
 	if temp_tower:
 		# --- AQUI ESTÁ A ADAPTAÇÃO ---

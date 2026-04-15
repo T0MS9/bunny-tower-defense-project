@@ -49,7 +49,11 @@ func label_money():
 	
 	tween.finished.connect(label_M.queue_free)
 
+func time_stop():
+	$Timer.stop()
 
+func time_start():
+	$Timer.start()
 
 
 func _on_texture_button_pressed() -> void:
