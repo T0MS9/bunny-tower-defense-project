@@ -9,15 +9,24 @@ var valor_lucky = 5
 var posicionado = false
 
 
-func _process(float):
+func _physics_process(_delta):
+	$ProgressBar.max_value = $Timer.wait_time
+	$ProgressBar.value = $Timer.wait_time - $Timer.time_left
+	
+	
+	
 	var spawner = get_tree().get_first_node_in_group("spawner")
-
-	if spawner.ronda_a_decorrer and posicionado:
-		if $Timer.is_stopped():
-			$Timer.start()
+	
+	if spawner:
+		
+		if not spawner.ronda_a_decorrer or not posicionado:
+			$Timer.paused = true
+		else:
 			
-	else:
-		$Timer.stop()
+			$Timer.paused = false
+			
+			if $Timer.is_stopped():
+				$Timer.start()
 
 
 func _on_timer_timeout() -> void:
