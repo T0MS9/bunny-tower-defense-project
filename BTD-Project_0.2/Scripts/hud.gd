@@ -50,3 +50,4 @@ func _on_restart_pressed() -> void:
 
 func _on_start_round_pressed() -> void:
 	spawner.iniciar_vaga()
+	

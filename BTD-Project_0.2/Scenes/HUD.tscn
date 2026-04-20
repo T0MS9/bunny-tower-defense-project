@@ -22,14 +22,14 @@
 [ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
 [ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="18_lrioy"]
 [ext_resource type="Texture2D" uid="uid://dwdyptxttt1b0" path="res://Assets/Others/HUD_Assets/Start.png" id="21_8kn8h"]
-[ext_resource type="Texture2D" uid="uid://clp3vwvpiht1c" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22_eukkl"]
+[ext_resource type="Texture2D" uid="uid://qcoiw44o33a7" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22_eukkl"]
 [ext_resource type="Texture2D" uid="uid://cx66sdl26r7of" path="res://Assets/Others/HUD_Assets/StartPressed.png" id="22_ync2q"]
 [ext_resource type="Texture2D" uid="uid://bqifqdi0hicud" path="res://Assets/Others/HUD_Assets/Pause.png" id="23_6kyvd"]
 [ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="23_j3rjm"]
-[ext_resource type="Texture2D" uid="uid://brogtr3kv8yag" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="23_q3bjx"]
-[ext_resource type="Texture2D" uid="uid://dut106yptn0k7" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="23_tvuu7"]
+[ext_resource type="Texture2D" uid="uid://57x3wplejr8j" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="23_q3bjx"]
+[ext_resource type="Texture2D" uid="uid://dfap1ey70msiw" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="23_tvuu7"]
 [ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="24_b1hwh"]
-[ext_resource type="Texture2D" uid="uid://cqguy8kumyt65" path="res://Assets/Others/HUD_Assets/BunnyBoxStun.png" id="24_esw7j"]
+[ext_resource type="Texture2D" uid="uid://k3ao3lrtr4mg" path="res://Assets/Others/HUD_Assets/BunnyBoxStun.png" id="24_esw7j"]
 [ext_resource type="Texture2D" uid="uid://d2yb01obfxojq" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="24_y1r3c"]
 [ext_resource type="Texture2D" uid="uid://cw32myafyva10" path="res://Assets/Bunnies/RookieDisable.png" id="25_iqxei"]
 [ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="26_pss1r"]
@@ -41,7 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="30_l0mrj"]
 [ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="30_ljo2x"]
 [ext_resource type="Texture2D" uid="uid://r8qky2h2ppl8" path="res://Assets/Bunnies/Ghoulish.png" id="31_2dcso"]
-[ext_resource type="Texture2D" uid="uid://g8ln44wa3k2v" path="res://Assets/Others/HUD_Assets/Lock.png" id="31_iqxei"]
 [ext_resource type="Texture2D" uid="uid://dv308wdu2lc0j" path="res://Assets/Bunnies/Scrappy.png" id="32_0dtjy"]
 [ext_resource type="Texture2D" uid="uid://vrnw0rrmjx43" path="res://Assets/Bunnies/AnarchistDisable.png" id="32_jjmk5"]
 [ext_resource type="Texture2D" uid="uid://b4xq7rcw4elgm" path="res://Assets/Bunnies/Toasty.png" id="33_sassi"]
@@ -444,7 +443,7 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 70
 max_value = 9999999.0
 step = 1.0
-value = 85.0
+value = 205.0
 metadata/_edit_use_anchors_ = true
 
 [node name="EventSign" type="Sprite2D" parent="HUD" unique_id=1396536025]
@@ -695,13 +694,9 @@ theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
-[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Toasty_BG_dps" unique_id=1536827768]
-position = Vector2(96.00001, 128)
-scale = Vector2(0.24108563, 0.24108563)
-texture = ExtResource("31_iqxei")
-
 [node name="Anarchist_BG_dps" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1319889206]
 layout_mode = 2
+disabled = true
 texture_normal = ExtResource("22_eukkl")
 texture_disabled = ExtResource("23_q3bjx")
 
@@ -711,6 +706,7 @@ offset_left = 4.0
 offset_top = 14.067688
 offset_right = 184.0
 offset_bottom = 247.23656
+disabled = true
 texture_normal = ExtResource("34_os363")
 texture_disabled = ExtResource("32_jjmk5")
 ignore_texture_size = true
@@ -732,7 +728,7 @@ theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
 theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
-text = "130"
+text = "---"
 
 [node name="Gooey_BG_stun" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=2138510493]
 layout_mode = 2
@@ -785,11 +781,6 @@ texture_normal = ExtResource("32_0dtjy")
 texture_disabled = ExtResource("37_iivpx")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=135121996]
-position = Vector2(96.00001, 128)
-scale = Vector2(0.24108563, 0.24108563)
-texture = ExtResource("31_iqxei")
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=958780730]
 position = Vector2(124, 245)
@@ -844,11 +835,6 @@ theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.87450
 theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
 text = "---"
-
-[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Ghoulish_BG_stun" unique_id=1777494883]
-position = Vector2(96.00001, 128)
-scale = Vector2(0.24108563, 0.24108563)
-texture = ExtResource("31_iqxei")
 
 [node name="Lucky_BG_support" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1532573094]
 layout_mode = 2
@@ -920,11 +906,6 @@ theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
-[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Alien_BG_support" unique_id=202336620]
-position = Vector2(96.00001, 128)
-scale = Vector2(0.24108563, 0.24108563)
-texture = ExtResource("31_iqxei")
-
 [node name="Mystical_BG_support" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=542388852]
 layout_mode = 2
 disabled = true
@@ -960,11 +941,6 @@ theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.87450
 theme_override_fonts/font = ExtResource("4_8ys6w")
 theme_override_font_sizes/font_size = 23
 text = "---"
-
-[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Mystical_BG_support" unique_id=1810589664]
-position = Vector2(96.00001, 128)
-scale = Vector2(0.24108563, 0.24108563)
-texture = ExtResource("31_iqxei")
 
 [node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499 groups=["start_button"]]
 offset_left = 1588.0
@@ -1010,7 +986,6 @@ stretch_mode = 0
 [connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
-[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Anarchist_BG_dps/Anarchist" to="HUD/UI_Selection/Bunnies" method="_on_anarchist_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Gooey_BG_stun/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Lucky_BG_support/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
 [connection signal="pressed" from="HUD/UI_Selection/StartRound" to="HUD" method="_on_start_round_pressed"]
