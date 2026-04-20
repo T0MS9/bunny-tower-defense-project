@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1_dl7t5"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_btyo5"]
 [ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="2_phvx5"]
 [ext_resource type="Texture2D" uid="uid://dwtvxvdpwughw" path="res://Assets/Others/HUD_Assets/Skin.png" id="3_phvx5"]
+=======
+[ext_resource type="Texture2D" uid="uid://b7rxbi2a3ra57" path="res://Assets/Bunnies/Skins/ZeRon.png" id="2_dl7t5"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -106,7 +110,7 @@ texture = ExtResource("2_btyo5")
 [node name="Lucky" type="Sprite2D" parent="." unique_id=73068581]
 position = Vector2(-9.062502, -27.587305)
 scale = Vector2(0.11124287, 0.10587178)
-texture = ExtResource("2_phvx5")
+texture = ExtResource("2_dl7t5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Lucky" unique_id=352638204]
 libraries/ = SubResource("AnimationLibrary_4epwh")
