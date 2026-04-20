@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cwql3yq0oosnw"]
 
-[ext_resource type="Script" uid="uid://7ko1scy7m52u" path="res://Scripts/Enemies/Ghostling/ghazt.gd" id="1_inlgs"]
-[ext_resource type="Texture2D" uid="uid://db6d0bop6trhe" path="res://Assets/Enemies/Ghostlings/Ghazt.png" id="2_inlgs"]
-[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_a2cqm"]
+[ext_resource type="Script" uid="uid://7ko1scy7m52u" path="res://Scripts/Enemies/Ghostling/ghazt.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://eaiko6pr5hgj" path="res://Assets/Enemies/Ghostlings/Ghazt.png" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5f02t"]
 radius = 4.854944
@@ -15,13 +15,13 @@ loop = false
 [node name="Ghazt" type="CharacterBody2D" parent="." unique_id=593512115 groups=["Ghostlings"]]
 position = Vector2(1, 0)
 scale = Vector2(0.8, 0.8)
-script = ExtResource("1_inlgs")
+script = ExtResource("1")
 speed = 211
 
 [node name="Ghazt" type="Sprite2D" parent="Ghazt" unique_id=868435450]
 position = Vector2(2.5000002, 1.250001)
 scale = Vector2(0.096, 0.096)
-texture = ExtResource("2_inlgs")
+texture = ExtResource("2")
 
 [node name="HitBoxGhostling" type="CollisionShape2D" parent="Ghazt" unique_id=1397151304]
 position = Vector2(3.7499995, 0)
@@ -30,4 +30,4 @@ shape = SubResource("CapsuleShape2D_5f02t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ghazt" unique_id=2086486209]
 root_node = NodePath("../Ghazt")
-libraries/Animations = ExtResource("3_a2cqm")
+libraries/Animations = ExtResource("3")

@@ -1,0 +1,36 @@
+GDRE Tools v2.4.0
+CachyOS Linux #1 SMP PREEMPT Fri, 17 Apr 2026 11:49:42 +0000, NVIDIA GeForce RTX 3060, vulkan
+Opening file: ~/Área de Trabalho/BunnyTD.exe
+Loaded 225 imported files
+Detected Engine Version: 4.6.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 455 files, no errors detected!
+Extracted 455 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     23
+Failed scripts:                         0
+Imported resources for export session:  225
+Successfully converted:                 225
+Lossy:                                  1
+Rewrote metadata:                       187
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.6.1 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

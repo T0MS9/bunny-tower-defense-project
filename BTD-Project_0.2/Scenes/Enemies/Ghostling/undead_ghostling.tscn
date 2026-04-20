@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d3h268ltudw0i"]
 
-[ext_resource type="Script" uid="uid://bbywayjaqfn8y" path="res://Scripts/Enemies/Ghostling/undead_ghostling.gd" id="1_0tovf"]
-[ext_resource type="Texture2D" uid="uid://dw1ydi486whhh" path="res://Assets/Enemies/Ghostlings/Undead Ghostling.png" id="2_2pdjo"]
-[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3_2pdjo"]
+[ext_resource type="Script" uid="uid://bbywayjaqfn8y" path="res://Scripts/Enemies/Ghostling/undead_ghostling.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dw1ydi486whhh" path="res://Assets/Enemies/Ghostlings/Undead Ghostling.png" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7e0vp"]
 radius = 6521.0347
@@ -15,11 +15,11 @@ loop = false
 [node name="UndeadGhostling" type="CharacterBody2D" parent="." unique_id=1513647972 groups=["Ghostlings"]]
 position = Vector2(1, 0)
 scale = Vector2(0.8, 0.8)
-script = ExtResource("1_0tovf")
+script = ExtResource("1")
 
 [node name="UndeadGhostling" type="Sprite2D" parent="UndeadGhostling" unique_id=1910617082]
 position = Vector2(0, 1.2501221)
-texture = ExtResource("2_2pdjo")
+texture = ExtResource("2")
 
 [node name="HitBoxUndeadGhostling" type="CollisionShape2D" parent="UndeadGhostling" unique_id=1706406217]
 position = Vector2(0, 1.250122)
@@ -28,4 +28,4 @@ shape = SubResource("CircleShape2D_7e0vp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UndeadGhostling" unique_id=2084397389]
 root_node = NodePath("../..")
-libraries/Animations = ExtResource("3_2pdjo")
+libraries/Animations = ExtResource("3")

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bpsi13nm48dib"]
 
-[ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1_c36il"]
-[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2_55yyg"]
-[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="2_xbbb2"]
+[ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="3"]
 
 [sub_resource type="Animation" id="Animation_c36il"]
 length = 0.001
@@ -50,7 +50,7 @@ radius = 196.01021
 
 [node name="Rookie" type="StaticBody2D" unique_id=264265458]
 position = Vector2(0, -4)
-script = ExtResource("1_c36il")
+script = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
@@ -63,12 +63,12 @@ self_modulate = Color(1, 1, 1, 0.5411765)
 y_sort_enabled = true
 position = Vector2(2.842171e-14, 69)
 scale = Vector2(0.32291666, 0.32291666)
-texture = ExtResource("2_55yyg")
+texture = ExtResource("2")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
 position = Vector2(5.9604645e-08, 0)
 scale = Vector2(0.11124287, 0.10587178)
-texture = ExtResource("2_xbbb2")
+texture = ExtResource("3")
 offset = Vector2(-81.46591, -260.5728)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=1122360598]

@@ -1,57 +1,58 @@
 [gd_scene format=3 uid="uid://cvtf3eidvbt76"]
 
-[ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="1_w0blg"]
-[ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="2_lqayy"]
-[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3_lrioy"]
-[ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="4_8ys6w"]
-[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="5_8kn8h"]
-[ext_resource type="Texture2D" uid="uid://che8gaxewwtmb" path="res://Assets/Others/UI_Assets/Exit.png" id="5_ij8d5"]
-[ext_resource type="Texture2D" uid="uid://c8ptqbmxfllat" path="res://Assets/Others/UI_Assets/X.png" id="6_ljo2x"]
-[ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="6_ync2q"]
-[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="7_7bkcm"]
-[ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="8_6kyvd"]
-[ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="9_b1hwh"]
-[ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="10_ew2rj"]
-[ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="11_2b6re"]
-[ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="12_15qt1"]
-[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="13_wy4oo"]
-[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="14_eukkl"]
-[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="15_tvuu7"]
-[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="16_esw7j"]
-[ext_resource type="Script" uid="uid://b51nkp55iw5n2" path="res://Scripts/hud_shop.gd" id="16_vdgmp"]
-[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="17_1slhg"]
-[ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="18_lrioy"]
-[ext_resource type="Texture2D" uid="uid://dwdyptxttt1b0" path="res://Assets/Others/HUD_Assets/Start.png" id="21_8kn8h"]
-[ext_resource type="Texture2D" uid="uid://qcoiw44o33a7" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22_eukkl"]
-[ext_resource type="Texture2D" uid="uid://cx66sdl26r7of" path="res://Assets/Others/HUD_Assets/StartPressed.png" id="22_ync2q"]
-[ext_resource type="Texture2D" uid="uid://bqifqdi0hicud" path="res://Assets/Others/HUD_Assets/Pause.png" id="23_6kyvd"]
-[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="23_j3rjm"]
-[ext_resource type="Texture2D" uid="uid://57x3wplejr8j" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="23_q3bjx"]
-[ext_resource type="Texture2D" uid="uid://dfap1ey70msiw" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="23_tvuu7"]
-[ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="24_b1hwh"]
-[ext_resource type="Texture2D" uid="uid://k3ao3lrtr4mg" path="res://Assets/Others/HUD_Assets/BunnyBoxStun.png" id="24_esw7j"]
-[ext_resource type="Texture2D" uid="uid://d2yb01obfxojq" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="24_y1r3c"]
-[ext_resource type="Texture2D" uid="uid://cw32myafyva10" path="res://Assets/Bunnies/RookieDisable.png" id="25_iqxei"]
-[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="26_pss1r"]
-[ext_resource type="Texture2D" uid="uid://bewynet5sfny3" path="res://Assets/Bunnies/Slasher.png" id="27_d3djm"]
-[ext_resource type="Texture2D" uid="uid://bfyreavg6683s" path="res://Assets/Bunnies/SlasherDisable.png" id="28_4hkqd"]
-[ext_resource type="Texture2D" uid="uid://cgunt1or7fs8q" path="res://Assets/Bunnies/Alien.png" id="29_0jpwu"]
-[ext_resource type="Texture2D" uid="uid://b2pvy1ylh8v27" path="res://Assets/Others/HUD_Assets/Restart.png" id="29_ij8d5"]
-[ext_resource type="Texture2D" uid="uid://cyvsnhy17ay2o" path="res://Assets/Bunnies/ToastyDisable.png" id="30_dsgg8"]
-[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="30_l0mrj"]
-[ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="30_ljo2x"]
-[ext_resource type="Texture2D" uid="uid://r8qky2h2ppl8" path="res://Assets/Bunnies/Ghoulish.png" id="31_2dcso"]
-[ext_resource type="Texture2D" uid="uid://dv308wdu2lc0j" path="res://Assets/Bunnies/Scrappy.png" id="32_0dtjy"]
-[ext_resource type="Texture2D" uid="uid://vrnw0rrmjx43" path="res://Assets/Bunnies/AnarchistDisable.png" id="32_jjmk5"]
-[ext_resource type="Texture2D" uid="uid://b4xq7rcw4elgm" path="res://Assets/Bunnies/Toasty.png" id="33_sassi"]
-[ext_resource type="Texture2D" uid="uid://df2mmdfu0s8m6" path="res://Assets/Bunnies/Anarchist.png" id="34_os363"]
-[ext_resource type="Texture2D" uid="uid://t7wgkejat1f0" path="res://Assets/Bunnies/Mystical.png" id="35_5ugrk"]
-[ext_resource type="Texture2D" uid="uid://ccwyjijlk56k" path="res://Assets/Bunnies/GooeyDisable.png" id="35_e0yge"]
-[ext_resource type="Texture2D" uid="uid://d00oo4losh56p" path="res://Assets/Bunnies/ScrappyDisable.png" id="37_iivpx"]
-[ext_resource type="Texture2D" uid="uid://cevlegbwwgrtw" path="res://Assets/Bunnies/GhoulishDisable.png" id="39_h0ww3"]
-[ext_resource type="Texture2D" uid="uid://brvkk8eh3jr6u" path="res://Assets/Bunnies/LuckyDisable.png" id="42_hl3i6"]
-[ext_resource type="Texture2D" uid="uid://byjet7tuf5c5v" path="res://Assets/Bunnies/AlienDisable.png" id="44_087co"]
-[ext_resource type="Texture2D" uid="uid://dll5yqlexlt6s" path="res://Assets/Bunnies/MysticalDisable.png" id="46_ag3a8"]
+[ext_resource type="Script" uid="uid://bpsbggr0grq8c" path="res://Scripts/hud.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://crhlssnk24ieu" path="res://Assets/Others/UI_Assets/Settings.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c4j3dauaitqb3" path="res://Assets/Others/Menu_Assets/Menu_Settings.png" id="3"]
+[ext_resource type="FontFile" uid="uid://v56c1vt506yg" path="res://FontText/Coiny-Regular.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://che8gaxewwtmb" path="res://Assets/Others/UI_Assets/Exit.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c8ptqbmxfllat" path="res://Assets/Others/UI_Assets/X.png" id="6"]
+[ext_resource type="Script" uid="uid://b6kmaiowa4gt8" path="res://Scripts/music_control.gd" id="7"]
+[ext_resource type="Script" uid="uid://cdcnh7mikbgwk" path="res://Scripts/fullscreen_cb.gd" id="8"]
+[ext_resource type="FontFile" uid="uid://c4oqjtn2jr35r" path="res://FontText/Candy Planet.ttf" id="9"]
+[ext_resource type="Script" uid="uid://bgpptnikuhqpt" path="res://Scripts/vidas.gd" id="10"]
+[ext_resource type="Texture2D" uid="uid://0gspvaywejuj" path="res://Assets/Others/UI_Assets/Heart01.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bc70ai7pslgij" path="res://Assets/Others/UI_Assets/Heart02.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cqlkmaby0pnuc" path="res://Assets/Others/UI_Assets/Carrot.png" id="13"]
+[ext_resource type="Script" uid="uid://cht6cv0atxuhh" path="res://Scripts/moedas.gd" id="14"]
+[ext_resource type="Texture2D" uid="uid://1kcs1y03k2nr" path="res://Assets/Others/HUD_Assets/EventSign.png" id="15"]
+[ext_resource type="Script" uid="uid://b51nkp55iw5n2" path="res://Scripts/hud_shop.gd" id="16"]
+[ext_resource type="Texture2D" uid="uid://cxu46ob6cvmit" path="res://Assets/Others/HUD_Assets/HUD_BG_Down.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="20"]
+[ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="21"]
+[ext_resource type="Texture2D" uid="uid://clp3vwvpiht1c" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://brogtr3kv8yag" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://cw32myafyva10" path="res://Assets/Bunnies/RookieDisable.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://d2yb01obfxojq" path="res://Assets/Others/HUD_Assets/PriceTag.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://bewynet5sfny3" path="res://Assets/Bunnies/Slasher.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://bfyreavg6683s" path="res://Assets/Bunnies/SlasherDisable.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://b4xq7rcw4elgm" path="res://Assets/Bunnies/Toasty.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://cyvsnhy17ay2o" path="res://Assets/Bunnies/ToastyDisable.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://g8ln44wa3k2v" path="res://Assets/Others/HUD_Assets/Lock.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://df2mmdfu0s8m6" path="res://Assets/Bunnies/Anarchist.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://vrnw0rrmjx43" path="res://Assets/Bunnies/AnarchistDisable.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://cqguy8kumyt65" path="res://Assets/Others/HUD_Assets/BunnyBoxStun.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://ccwyjijlk56k" path="res://Assets/Bunnies/GooeyDisable.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://dv308wdu2lc0j" path="res://Assets/Bunnies/Scrappy.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://d00oo4losh56p" path="res://Assets/Bunnies/ScrappyDisable.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://r8qky2h2ppl8" path="res://Assets/Bunnies/Ghoulish.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://cevlegbwwgrtw" path="res://Assets/Bunnies/GhoulishDisable.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://dut106yptn0k7" path="res://Assets/Others/HUD_Assets/BunnyBoxSupport.png" id="41"]
+[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="42"]
+[ext_resource type="Texture2D" uid="uid://brvkk8eh3jr6u" path="res://Assets/Bunnies/LuckyDisable.png" id="43"]
+[ext_resource type="Texture2D" uid="uid://cgunt1or7fs8q" path="res://Assets/Bunnies/Alien.png" id="44"]
+[ext_resource type="Texture2D" uid="uid://byjet7tuf5c5v" path="res://Assets/Bunnies/AlienDisable.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://t7wgkejat1f0" path="res://Assets/Bunnies/Mystical.png" id="46"]
+[ext_resource type="Texture2D" uid="uid://dll5yqlexlt6s" path="res://Assets/Bunnies/MysticalDisable.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://dwdyptxttt1b0" path="res://Assets/Others/HUD_Assets/Start.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://cx66sdl26r7of" path="res://Assets/Others/HUD_Assets/StartPressed.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://bqifqdi0hicud" path="res://Assets/Others/HUD_Assets/Pause.png" id="50"]
+[ext_resource type="Texture2D" uid="uid://6evqqjgv32t0" path="res://Assets/Others/HUD_Assets/PausePressed.png" id="51"]
+[ext_resource type="Texture2D" uid="uid://b2pvy1ylh8v27" path="res://Assets/Others/HUD_Assets/Restart.png" id="52"]
+[ext_resource type="Texture2D" uid="uid://oeyq25vq54jd" path="res://Assets/Others/HUD_Assets/RestartPressed.png" id="53"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ornx7"]
 content_margin_left = 324.0
@@ -59,10 +60,10 @@ content_margin_left = 324.0
 [sub_resource type="ImageTexture" id="ImageTexture_q5dlx"]
 
 [sub_resource type="Theme" id="Theme_c4wnb"]
-default_font = ExtResource("4_8ys6w")
+default_font = ExtResource("4")
 
 [sub_resource type="Theme" id="Theme_7plk7"]
-default_font = ExtResource("7_7bkcm")
+default_font = ExtResource("9")
 
 [sub_resource type="Animation" id="Animation_1nvmp"]
 length = 0.001
@@ -170,7 +171,7 @@ _data = {
 process_mode = 3
 position = Vector2(-52.999992, -59.000004)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("1_w0blg")
+script = ExtResource("1")
 
 [node name="Pause" type="Button" parent="HUD" unique_id=2089806370]
 offset_left = 1464.0001
@@ -178,7 +179,7 @@ offset_top = 56.000004
 offset_right = 1545.6047
 offset_bottom = 137.60461
 theme_override_font_sizes/font_size = 76
-icon = ExtResource("2_lqayy")
+icon = ExtResource("2")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -201,7 +202,7 @@ grow_vertical = 2
 modulate = Color(0.8848981, 0.8848981, 0.8848981, 0.85882354)
 position = Vector2(446.78564, 302.25)
 scale = Vector2(0.98663104, 0.9791347)
-texture = ExtResource("3_lrioy")
+texture = ExtResource("3")
 
 [node name="Label" type="Label" parent="HUD/Options" unique_id=264149739]
 layout_mode = 1
@@ -212,7 +213,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7019608)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.4392157)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ornx7")
 text = "DEFINIÇÕES"
@@ -230,7 +231,7 @@ offset_left = -5.187195
 offset_top = -11.344025
 offset_right = 5.513794
 offset_bottom = 11.90802
-texture_normal = ExtResource("5_ij8d5")
+texture_normal = ExtResource("5")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -245,7 +246,7 @@ offset_left = -2.4692993
 offset_top = -5.695918
 offset_right = 2.9335938
 offset_bottom = 6.430069
-texture_normal = ExtResource("6_ljo2x")
+texture_normal = ExtResource("6")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -258,7 +259,7 @@ offset_bottom = 222.0
 max_value = 1.0
 step = 0.05
 value = 0.25
-script = ExtResource("5_8kn8h")
+script = ExtResource("7")
 audio_bus_name = "Music"
 
 [node name="Musica" type="Label" parent="HUD/Options/MusicControl" unique_id=958609823]
@@ -268,7 +269,7 @@ offset_top = 38.0
 offset_right = 2.0
 offset_bottom = 87.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 32
 text = "Música"
 horizontal_alignment = 1
@@ -283,7 +284,7 @@ offset_bottom = 303.0
 max_value = 1.0
 step = 0.05
 value = 0.25
-script = ExtResource("5_8kn8h")
+script = ExtResource("7")
 audio_bus_name = "SFX"
 
 [node name="Sons" type="Label" parent="HUD/Options/SFXControl" unique_id=976187456]
@@ -293,7 +294,7 @@ offset_top = 37.0
 offset_right = 2.0
 offset_bottom = 86.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 32
 text = "Sons"
 horizontal_alignment = 1
@@ -306,11 +307,11 @@ offset_top = 257.0
 offset_right = 409.0
 offset_bottom = 376.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 39
 theme_override_icons/checked = SubResource("ImageTexture_q5dlx")
 text = "Fullscreen"
-script = ExtResource("6_ync2q")
+script = ExtResource("8")
 
 [node name="GameOver" type="Panel" parent="HUD" unique_id=605734411]
 visible = false
@@ -335,7 +336,7 @@ offset_right = 634.7305
 offset_bottom = 171.25745
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("7_7bkcm")
+theme_override_fonts/font = ExtResource("9")
 theme_override_font_sizes/font_size = 76
 text = "Game Over"
 horizontal_alignment = 1
@@ -354,7 +355,7 @@ offset_right = 271.85632
 offset_bottom = 65.26944
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("7_7bkcm")
+theme_override_fonts/font = ExtResource("9")
 theme_override_font_sizes/font_size = 46
 text = "Tentar denovo"
 
@@ -371,7 +372,7 @@ offset_right = 271.85632
 offset_bottom = 270.06
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("7_7bkcm")
+theme_override_fonts/font = ExtResource("9")
 theme_override_font_sizes/font_size = 46
 text = "Voltar ao Menu"
 
@@ -399,24 +400,24 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 3
 theme_override_font_sizes/font_size = 64
 text = "100"
-script = ExtResource("8_6kyvd")
+script = ExtResource("10")
 metadata/_edit_use_anchors_ = true
 
 [node name="Heart" type="Sprite2D" parent="HUD" unique_id=1880252046]
 position = Vector2(105.83234, 111.82022)
 scale = Vector2(0.12905048, 0.12905048)
-texture = ExtResource("9_b1hwh")
+texture = ExtResource("11")
 
 [node name="HeartBroke" type="Sprite2D" parent="HUD" unique_id=869311774]
 visible = false
 position = Vector2(105.786, 111.774)
 scale = Vector2(0.12918285, 0.12918285)
-texture = ExtResource("10_ew2rj")
+texture = ExtResource("12")
 
 [node name="Coin" type="Sprite2D" parent="HUD" unique_id=771336608]
 position = Vector2(102.78626, 216.55849)
 scale = Vector2(0.120610684, 0.120610684)
-texture = ExtResource("11_2b6re")
+texture = ExtResource("13")
 
 [node name="Moedas" type="Label" parent="HUD" unique_id=432508488]
 process_mode = 3
@@ -428,10 +429,10 @@ theme = SubResource("Theme_7plk7")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.37254903)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 64
 text = "100"
-script = ExtResource("12_15qt1")
+script = ExtResource("14")
 metadata/_edit_use_anchors_ = true
 
 [node name="PGB_M" type="ProgressBar" parent="HUD" unique_id=1840660125]
@@ -450,7 +451,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(220.35931, 955.68866)
 scale = Vector2(0.4844466, 0.4844466)
-texture = ExtResource("13_wy4oo")
+texture = ExtResource("15")
 
 [node name="Limits" type="Area2D" parent="HUD" unique_id=1224677807 groups=["no_place"]]
 position = Vector2(52.999992, 59.000004)
@@ -485,7 +486,7 @@ polygon = PackedVector2Array(-101.05957, -24.795378, -101.05957, 91.073944, 18.9
 [node name="HUD_Shop" type="Node2D" parent="HUD" unique_id=1878578739]
 position = Vector2(2157.9224, 765.2696)
 scale = Vector2(1.078842, 1.078842)
-script = ExtResource("16_vdgmp")
+script = ExtResource("16")
 
 [node name="Shop_Appear" type="AnimationPlayer" parent="HUD/HUD_Shop" unique_id=750646598]
 active = false
@@ -496,7 +497,7 @@ libraries/ = SubResource("AnimationLibrary_fbwgr")
 texture_repeat = 2
 position = Vector2(-1269.618, 574.73)
 scale = Vector2(1.6646795, 1.747142)
-texture = ExtResource("16_esw7j")
+texture = ExtResource("17")
 region_enabled = true
 region_rect = Rect2(0, 0, 1080, 151.48657)
 
@@ -509,7 +510,7 @@ speed_scale = 0.155
 [node name="HudShopFrame" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=470288902]
 position = Vector2(-1262.8525, 472.20032)
 scale = Vector2(0.43589035, 0.38)
-texture = ExtResource("17_1slhg")
+texture = ExtResource("18")
 
 [node name="disable_shop" type="Button" parent="HUD" unique_id=82156049]
 visible = false
@@ -526,14 +527,14 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="HudBgRight" type="Sprite2D" parent="HUD/UI_Selection" unique_id=1211361329]
 position = Vector2(1769.9219, 774.26953)
 scale = Vector2(1.0788419, 1.0788419)
-texture = ExtResource("14_eukkl")
+texture = ExtResource("19")
 region_enabled = true
 region_rect = Rect2(0, 0, 377.19507, 1080)
 
 [node name="HudSelectionFrame" type="Sprite2D" parent="HUD/UI_Selection" unique_id=887820282]
 position = Vector2(1759.1436, 705.47186)
 scale = Vector2(0.5964735, 0.5970855)
-texture = ExtResource("15_tvuu7")
+texture = ExtResource("20")
 
 [node name="Round" type="Label" parent="HUD/UI_Selection" unique_id=795597463]
 offset_left = 1573.5145
@@ -542,7 +543,7 @@ offset_right = 1856.1494
 offset_bottom = 123.97008
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_constants/shadow_offset_x = 4
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 65
 text = "ROUND:"
 vertical_alignment = 1
@@ -556,7 +557,7 @@ offset_bottom = 169.47903
 theme_override_colors/font_color = Color(0.6955032, 0.6955031, 0.6955031, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3647059)
 theme_override_constants/shadow_offset_x = 4
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 40
 text = "(NO EVENT)"
 vertical_alignment = 1
@@ -569,7 +570,7 @@ offset_right = 1968.7245
 offset_bottom = 122.77249
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_constants/shadow_offset_x = 4
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 65
 text = "1"
 vertical_alignment = 1
@@ -578,7 +579,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Bunnies" type="Node2D" parent="HUD/UI_Selection" unique_id=1149456240]
 position = Vector2(53, 59.00001)
 scale = Vector2(1.0000001, 1.0000001)
-script = ExtResource("18_lrioy")
+script = ExtResource("21")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HUD/UI_Selection/Bunnies" unique_id=1163235928]
 offset_left = 1520.0
@@ -592,8 +593,8 @@ columns = 2
 
 [node name="Rookie_BG_dps" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1755857970]
 layout_mode = 2
-texture_normal = ExtResource("22_eukkl")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("22")
+texture_disabled = ExtResource("23")
 
 [node name="Rookie" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps" unique_id=1569122706]
 layout_mode = 0
@@ -601,15 +602,15 @@ offset_left = -4.0
 offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
-texture_normal = ExtResource("23_j3rjm")
-texture_disabled = ExtResource("25_iqxei")
+texture_normal = ExtResource("24")
+texture_disabled = ExtResource("25")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps" unique_id=1662657573]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps" unique_id=1249860019]
 layout_mode = 0
@@ -620,14 +621,14 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "75"
 
 [node name="Slasher_BG_dps" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=378263718]
 layout_mode = 2
-texture_normal = ExtResource("22_eukkl")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("22")
+texture_disabled = ExtResource("23")
 
 [node name="Slasher" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps" unique_id=2052073892]
 layout_mode = 0
@@ -635,15 +636,15 @@ offset_left = -4.0
 offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
-texture_normal = ExtResource("27_d3djm")
-texture_disabled = ExtResource("28_4hkqd")
+texture_normal = ExtResource("27")
+texture_disabled = ExtResource("28")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps" unique_id=1763141016]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps" unique_id=2028230198]
 layout_mode = 0
@@ -654,15 +655,15 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "140"
 
 [node name="Toasty_BG_dps" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=458300905]
 layout_mode = 2
 disabled = true
-texture_normal = ExtResource("22_eukkl")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("22")
+texture_disabled = ExtResource("23")
 
 [node name="Toasty" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Toasty_BG_dps" unique_id=898894793]
 layout_mode = 0
@@ -671,15 +672,15 @@ offset_top = -5.772293
 offset_right = 191.0
 offset_bottom = 244.23656
 disabled = true
-texture_normal = ExtResource("33_sassi")
-texture_disabled = ExtResource("30_dsgg8")
+texture_normal = ExtResource("29")
+texture_disabled = ExtResource("30")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Toasty_BG_dps" unique_id=752082675]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Toasty_BG_dps" unique_id=1736052465]
 layout_mode = 0
@@ -690,15 +691,19 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
+[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Toasty_BG_dps" unique_id=1536827768]
+position = Vector2(96.00001, 128)
+scale = Vector2(0.24108563, 0.24108563)
+texture = ExtResource("31")
+
 [node name="Anarchist_BG_dps" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1319889206]
 layout_mode = 2
-disabled = true
-texture_normal = ExtResource("22_eukkl")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("22")
+texture_disabled = ExtResource("23")
 
 [node name="Anarchist" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Anarchist_BG_dps" unique_id=1332871057]
 layout_mode = 0
@@ -706,16 +711,15 @@ offset_left = 4.0
 offset_top = 14.067688
 offset_right = 184.0
 offset_bottom = 247.23656
-disabled = true
-texture_normal = ExtResource("34_os363")
-texture_disabled = ExtResource("32_jjmk5")
+texture_normal = ExtResource("32")
+texture_disabled = ExtResource("33")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Anarchist_BG_dps" unique_id=357696644]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Anarchist_BG_dps" unique_id=983144561]
 layout_mode = 0
@@ -726,14 +730,14 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
-text = "---"
+text = "130"
 
 [node name="Gooey_BG_stun" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=2138510493]
 layout_mode = 2
-texture_normal = ExtResource("24_esw7j")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("34")
+texture_disabled = ExtResource("23")
 
 [node name="Gooey" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Gooey_BG_stun" unique_id=1614574487]
 layout_mode = 0
@@ -741,15 +745,15 @@ offset_left = -4.0
 offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
-texture_normal = ExtResource("26_pss1r")
-texture_disabled = ExtResource("35_e0yge")
+texture_normal = ExtResource("35")
+texture_disabled = ExtResource("36")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Gooey_BG_stun" unique_id=1645671348]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Gooey_BG_stun" unique_id=277106955]
 layout_mode = 0
@@ -760,15 +764,15 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "90"
 
 [node name="Scrappy_BG_stun" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=824449174]
 layout_mode = 2
 disabled = true
-texture_normal = ExtResource("24_esw7j")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("34")
+texture_disabled = ExtResource("23")
 
 [node name="Scrappy" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=1322863999]
 layout_mode = 0
@@ -777,15 +781,20 @@ offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
 disabled = true
-texture_normal = ExtResource("32_0dtjy")
-texture_disabled = ExtResource("37_iivpx")
+texture_normal = ExtResource("37")
+texture_disabled = ExtResource("38")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=135121996]
+position = Vector2(96.00001, 128)
+scale = Vector2(0.24108563, 0.24108563)
+texture = ExtResource("31")
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=958780730]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Scrappy_BG_stun" unique_id=1420738242]
 layout_mode = 0
@@ -796,15 +805,15 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
 [node name="Ghoulish_BG_stun" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1447302593]
 layout_mode = 2
 disabled = true
-texture_normal = ExtResource("24_esw7j")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("34")
+texture_disabled = ExtResource("23")
 
 [node name="Ghoulish" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Ghoulish_BG_stun" unique_id=316414207]
 layout_mode = 0
@@ -813,15 +822,15 @@ offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
 disabled = true
-texture_normal = ExtResource("31_2dcso")
-texture_disabled = ExtResource("39_h0ww3")
+texture_normal = ExtResource("39")
+texture_disabled = ExtResource("40")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Ghoulish_BG_stun" unique_id=802096256]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Ghoulish_BG_stun" unique_id=1696937418]
 layout_mode = 0
@@ -832,14 +841,19 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "---"
 
+[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Ghoulish_BG_stun" unique_id=1777494883]
+position = Vector2(96.00001, 128)
+scale = Vector2(0.24108563, 0.24108563)
+texture = ExtResource("31")
+
 [node name="Lucky_BG_support" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=1532573094]
 layout_mode = 2
-texture_normal = ExtResource("23_tvuu7")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("41")
+texture_disabled = ExtResource("23")
 
 [node name="Lucky" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Lucky_BG_support" unique_id=1775925073]
 layout_mode = 0
@@ -847,15 +861,15 @@ offset_left = -4.0
 offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
-texture_normal = ExtResource("30_l0mrj")
-texture_disabled = ExtResource("42_hl3i6")
+texture_normal = ExtResource("42")
+texture_disabled = ExtResource("43")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Lucky_BG_support" unique_id=190610724]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Lucky_BG_support" unique_id=618724223]
 layout_mode = 0
@@ -866,15 +880,15 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "130"
 
 [node name="Alien_BG_support" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=831714472]
 layout_mode = 2
 disabled = true
-texture_normal = ExtResource("23_tvuu7")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("41")
+texture_disabled = ExtResource("23")
 
 [node name="Alien" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Alien_BG_support" unique_id=776207283]
 layout_mode = 0
@@ -883,15 +897,15 @@ offset_top = 11.772308
 offset_right = 185.0
 offset_bottom = 246.23656
 disabled = true
-texture_normal = ExtResource("29_0jpwu")
-texture_disabled = ExtResource("44_087co")
+texture_normal = ExtResource("44")
+texture_disabled = ExtResource("45")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Alien_BG_support" unique_id=334616156]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Alien_BG_support" unique_id=1813860560]
 layout_mode = 0
@@ -902,15 +916,20 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "---"
+
+[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Alien_BG_support" unique_id=202336620]
+position = Vector2(96.00001, 128)
+scale = Vector2(0.24108563, 0.24108563)
+texture = ExtResource("31")
 
 [node name="Mystical_BG_support" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer" unique_id=542388852]
 layout_mode = 2
 disabled = true
-texture_normal = ExtResource("23_tvuu7")
-texture_disabled = ExtResource("23_q3bjx")
+texture_normal = ExtResource("41")
+texture_disabled = ExtResource("23")
 
 [node name="Mystical" type="TextureButton" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Mystical_BG_support" unique_id=54255089]
 layout_mode = 0
@@ -919,15 +938,15 @@ offset_top = 4.0
 offset_right = 183.0
 offset_bottom = 246.23656
 disabled = true
-texture_normal = ExtResource("35_5ugrk")
-texture_disabled = ExtResource("46_ag3a8")
+texture_normal = ExtResource("46")
+texture_disabled = ExtResource("47")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Mystical_BG_support" unique_id=1064552725]
 position = Vector2(124, 245)
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("24_y1r3c")
+texture = ExtResource("26")
 
 [node name="Preço" type="Label" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Mystical_BG_support" unique_id=1452866165]
 layout_mode = 0
@@ -938,9 +957,14 @@ offset_bottom = 259.0
 rotation = -0.05235988
 theme_override_colors/font_color = Color(1, 0.78039217, 0.3019608, 1)
 theme_override_colors/font_shadow_color = Color(0.81960785, 0.627451, 0, 0.8745098)
-theme_override_fonts/font = ExtResource("4_8ys6w")
+theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 23
 text = "---"
+
+[node name="lock" type="Sprite2D" parent="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Mystical_BG_support" unique_id=1810589664]
+position = Vector2(96.00001, 128)
+scale = Vector2(0.24108563, 0.24108563)
+texture = ExtResource("31")
 
 [node name="StartRound" type="TextureButton" parent="HUD/UI_Selection" unique_id=2131063499 groups=["start_button"]]
 offset_left = 1588.0
@@ -948,9 +972,9 @@ offset_top = 932.0001
 offset_right = 1951.368
 offset_bottom = 1023.0001
 disabled = true
-texture_normal = ExtResource("21_8kn8h")
-texture_pressed = ExtResource("22_ync2q")
-texture_disabled = ExtResource("22_ync2q")
+texture_normal = ExtResource("48")
+texture_pressed = ExtResource("49")
+texture_disabled = ExtResource("49")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -960,8 +984,8 @@ offset_left = 1587.9998
 offset_top = 933.0001
 offset_right = 1951.0002
 offset_bottom = 1023.0006
-texture_normal = ExtResource("23_6kyvd")
-texture_pressed = ExtResource("24_b1hwh")
+texture_normal = ExtResource("50")
+texture_pressed = ExtResource("51")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -970,8 +994,8 @@ offset_left = 1588.0001
 offset_top = 1032.0001
 offset_right = 1951.3683
 offset_bottom = 1123.0001
-texture_normal = ExtResource("29_ij8d5")
-texture_pressed = ExtResource("30_ljo2x")
+texture_normal = ExtResource("52")
+texture_pressed = ExtResource("53")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -986,6 +1010,7 @@ stretch_mode = 0
 [connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
+[connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Anarchist_BG_dps/Anarchist" to="HUD/UI_Selection/Bunnies" method="_on_anarchist_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Gooey_BG_stun/Gooey" to="HUD/UI_Selection/Bunnies" method="_on_gooey_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Lucky_BG_support/Lucky" to="HUD/UI_Selection/Bunnies" method="_on_lucky_button_down"]
 [connection signal="pressed" from="HUD/UI_Selection/StartRound" to="HUD" method="_on_start_round_pressed"]

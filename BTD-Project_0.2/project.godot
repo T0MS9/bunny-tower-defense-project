@@ -32,6 +32,10 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://dfdo8udp78a56"
 
+[editor_overrides]
+
+text_editor/behavior/indent/type=1
+
 [file_customization]
 
 folder_colors={
