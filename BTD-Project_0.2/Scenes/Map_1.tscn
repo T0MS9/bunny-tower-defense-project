@@ -44,7 +44,7 @@ scale = Vector2(0.5990241, 0.59902424)
 texture = ExtResource("2_yi2un")
 offset = Vector2(292.51355, 1213.1501)
 
-[node name="MapSprits" type="Node2D" parent="Map" unique_id=1907962850]
+[node name="MapSprites" type="Node2D" parent="Map" unique_id=1907962850]
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1947152330]
 y_sort_enabled = true

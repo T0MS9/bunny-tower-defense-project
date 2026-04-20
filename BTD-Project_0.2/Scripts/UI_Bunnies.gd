@@ -4,6 +4,7 @@ extends Node2D
 @onready var lucky_scene = preload("res://Scenes/Towers/lucky.tscn")
 @onready var slasher_scene = preload("res://Scenes/Towers/slasher.tscn")
 @onready var gooey_scene = preload("res://Scenes/Towers/gooey.tscn")
+@onready var anarchist_scene = preload("res://Scenes/Towers/anarchist.tscn")
 
 
 @onready var moedas_label = $"../../Moedas"
@@ -36,6 +37,9 @@ func _process(_delta: float) -> void:
 	
 	$ScrollContainer/GridContainer/Gooey_BG_stun.disabled = (moedas_atuais < 90)
 	$ScrollContainer/GridContainer/Gooey_BG_stun/Gooey.disabled = (moedas_atuais < 90)
+	
+	$ScrollContainer/GridContainer/Anarchist_BG_dps.disabled = (moedas_atuais < 130)
+	$ScrollContainer/GridContainer/Anarchist_BG_dps/Anarchist.disabled = (moedas_atuais < 130)
 	
 	if temp_tower != null:
 		temp_tower.global_position = get_global_mouse_position()
@@ -72,27 +76,34 @@ func _process(_delta: float) -> void:
 func _on_rookie_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 75:
 		temp_tower = rookie_scene.instantiate()
-		custo_da_torre_atual = 75 # <--- Define o custo aqui
+		custo_da_torre_atual = 75
 		configurar_torre_temp()
 		
 func _on_slasher_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 140:
 		temp_tower = slasher_scene.instantiate()
-		custo_da_torre_atual = 140 # <--- Define o custo aqui
+		custo_da_torre_atual = 140
 		configurar_torre_temp()
 
 func _on_lucky_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 130:
 		tipo_torre_atual = "lucky"
 		temp_tower = lucky_scene.instantiate()
-		custo_da_torre_atual = 130 # <--- Define o custo aqui
+		custo_da_torre_atual = 130
 		configurar_torre_temp()
 		
 func _on_gooey_button_down() -> void:
 	if temp_tower == null and moedas_atuais >= 90:
 		tipo_torre_atual = "gooey"
 		temp_tower = gooey_scene.instantiate()
-		custo_da_torre_atual = 90 # <--- Define o custo aqui
+		custo_da_torre_atual = 90
+		configurar_torre_temp()
+		
+func _on_anarchist_button_down() -> void:
+	if temp_tower == null and moedas_atuais >= 130:
+		tipo_torre_atual = "anarchist"
+		temp_tower = anarchist_scene.instantiate()
+		custo_da_torre_atual = 130
 		configurar_torre_temp()
 	
 #///////////////////////////////////////////////////////////////
