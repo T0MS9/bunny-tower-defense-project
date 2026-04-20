@@ -12,6 +12,9 @@ func _physics_process(delta):
 
 	if $"..".progress_ratio >= 0.99:
 		get_tree().call_group("HP", "take_dmg", 1)
+		
+		var spawner_no = get_tree().get_first_node_in_group("spawner")
+		spawner_no.inimigo_morreu()
 		get_parent().queue_free()
 
 func DMGED(quantidade):

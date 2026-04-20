@@ -14,6 +14,9 @@ func _physics_process(delta):
 #codigo q perder vidas quando chega ao fim (NGM)
 	if $"..".progress_ratio >= 0.99:
 		get_tree().call_group("HP", "take_dmg", 3)
+		
+		var spawner_no = get_tree().get_first_node_in_group("spawner")
+		spawner_no.inimigo_morreu()
 		get_parent().queue_free()
 
 func DMGED(quantidade):
