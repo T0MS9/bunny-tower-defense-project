@@ -58,13 +58,12 @@ HP=""
 Ghostlings=""
 no_place=""
 Timers=""
-Bunnis=""
 start_button=""
 spawner=""
 Round_Counter=""
 Lucky_script=""
 HUD=""
-Focus=""
+Bunnies=""
 
 [input]
 

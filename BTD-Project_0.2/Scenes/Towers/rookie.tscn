@@ -87,7 +87,7 @@ _data = {
 &"idle": SubResource("Animation_8lmgt")
 }
 
-[node name="Rookie" type="StaticBody2D" unique_id=264265458 groups=["Focus"]]
+[node name="Rookie" type="StaticBody2D" unique_id=264265458 groups=["Bunnies"]]
 position = Vector2(0, -4)
 script = ExtResource("1")
 

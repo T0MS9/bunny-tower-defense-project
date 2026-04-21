@@ -11,7 +11,7 @@ var dmg_Rookie = 1
 var focus = false
 
 
-func _process(delta: float) -> void :
+func _process(float) -> void :
     
     if focus == true:
         $ArrowDps.visible = true
@@ -41,7 +41,6 @@ func atacar(alvo):
 
 
 
-
 func _draw() -> void :
     if mostrar_range:
         var shape = $Range/CollisionRange.shape
@@ -58,6 +57,33 @@ func _on_button_mouse_exited() -> void :
     queue_redraw()
 
 
+
+
+
+
+func mudar_skin():
+    skin = !skin
+    
+    var path = $Rookie.texture.resource_path
+    match path:
+        "res://Assets/Bunnies/Rookie.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/buny.png")
+            
+        "res://Assets/Bunnies/Skins/buny.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Rookie.png")
+            
+        "res://Assets/Bunnies/Paths/Rookie01.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+            
+        "res://Assets/Bunnies/Skins/Paths/buny02.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
+            
+        "res://Assets/Bunnies/Paths/Rookie02.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
+            
+        "res://Assets/Bunnies/Skins/Paths/buny01.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")
+
 func _on_button_button_down() -> void:
     focus = true
     
@@ -70,17 +96,22 @@ func _on_button_button_down() -> void:
         hud.get_node("HUD_Shop/HudBgDown/ExitShop").disabled = false
         hud.get_node("HUD_Shop/Shop_Appear").play("Shop_Appear")
     
-    
-
-
 
 func aplicar_upgrade(caminho: int):
     if caminho == 1:
         nivel_dano += 1
         dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
-        $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
+        
+        if skin:
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+        else:
+            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
         
     elif caminho == 2:
         nivel_velocidade += 1
         $Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
-        $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")
+        
+        if skin:
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
+        else:
+            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")

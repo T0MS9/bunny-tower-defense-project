@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b080v0sncidon" path="res://Assets/Others/HUD_Assets/HUD_ShopFrame.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://dlasl45jxbxag" path="res://Assets/Others/HUD_Assets/HUD_BG_Right.png" id="19"]
 [ext_resource type="Texture2D" uid="uid://7u8qiakupiub" path="res://Assets/Others/HUD_Assets/HUD_SelectionFrame.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://dwtvxvdpwughw" path="res://Assets/Others/HUD_Assets/Skin.png" id="20_4hkqd"]
 [ext_resource type="Script" uid="uid://dynewn01di37k" path="res://Scripts/UI_Bunnies.gd" id="21"]
 [ext_resource type="Texture2D" uid="uid://clp3vwvpiht1c" path="res://Assets/Others/HUD_Assets/BunnyBoxDPS.png" id="22"]
 [ext_resource type="Texture2D" uid="uid://brogtr3kv8yag" path="res://Assets/Others/HUD_Assets/BunnyBox.png" id="23"]
@@ -552,6 +553,7 @@ stretch_mode = 0
 [node name="BunnySel" type="Sprite2D" parent="HUD/HUD_Shop/HudBgDown" unique_id=2059092966]
 position = Vector2(-332.53345, -96.06146)
 scale = Vector2(0.09667676, 0.09131366)
+texture = ExtResource("24")
 
 [node name="path 1" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=19946101]
 offset_left = -6.2390747
@@ -566,6 +568,15 @@ offset_top = -54.81076
 offset_right = 237.08937
 offset_bottom = 7.9999695
 text = "velociade"
+
+[node name="TextureButton" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=521091660]
+offset_left = -411.04413
+offset_top = -45.316696
+offset_right = -360.37393
+offset_bottom = 5.353504
+texture_normal = ExtResource("20_4hkqd")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="disable_shop" type="Button" parent="HUD" unique_id=82156049]
 visible = false
@@ -1064,6 +1075,7 @@ stretch_mode = 0
 [connection signal="button_down" from="HUD/HUD_Shop/HudBgDown/ExitShop" to="HUD" method="_on_exit_settings_button_down"]
 [connection signal="pressed" from="HUD/HUD_Shop/HudBgDown/path 1" to="HUD" method="_on_path_1_pressed"]
 [connection signal="pressed" from="HUD/HUD_Shop/HudBgDown/path 2" to="HUD" method="_on_path_2_pressed"]
+[connection signal="pressed" from="HUD/HUD_Shop/HudBgDown/TextureButton" to="HUD" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]
