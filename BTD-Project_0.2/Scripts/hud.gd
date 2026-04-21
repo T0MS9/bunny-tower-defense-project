@@ -55,10 +55,7 @@ func _on_start_round_pressed() -> void :
 
 
 func _on_exit_settings_button_down() -> void:
-    
-    var focus = get_tree().get_first_node_in_group("Bunnies")
-    if focus.focus:
-        focus.focus = false
+    get_tree().call_group("Bunnies", "reset_focus")
     
     $HUD_Shop/HudBgDown/ExitShop.disabled = true
     $HUD_Shop/Shop_Appear.play_backwards("Shop_Appear")
@@ -88,7 +85,8 @@ func _on_path_2_pressed() -> void:
         torre_em_foco.aplicar_upgrade(2)
 
 
+
+
 func _on_texture_button_pressed() -> void:
-    var skins = get_tree().get_first_node_in_group("Bunnies")
-    skins.mudar_skin()
-    
+    if torre_em_foco != null:
+        torre_em_foco.mudar_skin()

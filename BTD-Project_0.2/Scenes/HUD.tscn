@@ -536,16 +536,88 @@ texture = ExtResource("17")
 region_enabled = true
 region_rect = Rect2(0, 0, 1080, 151.48657)
 
+[node name="Upgrade 1-1" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1918691455]
+offset_left = 31.624382
+offset_top = -120.12201
+offset_right = 81.737816
+offset_bottom = -70.008575
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 1-2" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=901008340]
+offset_left = 89.533226
+offset_top = -120.12201
+offset_right = 139.64667
+offset_bottom = -70.008575
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 1-3" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1283517967]
+offset_left = 147.44203
+offset_top = -120.12201
+offset_right = 197.55547
+offset_bottom = -70.008575
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 1-4" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1201173537]
+offset_left = 205.3509
+offset_top = -120.12201
+offset_right = 255.46434
+offset_bottom = -70.008575
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 2-1" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1471342410]
+offset_left = 31.624361
+offset_top = -60.7021
+offset_right = 81.73779
+offset_bottom = -10.588665
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 2-2" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=281258325]
+offset_left = 89.53318
+offset_top = -60.7021
+offset_right = 139.6466
+offset_bottom = -10.588665
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 2-3" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1097753098]
+offset_left = 147.44196
+offset_top = -60.7021
+offset_right = 197.55539
+offset_bottom = -10.588665
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Upgrade 2-4" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=530252470]
+offset_left = 205.35083
+offset_top = -60.7021
+offset_right = 255.46426
+offset_bottom = -10.588665
+texture_normal = ExtResource("13")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="ExitShop" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1695559731]
 anchors_preset = -1
-anchor_left = 0.95100003
+anchor_left = 0.952
 anchor_top = 0.001
-anchor_right = 0.99600005
+anchor_right = 0.99700004
 anchor_bottom = 0.14400001
-offset_left = -421.30096
-offset_top = -130.40775
-offset_right = -421.05908
-offset_bottom = -130.59329
+offset_left = -421.39297
+offset_top = -130.40773
+offset_right = -421.1511
+offset_bottom = -130.59328
 texture_normal = ExtResource("6")
 ignore_texture_size = true
 stretch_mode = 0
@@ -559,14 +631,14 @@ offset_left = -6.2390747
 offset_top = -125.902405
 offset_right = 244.32794
 offset_bottom = -63.091675
-text = "ataque"
+text = "path 1"
 
 [node name="path 2" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=1096517178]
 offset_left = -6.239084
 offset_top = -54.81076
 offset_right = 237.08937
 offset_bottom = 7.9999695
-text = "velociade"
+text = "path 2"
 
 [node name="TextureButton" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=521091660]
 offset_left = -411.04413

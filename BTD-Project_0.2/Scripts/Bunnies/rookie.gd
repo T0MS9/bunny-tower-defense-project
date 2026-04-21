@@ -56,10 +56,8 @@ func _on_button_mouse_exited() -> void :
     mostrar_range = false
     queue_redraw()
 
-
-
-
-
+func reset_focus():
+    focus = false
 
 func mudar_skin():
     skin = !skin
@@ -85,12 +83,16 @@ func mudar_skin():
             $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")
 
 func _on_button_button_down() -> void:
+    # 1. Diz a TODOS os nós no grupo "Bunnies" para correrem a função reset_focus
+    get_tree().call_group("Bunnies", "reset_focus")
+    
+    # 2. Agora liga o foco apenas DESTE coelho
     focus = true
     
+    # ... resto do teu código (abrir HUD, etc) ...
     var hud = get_tree().get_first_node_in_group("HUD")
     if hud:
-        # ESTA LINHA É A CHAVE:
-        hud.abrir_menu_upgrade(self) 
+        hud.abrir_menu_upgrade(self)
         
         hud.get_node("HUD_Shop/HudBgDown/BunnySel").texture = load("res://Assets/Bunnies/Rookie.png")
         hud.get_node("HUD_Shop/HudBgDown/ExitShop").disabled = false
@@ -99,8 +101,8 @@ func _on_button_button_down() -> void:
 
 func aplicar_upgrade(caminho: int):
     if caminho == 1:
-        nivel_dano += 1
-        dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
+        #nivel_dano += 1
+        #dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
         
         if skin:
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
@@ -108,8 +110,8 @@ func aplicar_upgrade(caminho: int):
             $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
         
     elif caminho == 2:
-        nivel_velocidade += 1
-        $Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
+        #nivel_velocidade += 1
+        #$Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
         
         if skin:
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")

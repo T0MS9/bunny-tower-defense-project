@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cflli26dslt1p"]
 
 [ext_resource type="Script" uid="uid://b4i63c7s3pbvr" path="res://Scripts/Bunnies/gooey.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ca483pwed2uya" path="res://Assets/Bunnies/Gooey.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bje4pbemesb41" path="res://Assets/Others/UI_Assets/ArrowStun.png" id="4_8ko8t"]
 
 [sub_resource type="Animation" id="Animation_72gkk"]
 resource_name = "Gooey_Attack"
@@ -48,7 +49,45 @@ height = 99.867
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjj1g"]
 radius = 238.0084
 
-[node name="Gooey" type="StaticBody2D" unique_id=264265458]
+[sub_resource type="Animation" id="Animation_a4dix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002)]
+}
+
+[sub_resource type="Animation" id="Animation_8lmgt"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.4142141, 2.000001, 2),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002), Vector2(-7.0000005, -176.00002), Vector2(-7.0000005, -160.00002)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3y2c6"]
+_data = {
+&"RESET": SubResource("Animation_a4dix"),
+&"idle": SubResource("Animation_8lmgt")
+}
+
+[node name="Gooey" type="StaticBody2D" unique_id=264265458 groups=["Bunnies"]]
 y_sort_enabled = true
 position = Vector2(0, -4)
 script = ExtResource("1")
@@ -96,13 +135,23 @@ position = Vector2(37, 80)
 shape = SubResource("CircleShape2D_cjj1g")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="insp" type="Button" parent="." unique_id=1525124063]
-offset_left = -46.0
-offset_top = -79.0
-offset_right = 60.0
-offset_bottom = 76.0
+[node name="button" type="Button" parent="." unique_id=1956728241]
+offset_left = -63.0
+offset_top = -93.0
+offset_right = 63.0
+offset_bottom = 77.0
 flat = true
 
+[node name="ArrowStun" type="Sprite2D" parent="." unique_id=1786001535]
+position = Vector2(-7.000001, -160.00002)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("4_8ko8t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ArrowStun" unique_id=296521242]
+libraries/ = SubResource("AnimationLibrary_3y2c6")
+autoplay = &"idle"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="mouse_entered" from="insp" to="." method="_on_insp_mouse_entered"]
-[connection signal="mouse_exited" from="insp" to="." method="_on_insp_mouse_exited"]
+[connection signal="button_down" from="button" to="." method="_on_button_button_down"]
+[connection signal="mouse_entered" from="button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="button" to="." method="_on_button_mouse_exited"]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://dwtvxvdpwughw" path="res://Assets/Others/HUD_Assets/Skin.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bw3gf8wg7hwn0" path="res://Assets/Bunnies/Lucky.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b43vqrghk26ay" path="res://Assets/Others/UI_Assets/ArrowSupport.png" id="4_btyo5"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -87,7 +87,45 @@ height = 99.867
 [sub_resource type="CircleShape2D" id="CircleShape2D_dl7t5"]
 radius = 0.0
 
-[node name="Lucky" type="StaticBody2D" unique_id=73009915 groups=["Lucky_script"]]
+[sub_resource type="Animation" id="Animation_a4dix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002)]
+}
+
+[sub_resource type="Animation" id="Animation_8lmgt"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.4142141, 2.000001, 2),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002), Vector2(-7.0000005, -176.00002), Vector2(-7.0000005, -160.00002)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8cit"]
+_data = {
+&"RESET": SubResource("Animation_a4dix"),
+&"idle": SubResource("Animation_8lmgt")
+}
+
+[node name="Lucky" type="StaticBody2D" unique_id=73009915 groups=["Bunnies", "Lucky_script"]]
 position = Vector2(0, -4)
 script = ExtResource("1")
 
@@ -139,20 +177,28 @@ offset_bottom = -26.0
 pivot_offset = Vector2(106, 63)
 size_flags_horizontal = 4
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=667224735]
-offset_left = 18.0
-offset_top = -137.0
-offset_right = 112.0
-offset_bottom = -43.0
-texture_normal = ExtResource("4")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1094588579]
 offset_left = -62.0
 offset_top = -190.0
 offset_right = 53.0
 offset_bottom = -136.0
 
+[node name="button" type="Button" parent="." unique_id=1573128707]
+offset_left = -63.0
+offset_top = -93.0
+offset_right = 63.0
+offset_bottom = 77.0
+flat = true
+
+[node name="ArrowSupport" type="Sprite2D" parent="." unique_id=1693711168]
+visible = false
+position = Vector2(-7.000001, -160.00002)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("4_btyo5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ArrowSupport" unique_id=1094926182]
+libraries/ = SubResource("AnimationLibrary_t8cit")
+autoplay = &"idle"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="button_down" from="button" to="." method="_on_button_button_down"]

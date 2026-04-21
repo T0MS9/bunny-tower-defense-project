@@ -7,8 +7,16 @@ var font_size = 40
 var valor_lucky = 5
 var posicionado = false
 
+var focus = false
+var skin = false
 
 func _physics_process(_delta):
+    
+    if focus == true:
+        $ArrowSupport.visible = true
+    else:
+        $ArrowSupport.visible = false
+    
     $ProgressBar.max_value = $Timer.wait_time
     $ProgressBar.value = $Timer.wait_time - $Timer.time_left
 
@@ -73,9 +81,60 @@ func time_start():
     $Timer.start()
 
 
-func _on_texture_button_pressed() -> void :
-    if $Lucky.texture.resource_path == "res://Assets/Bunnies/Lucky.png":
-        $Lucky.texture = load("res://Assets/Bunnies/Skins/ZeRon.png")
+func reset_focus():
+    focus = false
 
-    elif $Lucky.texture.resource_path == "res://Assets/Bunnies/Skins/ZeRon.png":
-        $Lucky.texture = load("res://Assets/Bunnies/Lucky.png")
+func mudar_skin():
+    skin = !skin
+    
+    var path = $Lucky.texture.resource_path
+    match path:
+        "res://Assets/Bunnies/Lucky.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Skins/ZeRon.png")
+            
+        "res://Assets/Bunnies/Skins/ZeRon.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Lucky.png")
+            
+        "res://Assets/Bunnies/Paths/Lucky01.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Skins/Paths/ZeRon01.png")
+            
+        "res://Assets/Bunnies/Skins/Paths/ZeRon01.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Paths/Lucky01.png")
+            
+        "res://Assets/Bunnies/Paths/Lucky02.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Skins/Paths/ZeRon02.png")
+            
+        "res://Assets/Bunnies/Skins/Paths/ZeRon02.png":
+            $Lucky.texture = load("res://Assets/Bunnies/Paths/Lucky02.png")
+
+func _on_button_button_down() -> void:
+    # 1. Diz a TODOS os nós no grupo "Bunnies" para correrem a função reset_focus
+    get_tree().call_group("Bunnies", "reset_focus")
+    
+    # 2. Agora liga o foco apenas DESTE coelho
+    focus = true
+    
+    # ... resto do teu código (abrir HUD, etc) ...
+    var hud = get_tree().get_first_node_in_group("HUD")
+    if hud:
+        hud.abrir_menu_upgrade(self)
+        
+        hud.get_node("HUD_Shop/HudBgDown/BunnySel").texture = load("res://Assets/Bunnies/Lucky.png")
+        hud.get_node("HUD_Shop/HudBgDown/ExitShop").disabled = false
+        hud.get_node("HUD_Shop/Shop_Appear").play("Shop_Appear")
+    
+
+func aplicar_upgrade(caminho: int):
+    if caminho == 1:
+        
+        if skin:
+            $Lucky.texture = load("res://Assets/Bunnies/Skins/Paths/ZeRon01.png")
+        else:
+            $Lucky.texture = load("res://Assets/Bunnies/Paths/Lucky01.png")
+        
+    elif caminho == 2:
+
+        if skin:
+            $Lucky.texture = load("res://Assets/Bunnies/Skins/Paths/ZeRon02.png")
+        else:
+            $Lucky.texture = load("res://Assets/Bunnies/Paths/Lucky02.png")
