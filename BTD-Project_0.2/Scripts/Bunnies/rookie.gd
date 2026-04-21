@@ -1,11 +1,23 @@
 extends Node2D
 
+var skin = false
+
 var mostrar_range = false
 var pronto_para_atacar = false
+
+var nivel_dano = 0
+var nivel_velocidade = 0
 var dmg_Rookie = 1
+var focus = false
 
 
 func _process(delta: float) -> void :
+    
+    if focus == true:
+        $ArrowDps.visible = true
+    else:
+        $ArrowDps.visible = false
+    
     if $Timer.is_stopped():
         pronto_para_atacar = true
 
@@ -32,9 +44,9 @@ func atacar(alvo):
 
 func _draw() -> void :
     if mostrar_range:
-        var shape = $Range / CollisionRange.shape
+        var shape = $Range/CollisionRange.shape
         if shape is CircleShape2D:
-            var raio_final = shape.radius * $Range / CollisionRange.scale.x
+            var raio_final = shape.radius * $Range/CollisionRange.scale.x
             draw_circle(Vector2.ZERO, raio_final, Color(0.46, 0.46, 0.46, 0.443))
 
 func _on_button_mouse_entered() -> void :
@@ -44,3 +56,31 @@ func _on_button_mouse_entered() -> void :
 func _on_button_mouse_exited() -> void :
     mostrar_range = false
     queue_redraw()
+
+
+func _on_button_button_down() -> void:
+    focus = true
+    
+    var hud = get_tree().get_first_node_in_group("HUD")
+    if hud:
+        # ESTA LINHA É A CHAVE:
+        hud.abrir_menu_upgrade(self) 
+        
+        hud.get_node("HUD_Shop/HudBgDown/BunnySel").texture = load("res://Assets/Bunnies/Rookie.png")
+        hud.get_node("HUD_Shop/HudBgDown/ExitShop").disabled = false
+        hud.get_node("HUD_Shop/Shop_Appear").play("Shop_Appear")
+    
+    
+
+
+
+func aplicar_upgrade(caminho: int):
+    if caminho == 1:
+        nivel_dano += 1
+        dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
+        $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
+        
+    elif caminho == 2:
+        nivel_velocidade += 1
+        $Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
+        $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")

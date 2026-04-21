@@ -65,44 +65,44 @@ default_font = ExtResource("4")
 [sub_resource type="Theme" id="Theme_7plk7"]
 default_font = ExtResource("9")
 
-[sub_resource type="Animation" id="Animation_1nvmp"]
+[sub_resource type="Animation" id="Animation_iqxei"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath(".:position")
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/HUD_Shop/HudBgDown:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1076.7809, 551.6186)]
+"values": [Vector2(-1269.618, 574.73)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("../HudShopFrame:position")
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/HUD_Shop/HudShopFrame:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1066.2354, 718.4697)]
+"values": [Vector2(-1262.853, 471.273)]
 }
 
-[sub_resource type="Animation" id="Animation_el1jj"]
+[sub_resource type="Animation" id="Animation_4hkqd"]
 resource_name = "Shop_Appear"
-length = 0.33333334
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("HUD/HUD_Shop/HudBgDown:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.33333334),
+"times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1.3660405, 0.7845841, 1),
 "update": 0,
 "values": [Vector2(-1269.618, 574.73), Vector2(-1269.618, 321.243), Vector2(-1269.618, 341.243)]
@@ -110,20 +110,20 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../HudShopFrame:position")
+tracks/1/path = NodePath("HUD/HUD_Shop/HudShopFrame:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1998209, 0.2, 0.33333334),
-"transitions": PackedFloat32Array(1.3660405, 1, 0.7845841, 1),
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1.3660405, 0.7845841, 1),
 "update": 0,
-"values": [Vector2(-1262.8525, 471.27332), Vector2(-1262.853, 217.81451), Vector2(-1262.853, 217.815), Vector2(-1262.853, 238.785)]
+"values": [Vector2(-1262.853, 471.273), Vector2(-1262.853, 217.815), Vector2(-1262.853, 238.785)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fbwgr"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dsgg8"]
 _data = {
-&"RESET": SubResource("Animation_1nvmp"),
-&"Shop_Appear": SubResource("Animation_el1jj")
+&"RESET": SubResource("Animation_iqxei"),
+&"Shop_Appear": SubResource("Animation_4hkqd")
 }
 
 [sub_resource type="Animation" id="Animation_hpu6p"]
@@ -158,6 +158,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Rect2(0, 0, 1080, 151.48657)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/HUD_Shop/HudBgDown:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1269.618, 574.73)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HUD/HUD_Shop/HudShopFrame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1262.853, 471.273)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mj2a"]
 _data = {
@@ -167,7 +191,7 @@ _data = {
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1805092987]
 
-[node name="HUD" type="Node2D" parent="." unique_id=1971829007 groups=["HP"]]
+[node name="HUD" type="Node2D" parent="." unique_id=1971829007 groups=["HP", "HUD"]]
 process_mode = 3
 position = Vector2(-52.999992, -59.000004)
 scale = Vector2(0.99999994, 0.99999994)
@@ -488,29 +512,60 @@ position = Vector2(2157.9224, 765.2696)
 scale = Vector2(1.078842, 1.078842)
 script = ExtResource("16")
 
-[node name="Shop_Appear" type="AnimationPlayer" parent="HUD/HUD_Shop" unique_id=750646598]
-active = false
-root_node = NodePath("../HudBgDown")
-libraries/ = SubResource("AnimationLibrary_fbwgr")
+[node name="Shop_Appear" type="AnimationPlayer" parent="HUD/HUD_Shop" unique_id=1703018073]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_dsgg8")
 
-[node name="HudBgDown" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=1695463993]
-texture_repeat = 2
-position = Vector2(-1269.618, 574.73)
-scale = Vector2(1.6646795, 1.747142)
-texture = ExtResource("17")
-region_enabled = true
-region_rect = Rect2(0, 0, 1080, 151.48657)
-
-[node name="BG_Shop_Anim_loop" type="AnimationPlayer" parent="HUD/HUD_Shop/HudBgDown" unique_id=92509159]
-root_node = NodePath("../../../..")
+[node name="BG_Shop_Anim_loop" type="AnimationPlayer" parent="HUD/HUD_Shop" unique_id=92509159]
+root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_7mj2a")
 autoplay = &"BG_shop"
 speed_scale = 0.155
 
 [node name="HudShopFrame" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=470288902]
-position = Vector2(-1262.8525, 472.20032)
+position = Vector2(-1262.853, 471.273)
 scale = Vector2(0.43589035, 0.38)
 texture = ExtResource("18")
+
+[node name="HudBgDown" type="Sprite2D" parent="HUD/HUD_Shop" unique_id=1695463993]
+texture_repeat = 2
+position = Vector2(-1269.618, 574.73)
+scale = Vector2(1.6646795, 1.7471418)
+texture = ExtResource("17")
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 151.48657)
+
+[node name="ExitShop" type="TextureButton" parent="HUD/HUD_Shop/HudBgDown" unique_id=1695559731]
+anchors_preset = -1
+anchor_left = 0.95100003
+anchor_top = 0.001
+anchor_right = 0.99600005
+anchor_bottom = 0.14400001
+offset_left = -421.30096
+offset_top = -130.40775
+offset_right = -421.05908
+offset_bottom = -130.59329
+texture_normal = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BunnySel" type="Sprite2D" parent="HUD/HUD_Shop/HudBgDown" unique_id=2059092966]
+position = Vector2(-332.53345, -96.06146)
+scale = Vector2(0.09667676, 0.09131366)
+
+[node name="path 1" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=19946101]
+offset_left = -6.2390747
+offset_top = -125.902405
+offset_right = 244.32794
+offset_bottom = -63.091675
+text = "ataque"
+
+[node name="path 2" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=1096517178]
+offset_left = -6.239084
+offset_top = -54.81076
+offset_right = 237.08937
+offset_bottom = 7.9999695
+text = "velociade"
 
 [node name="disable_shop" type="Button" parent="HUD" unique_id=82156049]
 visible = false
@@ -971,7 +1026,6 @@ offset_left = 1588.0
 offset_top = 932.0001
 offset_right = 1951.368
 offset_bottom = 1023.0001
-disabled = true
 texture_normal = ExtResource("48")
 texture_pressed = ExtResource("49")
 texture_disabled = ExtResource("49")
@@ -1007,6 +1061,9 @@ stretch_mode = 0
 [connection signal="toggled" from="HUD/Options/Fullscreen_CB" to="HUD/Options/Fullscreen_CB" method="_on_toggled"]
 [connection signal="pressed" from="HUD/GameOver/Restart" to="HUD" method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/GameOver/BackMenu" to="HUD" method="_on_back_menu_pressed"]
+[connection signal="button_down" from="HUD/HUD_Shop/HudBgDown/ExitShop" to="HUD" method="_on_exit_settings_button_down"]
+[connection signal="pressed" from="HUD/HUD_Shop/HudBgDown/path 1" to="HUD" method="_on_path_1_pressed"]
+[connection signal="pressed" from="HUD/HUD_Shop/HudBgDown/path 2" to="HUD" method="_on_path_2_pressed"]
 [connection signal="pressed" from="HUD/disable_shop" to="HUD/HUD_Shop" method="_on_disable_shop_pressed"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Rookie_BG_dps/Rookie" to="HUD/UI_Selection/Bunnies" method="_on_rookie_button_down"]
 [connection signal="button_down" from="HUD/UI_Selection/Bunnies/ScrollContainer/GridContainer/Slasher_BG_dps/Slasher" to="HUD/UI_Selection/Bunnies" method="_on_slasher_button_down"]

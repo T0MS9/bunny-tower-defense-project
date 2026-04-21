@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var moedas_node = $HUD / PGB_M
 
-
 var font = load("res://FontText/Coiny-Regular.ttf")
 var font_size = 40
 var valor_lucky = 5
