@@ -35,7 +35,7 @@ func DMGED(quantidade):
         $"../POP".play("default")
         
         await $AnimationPlayer.animation_finished
-        $Ghostling.modulate = Color(0.957, 0.478, 0.965, 0.0)
+        $Brute.modulate = Color(0.957, 0.478, 0.965, 0.0)
         
         await $"../POP".animation_finished
 

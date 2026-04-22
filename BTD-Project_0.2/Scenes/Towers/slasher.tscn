@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://nlcd786q3rpu" path="res://Assets/Bunnies/Animations/SlasherAttackIdle.png" id="5_6rs88"]
 [ext_resource type="Texture2D" uid="uid://eubwp3pjhmbu" path="res://Assets/Bunnies/Animations/SlasherAttackSpriteSheet.png" id="6_5ydw3"]
 [ext_resource type="Texture2D" uid="uid://2y3kmlwntxsq" path="res://Assets/Bunnies/Animations/EyeGlowSlasherSpriteSheet.png" id="6_qeanp"]
+[ext_resource type="Texture2D" uid="uid://g0fa68k78ltb" path="res://Assets/Others/UI_Assets/ArrowDPS.png" id="9_qeanp"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -166,6 +167,59 @@ animations = [{
 "speed": 17.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwwrj"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(2000, 1000, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vwpn"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rs88"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ydw3"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeanp"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(0, 1000, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpqr2"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(1000, 1000, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6ker"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwwrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vwpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rs88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ydw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeanp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpqr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwwrj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 42.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6ker"]
 atlas = ExtResource("6_5ydw3")
 region = Rect2(0, 0, 1581, 2048)
@@ -223,58 +277,43 @@ height = 95.74467
 [sub_resource type="CircleShape2D" id="CircleShape2D_q08p7"]
 radius = 147.03061
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qwwrj"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(2000, 1000, 1000, 1000)
+[sub_resource type="Animation" id="Animation_a4dix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002)]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5vwpn"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(0, 0, 1000, 1000)
+[sub_resource type="Animation" id="Animation_8lmgt"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.4142141, 2.000001, 2),
+"update": 0,
+"values": [Vector2(-7.000001, -160.00002), Vector2(-7.0000005, -176.00002), Vector2(-7.0000005, -160.00002)]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rs88"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(1000, 0, 1000, 1000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ydw3"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(2000, 0, 1000, 1000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qeanp"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(0, 1000, 1000, 1000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wpqr2"]
-atlas = ExtResource("4_q08p7")
-region = Rect2(1000, 1000, 1000, 1000)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_u6ker"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qwwrj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5vwpn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6rs88")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ydw3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qeanp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wpqr2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qwwrj")
-}],
-"loop": false,
-"name": &"default",
-"speed": 42.0
-}]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpqr2"]
+_data = {
+&"RESET": SubResource("Animation_a4dix"),
+&"idle": SubResource("Animation_8lmgt")
+}
 
 [node name="Slasher" type="StaticBody2D" unique_id=1200842233]
 y_sort_enabled = true
@@ -322,6 +361,15 @@ frame_progress = 0.18461868
 [node name="AppearUlt" type="AnimatedSprite2D" parent="Slasher" unique_id=274262831]
 position = Vector2(-8.427489, 5.5473237)
 sprite_frames = SubResource("SpriteFrames_47s4e")
+
+[node name="SlasherAttackEffect" type="AnimatedSprite2D" parent="." unique_id=2119975936]
+position = Vector2(-18, 26)
+scale = Vector2(0.34250003, 0.34250003)
+sprite_frames = SubResource("SpriteFrames_u6ker")
+frame = 6
+frame_progress = 1.0
+offset = Vector2(-32.116783, -201.45984)
+flip_h = true
 
 [node name="SlasherAttack" type="AnimatedSprite2D" parent="." unique_id=1171230926]
 position = Vector2(-2, -30)
@@ -374,15 +422,16 @@ min_value = 20.0
 max_value = 30.0
 value = 20.0
 
-[node name="SlasherAttackEffect" type="AnimatedSprite2D" parent="." unique_id=2119975936]
-position = Vector2(-18, 26)
-scale = Vector2(0.34250003, 0.34250003)
-sprite_frames = SubResource("SpriteFrames_u6ker")
-frame = 6
-frame_progress = 1.0
-offset = Vector2(-32.116783, -201.45984)
-flip_h = true
+[node name="ArrowDps" type="Sprite2D" parent="." unique_id=775453035]
+position = Vector2(-7.000001, -160.00002)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("9_qeanp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ArrowDps" unique_id=72990168]
+libraries/ = SubResource("AnimationLibrary_wpqr2")
+autoplay = &"idle"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="insp" to="." method="_on_insp_button_down"]
 [connection signal="mouse_entered" from="insp" to="." method="_on_insp_mouse_entered"]
 [connection signal="mouse_exited" from="insp" to="." method="_on_insp_mouse_exited"]
