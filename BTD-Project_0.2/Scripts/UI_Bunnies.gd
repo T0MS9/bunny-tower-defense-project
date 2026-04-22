@@ -147,8 +147,8 @@ func largar_torre():
 
             temp_tower = null
             custo_da_torre_atual = 0
+            
         else:
-
             temp_tower.queue_free()
             temp_tower = null
             custo_da_torre_atual = 0

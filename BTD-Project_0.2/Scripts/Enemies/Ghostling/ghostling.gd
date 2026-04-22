@@ -4,8 +4,6 @@ extends CharacterBody2D
 @export var vida = 1
 var speed_base = 200
 
-const slimed = preload("res://Assets/Enemies/Ghostlings/Ghostling_Slimed.png")
-
 func _physics_process(delta):
     var pf = get_parent() as PathFollow2D
     pf.progress += speed * delta
@@ -22,13 +20,13 @@ func DMGED(quantidade):
 
 
     if vida <= 0:
+        $HitBoxGhostling.disabled = true
         var moedas = get_tree().current_scene.find_child("Moedas")
         var valor_atual = int(moedas.text)
         moedas.text = str(valor_atual + 1)
 
 
         speed = 0
-        set_physics_process(false)
         $AnimationPlayer.play("Animations/ghostling_TakeDMG")
         $"../POP".play("default")
         
@@ -42,11 +40,15 @@ func DMGED(quantidade):
 
         get_parent().queue_free()
 
+
 func gooey_stun(TimeSlimed: float):
 
-    $Ghostling.texture = slimed
+    $"../Goo_Splash".play("Green_Goo")
     speed = speed_base / 3
+    $HitBoxGoo.disabled = true
 
     await get_tree().create_timer(TimeSlimed).timeout
-    $Ghostling.texture = load("res://Assets/Enemies/Ghostlings/Ghostling.png")
+    $"../Goo_Splash".play_backwards("Green_Goo")
+    $HitBoxGoo.disabled = false
+    
     speed = speed_base

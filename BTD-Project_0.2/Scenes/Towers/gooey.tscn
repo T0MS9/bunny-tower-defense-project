@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cflli26dslt1p"]
 
 [ext_resource type="Script" uid="uid://b4i63c7s3pbvr" path="res://Scripts/Bunnies/gooey.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://ca483pwed2uya" path="res://Assets/Bunnies/Gooey.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://bje4pbemesb41" path="res://Assets/Others/UI_Assets/ArrowStun.png" id="4_8ko8t"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://chfdctgw351s5" path="res://Assets/Bunnies/Gooey.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bklsgv01oisor" path="res://Assets/Others/UI_Assets/ArrowStun.png" id="4_8ko8t"]
 
 [sub_resource type="Animation" id="Animation_72gkk"]
 resource_name = "Gooey_Attack"

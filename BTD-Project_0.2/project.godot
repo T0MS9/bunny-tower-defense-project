@@ -64,6 +64,7 @@ Round_Counter=""
 Lucky_script=""
 HUD=""
 Bunnies=""
+Hitbox_Goo=""
 
 [input]
 

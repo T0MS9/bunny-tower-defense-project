@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var vida = 10
 var speed_base = 200
 
-const slimed = preload("res://Assets/Enemies/Ghostlings/Brute_Slimed.png")
 
 
 func _physics_process(delta):
@@ -45,7 +44,6 @@ func DMGED(quantidade):
 
 func gooey_stun(TimeSlimed: float):
     $AnimationPlayer.play("Animations/ghostling_TakeSlime")
-    $Brute.texture = slimed
     speed = speed_base / 2
 
 

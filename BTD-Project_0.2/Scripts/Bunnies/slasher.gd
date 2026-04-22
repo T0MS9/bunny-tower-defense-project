@@ -5,8 +5,7 @@ var mostrar_range = false
 var contagem_ult = 0
 var dmg_Slasher = 3
 
-@onready var SlasherNormal = preload("res://Assets/Bunnies/Slasher.png")
-@onready var SlasherUlt = preload("res://Assets/Others/Abilities & Utilities/SlasherUlt.png")
+
 
 
 func _process(delta: float) -> void :
@@ -35,34 +34,47 @@ func verificar_e_atacar():
 func atacar(alvo):
     if alvo.has_method("DMGED"):
         $Slasher/AnimationPlayer.play("LuckyAction")
-        $Slasher_Attack.play("default")
-        contagem_ult += 1
+        $SlasherAttackEffect.play("default")
+        $SlasherAttack.play("default")
+        $Slash.play()
+        contagem_ult += 6
+        verificar_ult()
 
         if contagem_ult >= 20:
-            $Slasher.texture = SlasherUlt
             alvo.DMGED(dmg_Slasher * 2)
+            $Slash_Ult.play()
 
             if contagem_ult >= 30:
-                $Slasher.texture = SlasherNormal
                 alvo.DMGED(dmg_Slasher)
                 contagem_ult = 0
 
         else:
-            $Slasher.texture = SlasherNormal
             alvo.DMGED(dmg_Slasher)
 
 
         pronto_para_atacar = false
         $Timer.start()
 
+func verificar_ult():
 
+    if contagem_ult >= 20:
+        $Slasher/AppearUlt.play("default")
+        await $Slasher/AppearUlt.animation_finished
+        
+        $Slasher/Ult.visible = true
+        $Slasher/Ult.play("default")
+        
 
+    elif contagem_ult >= 30:
+        $Slasher/Ult.visible = false
+        $Slasher/AppearUlt.play_backwards("default")
+    
 
 
 
 func _draw() -> void :
     if mostrar_range:
-        var shape = $Range / CollisionRange.shape
+        var shape = $Range/CollisionRange.shape
         if shape is CircleShape2D:
             var raio_final = shape.radius * $Range / CollisionRange.scale.x
             draw_circle(Vector2.ZERO, raio_final, Color(0.46, 0.46, 0.46, 0.443))

@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://cxfjrgn43hu7c" path="res://Assets/Bunnies/Rookie.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cbmccfyfx8iky" path="res://Assets/Bunnies/Animations/RookieAttackIdle.png" id="3_a4dix"]
 [ext_resource type="Texture2D" uid="uid://g0fa68k78ltb" path="res://Assets/Others/UI_Assets/ArrowDPS.png" id="4_55yyg"]
+[ext_resource type="Texture2D" uid="uid://xr85dx8vd5rc" path="res://Assets/Bunnies/Animations/RookieAttackSpriteSheet.png" id="5_8lmgt"]
 
 [sub_resource type="Animation" id="Animation_c36il"]
 length = 0.001
@@ -41,6 +42,91 @@ _data = {
 &"RESET": SubResource("Animation_c36il"),
 &"RookieAttack": SubResource("Animation_xbbb2")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfvfv"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(0, 0, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa1xd"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(1581, 0, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svypr"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(3162, 0, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dax2e"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(4743, 0, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxsyi"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(0, 2048, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2kb4"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(1581, 2048, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mwti"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(3162, 2048, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xji2b"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(4743, 2048, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfd32"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(0, 4096, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwte1"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(1581, 4096, 1581, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r0as"]
+atlas = ExtResource("5_8lmgt")
+region = Rect2(3162, 4096, 1581, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ted8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfvfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa1xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svypr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dax2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxsyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2kb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mwti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xji2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfd32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwte1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r0as")
+}],
+"loop": false,
+"name": &"default",
+"speed": 67.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_55yyg"]
 radius = 37.326958
@@ -93,6 +179,8 @@ script = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1824194571]
+
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
 one_shot = true
 
@@ -105,14 +193,21 @@ scale = Vector2(0.32291666, 0.32291666)
 texture = ExtResource("2")
 
 [node name="Rookie" type="Sprite2D" parent="." unique_id=799830229]
-position = Vector2(5.9604645e-08, 0)
+position = Vector2(-5.9604645e-08, -8.8224624e-08)
 scale = Vector2(0.11124287, 0.10587178)
-texture = ExtResource("3")
-offset = Vector2(-81.46591, -260.5728)
+texture = ExtResource("3_a4dix")
+offset = Vector2(-81.46553, -260.57333)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rookie" unique_id=1122360598]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_55yyg")
+
+[node name="RookieHands_Attack" type="AnimatedSprite2D" parent="." unique_id=179038366]
+position = Vector2(-3, -45)
+scale = Vector2(0.11799297, 0.12516825)
+sprite_frames = SubResource("SpriteFrames_2ted8")
+frame = 10
+frame_progress = 1.0
 
 [node name="HitBox" type="Area2D" parent="." unique_id=1941780108 groups=["no_place"]]
 position = Vector2(107.93747, 42.912655)
@@ -133,13 +228,6 @@ position = Vector2(37, 80)
 shape = SubResource("CircleShape2D_a4dix")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="button" type="Button" parent="." unique_id=1659386136]
-offset_left = -63.0
-offset_top = -93.0
-offset_right = 63.0
-offset_bottom = 77.0
-flat = true
-
 [node name="ArrowDps" type="Sprite2D" parent="." unique_id=1138255832]
 visible = false
 position = Vector2(-7.000001, -160.00002)
@@ -149,6 +237,14 @@ texture = ExtResource("4_55yyg")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ArrowDps" unique_id=1461088971]
 libraries/ = SubResource("AnimationLibrary_wfvfv")
 autoplay = &"idle"
+
+[node name="button" type="Button" parent="." unique_id=1659386136]
+offset_left = -63.0
+offset_top = -93.0
+offset_right = 63.0
+offset_bottom = 77.0
+flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_down" from="button" to="." method="_on_button_button_down"]

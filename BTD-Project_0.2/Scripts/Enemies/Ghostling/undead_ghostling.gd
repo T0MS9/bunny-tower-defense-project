@@ -5,7 +5,6 @@ extends CharacterBody2D
 var speed_base = 210
 var stunned = false
 
-const slimed = preload("res://Assets/Enemies/Ghostlings/Undead Ghostling_Slimed.png")
 
 func _physics_process(delta):
     var pf = get_parent() as PathFollow2D
@@ -45,7 +44,6 @@ func DMGED(quantidade):
         pass
 
 func gooey_stun(TimeSlimed: float):
-    $UndeadGhostling.texture = slimed
     stunned = true
     speed = speed_base / 2
 

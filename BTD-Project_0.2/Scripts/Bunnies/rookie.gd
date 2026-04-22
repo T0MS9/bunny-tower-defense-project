@@ -33,7 +33,8 @@ func verificar_e_atacar():
 
 func atacar(alvo):
     if alvo.has_method("DMGED"):
-        $Rookie / AnimationPlayer.play("RookieAttack")
+        $Rookie/AnimationPlayer.play("RookieAttack")
+        $RookieHands_Attack.play("default")
         alvo.DMGED(dmg_Rookie)
         pronto_para_atacar = false
         $Timer.start()

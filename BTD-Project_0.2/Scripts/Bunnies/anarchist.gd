@@ -44,6 +44,7 @@ func atacar(alvo):
         $Anarchist/AnimationPlayer.play("Anarchist_Attack")
         alvo.DMGED(dmg_Anarchist)
         pronto_para_atacar = false
+        
         balas -= 1
         print("Balas restantes: ", balas)
 
