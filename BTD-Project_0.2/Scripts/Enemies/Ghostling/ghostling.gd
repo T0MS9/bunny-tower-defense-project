@@ -30,7 +30,12 @@ func DMGED(quantidade):
         speed = 0
         set_physics_process(false)
         $AnimationPlayer.play("Animations/ghostling_TakeDMG")
+        $"../POP".play("default")
+        
         await $AnimationPlayer.animation_finished
+        $Ghostling.modulate = Color(0.957, 0.478, 0.965, 0.0)
+        
+        await $"../POP".animation_finished
 
         var spawner_no = get_tree().get_first_node_in_group("spawner")
         spawner_no.inimigo_morreu()

@@ -34,7 +34,8 @@ func verificar_e_atacar():
 
 func atacar(alvo):
     if alvo.has_method("DMGED"):
-        $Slasher / AnimationPlayer.play("LuckyAction")
+        $Slasher/AnimationPlayer.play("LuckyAction")
+        $Slasher_Attack.play("default")
         contagem_ult += 1
 
         if contagem_ult >= 20:

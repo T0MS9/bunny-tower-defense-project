@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cy6418q070xvu" path="res://Scripts/Bunnies/slasher.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bewynet5sfny3" path="res://Assets/Bunnies/Slasher.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4xbilalnbprl" path="res://Assets/Others/Abilities & Utilities/SlashVFXSpriteSheet.png" id="4_q08p7"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -71,6 +72,59 @@ height = 95.74467
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q08p7"]
 radius = 147.03061
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwwrj"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(2000, 1000, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vwpn"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rs88"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ydw3"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeanp"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(0, 1000, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpqr2"]
+atlas = ExtResource("4_q08p7")
+region = Rect2(1000, 1000, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6ker"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwwrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vwpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rs88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ydw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeanp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpqr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwwrj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 42.0
+}]
 
 [node name="Slasher" type="StaticBody2D" unique_id=1200842233]
 y_sort_enabled = true
@@ -143,6 +197,15 @@ offset_bottom = -2.0
 min_value = 20.0
 max_value = 30.0
 value = 20.0
+
+[node name="Slasher_Attack" type="AnimatedSprite2D" parent="." unique_id=2119975936]
+position = Vector2(-18, 26)
+scale = Vector2(0.34250003, 0.34250003)
+sprite_frames = SubResource("SpriteFrames_u6ker")
+frame = 6
+frame_progress = 1.0
+offset = Vector2(-32.116783, -201.45984)
+flip_h = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="insp" to="." method="_on_insp_mouse_entered"]

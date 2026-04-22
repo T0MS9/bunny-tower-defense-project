@@ -36,14 +36,14 @@ func _on_timer_timeout() -> void :
     var moedas = get_tree().current_scene.find_child("Moedas")
     var valor_atual = int(moedas.text)
     moedas.text = str(valor_atual + valor_lucky)
-    $Lucky / AnimationPlayer.play("LuckyAction")
+    $Lucky/AnimationPlayer.play("LuckyAction")
 
 func label_money():
     var label_M = Label.new()
     $Panel.add_child(label_M)
 
 
-    label_M.text = "+" + str(valor_lucky) + "$"
+    label_M.text = "RESENHA AVERIGUADA"
 
 
 
