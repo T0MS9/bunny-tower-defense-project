@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d01gyv5r3osuf"]
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b150v8hgm7xxj" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2"]
-[ext_resource type="AudioStream" uid="uid://yxdeuicx758d" path="res://Assets/SFX/Ghostling_Dies.mp3" id="2_ndjg1"]
+[ext_resource type="Texture2D" uid="uid://crxax7n5st0cg" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://dkhldb4qtj4ra" path="res://Assets/SFX/GhostlingDies.mp3" id="2_ndjg1"]
 [ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3"]
 [ext_resource type="Texture2D" uid="uid://bc10nqdeijysi" path="res://Assets/Others/Abilities & Utilities/GhostSplashVFXSpriteSheet.png" id="5_3q2gf"]
 [ext_resource type="Texture2D" uid="uid://b86wnmtmaqnpj" path="res://Assets/Others/Abilities & Utilities/GooSplash01VFXSpriteSheet.png" id="6_xd17q"]

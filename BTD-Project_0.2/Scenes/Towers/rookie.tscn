@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bpsi13nm48dib"]
 
 [ext_resource type="Script" uid="uid://qjkx21br6a30" path="res://Scripts/Bunnies/rookie.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://b6h3proqmmmua" path="res://Assets/SFX/Hit1.mp3" id="2_8lmgt"]
 [ext_resource type="AudioStream" uid="uid://cr2yk3dfty511" path="res://Assets/SFX/Hit3.mp3" id="2_wa1xd"]
 [ext_resource type="Texture2D" uid="uid://cbmccfyfx8iky" path="res://Assets/Bunnies/Animations/RookieAttackIdle.png" id="3_a4dix"]
 [ext_resource type="AudioStream" uid="uid://b44kvruihx3ia" path="res://Assets/SFX/Hit2.mp3" id="3_svypr"]
-[ext_resource type="Texture2D" uid="uid://dwrbtgkce4l1u" path="res://Assets/Others/UI_Assets/ArrowDPS.png" id="4_55yyg"]
+[ext_resource type="Texture2D" uid="uid://g0fa68k78ltb" path="res://Assets/Others/UI_Assets/ArrowDPS.png" id="4_55yyg"]
 [ext_resource type="Texture2D" uid="uid://xr85dx8vd5rc" path="res://Assets/Bunnies/Animations/RookieAttackSpriteSheet.png" id="5_8lmgt"]
 
 [sub_resource type="Animation" id="Animation_c36il"]

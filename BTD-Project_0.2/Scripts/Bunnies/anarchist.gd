@@ -42,6 +42,7 @@ func verificar_e_atacar():
 func atacar(alvo):
     if alvo.has_method("DMGED"):
         $Anarchist/AnimationPlayer.play("Anarchist_Attack")
+        $Shot.play()
         alvo.DMGED(dmg_Anarchist)
         pronto_para_atacar = false
         

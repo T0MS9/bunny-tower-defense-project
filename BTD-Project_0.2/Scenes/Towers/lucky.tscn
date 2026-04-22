@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
-[ext_resource type="AudioStream" uid="uid://b635vkhgisdso" path="res://Assets/SFX/Money.mp3" id="2_t8cit"]
-[ext_resource type="Texture2D" uid="uid://bw3gf8wg7hwn0" path="res://Assets/Bunnies/Lucky.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://b43vqrghk26ay" path="res://Assets/Others/UI_Assets/ArrowSupport.png" id="4_btyo5"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://da3e77v2t5fl0" path="res://Assets/SFX/LuckyMoney.mp3" id="2_t8cit"]
+[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cfej2sqmpf6wp" path="res://Assets/Others/UI_Assets/ArrowSupport.png" id="4_btyo5"]
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://wdtboust0hka"]
 
 [ext_resource type="Script" uid="uid://cy6418q070xvu" path="res://Scripts/Bunnies/slasher.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://dj2br232rt5gk" path="res://Assets/SFX/SlasherBunnyULT.mp3" id="2_5vwpn"]
-[ext_resource type="AudioStream" uid="uid://bbvvlfuu3yobj" path="res://Assets/SFX/Slash.mp3" id="3_5ydw3"]
+[ext_resource type="AudioStream" uid="uid://dctet7hu5vyh4" path="res://Assets/SFX/SlasherSlash.mp3" id="3_5ydw3"]
 [ext_resource type="Texture2D" uid="uid://b4xbilalnbprl" path="res://Assets/Others/Abilities & Utilities/SlashVFXSpriteSheet.png" id="4_q08p7"]
 [ext_resource type="Texture2D" uid="uid://nlcd786q3rpu" path="res://Assets/Bunnies/Animations/SlasherAttackIdle.png" id="5_6rs88"]
 [ext_resource type="Texture2D" uid="uid://eubwp3pjhmbu" path="res://Assets/Bunnies/Animations/SlasherAttackSpriteSheet.png" id="6_5ydw3"]
