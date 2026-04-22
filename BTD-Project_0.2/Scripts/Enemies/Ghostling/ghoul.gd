@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var vida = 3
 var speed_base = 235
 
-
+var goo_stun = false
 
 
 func _physics_process(delta):
@@ -33,20 +33,32 @@ func DMGED(quantidade):
         moedas.text = str(novo_total + 1)
 
         speed = 0
-        set_physics_process(false)
         $AnimationPlayer.play("Animations/ghostling_TakeDMG")
+        $"../POP".play("default")
+        
         await $AnimationPlayer.animation_finished
+        $Ghostling.modulate = Color(0.957, 0.478, 0.965, 0.0)
+        
+        await $"../POP".animation_finished
 
         var spawner_no = get_tree().get_first_node_in_group("spawner")
         spawner_no.inimigo_morreu()
 
         get_parent().queue_free()
+        
 
-
-func gooey_stun(TimeSlimed: float):
-
+func gooey_stun(TimeSlimed: float, cor_ataque: String):
+    if goo_stun: return 
+    
+    goo_stun = true
+    $"../Goo_Splash".visible = true
+    $"../Goo_Splash".play(cor_ataque)
+    
     speed = speed_base / 3
 
     await get_tree().create_timer(TimeSlimed).timeout
-    $Ghoul.texture = load("res://Assets/Enemies/Ghostlings/Ghoul.png")
-    speed = speed_base
+    
+    if is_instance_valid(self):
+        $"../Goo_Splash".play_backwards(cor_ataque)
+        speed = speed_base
+        goo_stun = false

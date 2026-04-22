@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed = 550
 @export var vida = 1
 
-const slimed = preload("res://Assets/Enemies/Ghostlings/Ghaztling_Slimed.png")
+var goo_stun = false
 
 
 func _physics_process(delta):
@@ -27,20 +27,32 @@ func DMGED(quantidade):
         moedas.text = str(valor_atual + 1)
 
         speed = 0
-        set_physics_process(false)
         $AnimationPlayer.play("Animations/ghostling_TakeDMG")
+        $"../POP".play("default")
+        
         await $AnimationPlayer.animation_finished
+        $Ghostling.modulate = Color(0.957, 0.478, 0.965, 0.0)
+        
+        await $"../POP".animation_finished
 
         var spawner_no = get_tree().get_first_node_in_group("spawner")
         spawner_no.inimigo_morreu()
 
         get_parent().queue_free()
+        
 
-
-func gooey_stun(tempo: float):
-    $AnimationPlayer.play("Animations/ghostling_TakeSlime")
-    $Ghaztling.texture = slimed
+func gooey_stun(TimeSlimed: float, cor_ataque: String):
+    if goo_stun: return 
+    
+    goo_stun = true
+    $"../Goo_Splash".visible = true
+    $"../Goo_Splash".play(cor_ataque)
+    
     speed = speed_base / 3
 
-    await get_tree().create_timer(tempo).timeout
-    speed = speed_base
+    await get_tree().create_timer(TimeSlimed).timeout
+    
+    if is_instance_valid(self):
+        $"../Goo_Splash".play_backwards(cor_ataque)
+        speed = speed_base
+        goo_stun = false

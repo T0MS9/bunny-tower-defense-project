@@ -38,40 +38,40 @@ func atacar(alvo):
         $SlasherAttackEffect.play("default")
         $SlasherAttack.play("default")
         
-        $Slash.pitch_scale = randf_range(0.9, 1.1)
         $Slash.play()
         
-        contagem_ult += 6
+        contagem_ult += 3
         verificar_ult()
 
         # LÓGICA DE DANO
         if contagem_ult >= 20:
             # ULTIMATE ATIVA: Dano massivo (aumentei de 2 para 3)
-            alvo.DMGED(dmg_Slasher * 3) 
-            $Slash_Ult.pitch_scale = randf_range(0.9, 1.1)
+            alvo.DMGED(dmg_Slasher * 2) 
+            print("Contagem de Ult: ", contagem_ult)
             $Slash_Ult.play()
             
-            # Verificamos se atingiu o NOVO limite máximo
-            if contagem_ult >= 60: 
-                # Dano de finalização explosivo (opcional)
+            
+            if contagem_ult >= 35: 
                 alvo.DMGED(dmg_Slasher * 2) 
+                
                 contagem_ult = 0
-                verificar_ult() # Chama para esconder o visual imediatamente
+                verificar_ult()
         else:
-            # Ataque normal quando a Ult não está pronta
             alvo.DMGED(dmg_Slasher)
+            print("Contagem de Ult: ", contagem_ult)
 
         pronto_para_atacar = false
         $Timer.start()
 
 func verificar_ult():
     # Agora a condição de desligar é 60, dando mais "janela" de uso
-    if contagem_ult >= 60 or contagem_ult == 0:
+    if contagem_ult >= 35 or contagem_ult == 0:
+        print("A Ult Resetou... ", contagem_ult)
         $Slasher/Ult.visible = false
         $Slasher/AppearUlt.play_backwards("default")
         
-    elif contagem_ult >= 20:
-        # Evita que a animação de "Aparecer" rode toda vez que atacar
+
+    elif contagem_ult > 20:
         if not $Slasher/Ult.visible and not $Slasher/AppearUlt.is_playing():
             $Slasher/AppearUlt.play("default")
             await $Slasher/AppearUlt.animation_finished

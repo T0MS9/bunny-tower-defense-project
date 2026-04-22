@@ -5,6 +5,8 @@ extends CharacterBody2D
 var speed_base = 210
 var stunned = false
 
+var goo_stun = false
+
 
 func _physics_process(delta):
     var pf = get_parent() as PathFollow2D
@@ -28,13 +30,20 @@ func DMGED(quantidade):
         moedas.text = str(valor_atual + quantidade)
 
         if vida <= 0:
+            $Death.play()
+            $"../Goo_Splash".visible = false
+            $HitBoxGhostling.disabled = true
             moedas.text = str(valor_atual + 9)
 
 
             speed = 0
-            set_physics_process(false)
             $AnimationPlayer.play("Animations/ghostling_TakeDMG")
+            $"../POP".play("default")
+        
             await $AnimationPlayer.animation_finished
+            $Ghostling.modulate = Color(0.957, 0.478, 0.965, 0.0)
+            
+            await $"../POP".animation_finished
 
             var spawner_no = get_tree().get_first_node_in_group("spawner")
             spawner_no.inimigo_morreu()
@@ -43,11 +52,21 @@ func DMGED(quantidade):
     else:
         pass
 
-func gooey_stun(TimeSlimed: float):
+func gooey_stun(TimeSlimed: float, cor_ataque: String):
+    if goo_stun: return 
+    
+    goo_stun = true
     stunned = true
-    speed = speed_base / 2
+    $"../Goo_Splash".visible = true
+    $"../Goo_Splash".play(cor_ataque)
+    
+    speed = speed_base / 3
 
     await get_tree().create_timer(TimeSlimed).timeout
-    stunned = false
-    $UndeadGhostling.texture = load("res://Assets/Enemies/Ghostlings/Undead Ghostling.png")
-    speed = speed_base
+    
+    if is_instance_valid(self):
+        $"../Goo_Splash".play_backwards(cor_ataque)
+        speed = speed_base
+        
+        stunned = false
+        goo_stun = false

@@ -36,13 +36,8 @@ func atacar(alvo):
         $Rookie/AnimationPlayer.play("RookieAttack")
         $RookieHands_Attack.play("default")
         
-        # 1. Criamos uma lista com os nós de áudio
         var sons_hit = [$Hit, $Hit2, $Hit3]
-        
-        # 2. Sorteamos um índice aleatório entre 0 e o tamanho da lista - 1
         var som_sorteado = sons_hit[randi() % sons_hit.size()]
-        
-        # 3. Tocamos o som escolhido
         som_sorteado.play()
         
         alvo.DMGED(dmg_Rookie)

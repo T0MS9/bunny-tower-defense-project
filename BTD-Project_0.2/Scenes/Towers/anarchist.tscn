@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c0y70hermmmb2"]
 
 [ext_resource type="Script" uid="uid://03efy6sl2750" path="res://Scripts/Bunnies/anarchist.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dhe6116efreus" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://bw3e6j7dp3dh2" path="res://Assets/SFX/Squeaky.mp3" id="2_qup5v"]
-[ext_resource type="Texture2D" uid="uid://df2mmdfu0s8m6" path="res://Assets/Bunnies/Anarchist.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://b5hhehacyhvhv" path="res://Assets/Others/UI_Assets/Hit.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://7dnpuvisq35a" path="res://Assets/Bunnies/Anarchist.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dtot615v2mkpx" path="res://Assets/Others/UI_Assets/Hit.png" id="4"]
 
 [sub_resource type="Animation" id="Animation_8h816"]
 resource_name = "Anarchist_Attack"
@@ -78,6 +78,7 @@ volume_db = -22.825
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342500545]
 
 [node name="Timer" type="Timer" parent="." unique_id=549134753 groups=["Timers"]]
+wait_time = 0.001
 one_shot = true
 
 [node name="Reload" type="Timer" parent="." unique_id=190412215]

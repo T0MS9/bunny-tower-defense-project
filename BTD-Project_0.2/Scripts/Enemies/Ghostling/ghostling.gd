@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var vida = 1
 var speed_base = 200
 
+var goo_stun = false
+
 func _physics_process(delta):
     var pf = get_parent() as PathFollow2D
     pf.progress += speed * delta
@@ -16,17 +18,20 @@ func _physics_process(delta):
         get_parent().queue_free()
 
 func DMGED(quantidade):
+    var moedas = get_tree().current_scene.find_child("Moedas")
+    var valor_atual = int(moedas.text)
+    
     vida -= quantidade
 
 
     if vida <= 0:
         $Death.play()
+        $"../Goo_Splash".visible = false
         $HitBoxGhostling.disabled = true
-        var moedas = get_tree().current_scene.find_child("Moedas")
-        var valor_atual = int(moedas.text)
+
         moedas.text = str(valor_atual + 1)
-
-
+        
+        
         speed = 0
         $AnimationPlayer.play("Animations/ghostling_TakeDMG")
         $"../POP".play("default")
@@ -40,18 +45,20 @@ func DMGED(quantidade):
         spawner_no.inimigo_morreu()
 
         get_parent().queue_free()
+        
 
-
-func gooey_stun(TimeSlimed: float):
-
-    $"../Goo_Splash".play("Green_Goo")
+func gooey_stun(TimeSlimed: float, cor_ataque: String):
+    if goo_stun: return 
+    
+    goo_stun = true
+    $"../Goo_Splash".visible = true
+    $"../Goo_Splash".play(cor_ataque)
+    
     speed = speed_base / 3
-    $HitBoxGoo.disabled = true
 
     await get_tree().create_timer(TimeSlimed).timeout
-    $"../Goo_Splash".play_backwards("Green_Goo")
-    $HitBoxGoo.disabled = false
     
-    speed = speed_base
-    
-    
+    if is_instance_valid(self):
+        $"../Goo_Splash".play_backwards(cor_ataque)
+        speed = speed_base
+        goo_stun = false
