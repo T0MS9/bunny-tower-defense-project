@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://ldeogvioymax"]
 
 [ext_resource type="Script" uid="uid://bcosxxn3weerc" path="res://Scripts/Bunnies/lucky.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bt26lpdxfpwnq" path="res://Assets/Others/Abilities & Utilities/Shadow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dkr53o6gmqvxf" path="res://Assets/Bunnies/Others/Shadow.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://da3e77v2t5fl0" path="res://Assets/SFX/LuckyMoney.mp3" id="2_t8cit"]
-[ext_resource type="Texture2D" uid="uid://o4rv4vmq3ykm" path="res://Assets/Bunnies/Lucky.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://cfej2sqmpf6wp" path="res://Assets/Others/UI_Assets/ArrowSupport.png" id="4_btyo5"]
+[ext_resource type="Texture2D" uid="uid://bw3gf8wg7hwn0" path="res://Assets/Bunnies/Lucky.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b43vqrghk26ay" path="res://Assets/Others/UI_Assets/ArrowSupport.png" id="4_btyo5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dl7t5"]
+radius = 0.0
 
 [sub_resource type="Animation" id="Animation_0mmsd"]
 resource_name = "LuckyAction"
@@ -85,9 +88,6 @@ _data = {
 radius = 37.326958
 height = 99.867
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dl7t5"]
-radius = 0.0
-
 [sub_resource type="Animation" id="Animation_a4dix"]
 length = 0.001
 tracks/0/type = "value"
@@ -130,6 +130,14 @@ _data = {
 position = Vector2(0, -4)
 script = ExtResource("1")
 
+[node name="Range" type="Area2D" parent="." unique_id=1555984591]
+position = Vector2(-37, -80)
+
+[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=2082037709]
+position = Vector2(30, 76)
+shape = SubResource("CircleShape2D_dl7t5")
+debug_color = Color(0, 0, 0, 0.41960785)
+
 [node name="Money" type="AudioStreamPlayer" parent="." unique_id=1966862508]
 stream = ExtResource("2_t8cit")
 
@@ -163,14 +171,6 @@ collision_mask = 3
 [node name="HitBox" type="CollisionShape2D" parent="HitBox" unique_id=2058948867]
 position = Vector2(0.09291077, 132.91219)
 shape = SubResource("CapsuleShape2D_55yyg")
-
-[node name="Range" type="Area2D" parent="." unique_id=1555984591]
-position = Vector2(-37, -80)
-
-[node name="CollisionRange" type="CollisionShape2D" parent="Range" unique_id=2082037709]
-position = Vector2(30, 76)
-shape = SubResource("CircleShape2D_dl7t5")
-debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="Panel" type="Panel" parent="." unique_id=1676851426]
 self_modulate = Color(1, 1, 1, 0)

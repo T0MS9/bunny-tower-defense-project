@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://drgcfy5rniced" path="res://Assets/Enemies/Ghostlings/Ghazt.png" id="2"]
 [ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3"]
 [ext_resource type="AudioStream" uid="uid://yxdeuicx758d" path="res://Assets/SFX/Ghostling_Dies.mp3" id="3_6j4ly"]
-[ext_resource type="Texture2D" uid="uid://bc10nqdeijysi" path="res://Assets/Others/Abilities & Utilities/GhostSplashVFXSpriteSheet.png" id="5_hdr0b"]
-[ext_resource type="Texture2D" uid="uid://b86wnmtmaqnpj" path="res://Assets/Others/Abilities & Utilities/GooSplash01VFXSpriteSheet.png" id="6_xfc3b"]
-[ext_resource type="Texture2D" uid="uid://cejmt3wmh4x32" path="res://Assets/Others/Abilities & Utilities/GooSplashVFXSpriteSheet.png" id="7_shedd"]
-[ext_resource type="Texture2D" uid="uid://c024jlytj5w1" path="res://Assets/Others/Abilities & Utilities/GooSplash02VFXSpriteSheet.png" id="8_6q7sx"]
-[ext_resource type="Texture2D" uid="uid://bnprminlq732w" path="res://Assets/Others/Abilities & Utilities/VoidGooSplashVFXSpriteSheet.png" id="9_whkm4"]
+[ext_resource type="Texture2D" uid="uid://dy1up7pkfgkw" path="res://Assets/Enemies/Animations/GhostSplashVFXSpriteSheet.png" id="5_hdr0b"]
+[ext_resource type="Texture2D" uid="uid://8upo31eleqj" path="res://Assets/Bunnies/Animations/Paths/GooSplash01VFXSpriteSheet.png" id="6_xfc3b"]
+[ext_resource type="Texture2D" uid="uid://pbo82nncgqos" path="res://Assets/Bunnies/Animations/GooSplashVFXSpriteSheet.png" id="7_shedd"]
+[ext_resource type="Texture2D" uid="uid://d1y6xppvpk2ov" path="res://Assets/Bunnies/Animations/Paths/GooSplash02VFXSpriteSheet.png" id="8_6q7sx"]
+[ext_resource type="Texture2D" uid="uid://dy6xyvu8o3ear" path="res://Assets/Bunnies/Animations/Skins/VoidGooSplashVFXSpriteSheet.png" id="9_whkm4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5f02t"]
 radius = 4.854944

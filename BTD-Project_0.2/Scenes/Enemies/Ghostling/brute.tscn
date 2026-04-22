@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://d01gyv5r3osuf"]
 
 [ext_resource type="Script" uid="uid://chut4q8ea6xsr" path="res://Scripts/Enemies/Ghostling/brute.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://crxax7n5st0cg" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b150v8hgm7xxj" path="res://Assets/Enemies/Ghostlings/Brute.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://dkhldb4qtj4ra" path="res://Assets/SFX/GhostlingDies.mp3" id="2_ndjg1"]
 [ext_resource type="AnimationLibrary" uid="uid://2l7nm16gxs37" path="res://Animations.res" id="3"]
-[ext_resource type="Texture2D" uid="uid://bc10nqdeijysi" path="res://Assets/Others/Abilities & Utilities/GhostSplashVFXSpriteSheet.png" id="5_3q2gf"]
-[ext_resource type="Texture2D" uid="uid://b86wnmtmaqnpj" path="res://Assets/Others/Abilities & Utilities/GooSplash01VFXSpriteSheet.png" id="6_xd17q"]
-[ext_resource type="Texture2D" uid="uid://cejmt3wmh4x32" path="res://Assets/Others/Abilities & Utilities/GooSplashVFXSpriteSheet.png" id="7_3axhd"]
-[ext_resource type="Texture2D" uid="uid://c024jlytj5w1" path="res://Assets/Others/Abilities & Utilities/GooSplash02VFXSpriteSheet.png" id="8_nx2pb"]
-[ext_resource type="Texture2D" uid="uid://bnprminlq732w" path="res://Assets/Others/Abilities & Utilities/VoidGooSplashVFXSpriteSheet.png" id="9_vb07c"]
+[ext_resource type="Texture2D" uid="uid://dy1up7pkfgkw" path="res://Assets/Enemies/Animations/GhostSplashVFXSpriteSheet.png" id="5_3q2gf"]
+[ext_resource type="Texture2D" uid="uid://8upo31eleqj" path="res://Assets/Bunnies/Animations/Paths/GooSplash01VFXSpriteSheet.png" id="6_xd17q"]
+[ext_resource type="Texture2D" uid="uid://pbo82nncgqos" path="res://Assets/Bunnies/Animations/GooSplashVFXSpriteSheet.png" id="7_3axhd"]
+[ext_resource type="Texture2D" uid="uid://d1y6xppvpk2ov" path="res://Assets/Bunnies/Animations/Paths/GooSplash02VFXSpriteSheet.png" id="8_nx2pb"]
+[ext_resource type="Texture2D" uid="uid://dy6xyvu8o3ear" path="res://Assets/Bunnies/Animations/Skins/VoidGooSplashVFXSpriteSheet.png" id="9_vb07c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hdtmh"]
 radius = 827.63617
@@ -352,5 +352,3 @@ position = Vector2(83.333374, 62.5)
 scale = Vector2(7.2043643, 7.204365)
 sprite_frames = SubResource("SpriteFrames_arexb")
 animation = &"Green_Goo"
-frame = 6
-frame_progress = 1.0
