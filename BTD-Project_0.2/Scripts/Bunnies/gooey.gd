@@ -31,9 +31,21 @@ func verificar_e_atacar():
 func atacar(alvo):
     if alvo.has_method("gooey_stun"):
         $Gooey/AnimationPlayer.play("Gooey_Attack")
-
+        
+        # 1. Lista de nós de áudio
+        var sons_hit = [$Goo, $Goo2]
+        
+        # 2. Sorteia um dos sons
+        var som_sorteado = sons_hit[randi() % sons_hit.size()]
+        
+        # 3. Aplica um pitch aleatório antes de tocar
+        # Para sons viscosos (goo), um pitch mais baixo costuma soar melhor
+        som_sorteado.pitch_scale = randf_range(0.8, 1.0)
+        
+        # 4. Toca o som escolhido com o novo pitch
+        som_sorteado.play()
+        
         alvo.gooey_stun(TimeSlimed)
-
         pronto_para_atacar = false
         $Timer.start()
 

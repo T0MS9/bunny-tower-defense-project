@@ -20,6 +20,7 @@ func DMGED(quantidade):
 
 
     if vida <= 0:
+        $Death.play()
         $HitBoxGhostling.disabled = true
         var moedas = get_tree().current_scene.find_child("Moedas")
         var valor_atual = int(moedas.text)
@@ -52,3 +53,5 @@ func gooey_stun(TimeSlimed: float):
     $HitBoxGoo.disabled = false
     
     speed = speed_base
+    
+    

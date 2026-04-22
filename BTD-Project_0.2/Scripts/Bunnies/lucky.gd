@@ -32,11 +32,17 @@ func _physics_process(_delta):
             $Timer.start()
 
 
-func _on_timer_timeout() -> void :
+func _on_timer_timeout() -> void:
     var moedas = get_tree().current_scene.find_child("Moedas")
     var valor_atual = int(moedas.text)
     moedas.text = str(valor_atual + valor_lucky)
+    
     $Lucky/AnimationPlayer.play("LuckyAction")
+    
+    # --- Alteração do Pitch ---
+    # randf_range gera um número decimal aleatório entre dois valores
+    $Money.pitch_scale = randf_range(0.9, 1.1) 
+    $Money.play()
 
 func label_money():
     var label_M = Label.new()

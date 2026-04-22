@@ -33,42 +33,50 @@ func verificar_e_atacar():
 
 func atacar(alvo):
     if alvo.has_method("DMGED"):
+        # Animações básicas de ataque
         $Slasher/AnimationPlayer.play("LuckyAction")
         $SlasherAttackEffect.play("default")
         $SlasherAttack.play("default")
+        
+        $Slash.pitch_scale = randf_range(0.9, 1.1)
         $Slash.play()
+        
         contagem_ult += 6
         verificar_ult()
 
+        # LÓGICA DE DANO
         if contagem_ult >= 20:
-            alvo.DMGED(dmg_Slasher * 2)
+            # ULTIMATE ATIVA: Dano massivo (aumentei de 2 para 3)
+            alvo.DMGED(dmg_Slasher * 3) 
+            $Slash_Ult.pitch_scale = randf_range(0.9, 1.1)
             $Slash_Ult.play()
-
-            if contagem_ult >= 30:
-                alvo.DMGED(dmg_Slasher)
+            
+            # Verificamos se atingiu o NOVO limite máximo
+            if contagem_ult >= 60: 
+                # Dano de finalização explosivo (opcional)
+                alvo.DMGED(dmg_Slasher * 2) 
                 contagem_ult = 0
-
+                verificar_ult() # Chama para esconder o visual imediatamente
         else:
+            # Ataque normal quando a Ult não está pronta
             alvo.DMGED(dmg_Slasher)
-
 
         pronto_para_atacar = false
         $Timer.start()
 
 func verificar_ult():
-
-    if contagem_ult >= 20:
-        $Slasher/AppearUlt.play("default")
-        await $Slasher/AppearUlt.animation_finished
-        
-        $Slasher/Ult.visible = true
-        $Slasher/Ult.play("default")
-        
-
-    elif contagem_ult >= 30:
+    # Agora a condição de desligar é 60, dando mais "janela" de uso
+    if contagem_ult >= 60 or contagem_ult == 0:
         $Slasher/Ult.visible = false
         $Slasher/AppearUlt.play_backwards("default")
-    
+        
+    elif contagem_ult >= 20:
+        # Evita que a animação de "Aparecer" rode toda vez que atacar
+        if not $Slasher/Ult.visible and not $Slasher/AppearUlt.is_playing():
+            $Slasher/AppearUlt.play("default")
+            await $Slasher/AppearUlt.animation_finished
+            $Slasher/Ult.visible = true
+            $Slasher/Ult.play("default")
 
 
 
