@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://cddy2c05ki38c" path="res://Assets/SFX/AnarchistReload.mp3" id="3_3yj7i"]
 [ext_resource type="Texture2D" uid="uid://dtot615v2mkpx" path="res://Assets/Others/UI_Assets/Hit.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://ca83s3ak6hio3" path="res://Assets/Bunnies/Animations/AnarchistAttackIdle.png" id="5_3yj7i"]
+[ext_resource type="Texture2D" uid="uid://8s3xfvankkkk" path="res://Assets/Bunnies/Animations/AnarchistAttackSpritesheet.png" id="6_2hr0n"]
+[ext_resource type="Texture2D" uid="uid://ceh0w4jurvoow" path="res://Assets/Bunnies/Animations/AnarchistReloadSpritesheet.png" id="7_qthyr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4dix"]
 radius = 294.0017
@@ -64,6 +66,166 @@ _data = {
 &"RookieAttack": SubResource("Animation_xbbb2")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yl3h"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(0, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8iyv"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(2056, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56475"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(4112, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2aot"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(0, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1exf"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(2056, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eleo8"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(4112, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln5iw"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(0, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1ssw"]
+atlas = ExtResource("6_2hr0n")
+region = Rect2(2056, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c30q6"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(0, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2pdx"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(2056, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cavn0"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(4112, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v600"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(6168, 0, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lq2k"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(0, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2a2x"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(2056, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yox6g"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(4112, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd2kw"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(6168, 2288, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru0on"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(0, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6iaw"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(2056, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uki2v"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(4112, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ini63"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(6168, 4576, 2056, 2288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnyj0"]
+atlas = ExtResource("7_qthyr")
+region = Rect2(0, 6864, 2056, 2288)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q7t3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yl3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8iyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56475")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2aot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1exf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eleo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln5iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1ssw")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 32.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c30q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2pdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cavn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v600")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lq2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2a2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yox6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd2kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru0on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6iaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uki2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ini63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnyj0")
+}],
+"loop": false,
+"name": &"Reaload",
+"speed": 32.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_55yyg"]
 radius = 37.326958
 height = 99.867
@@ -116,12 +278,20 @@ offset = Vector2(-81.46591, -260.5728)
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_55yyg")
 
+[node name="Anarchist_Animations" type="AnimatedSprite2D" parent="." unique_id=110907537]
+position = Vector2(-10, -24)
+scale = Vector2(0.10448079, 0.10448079)
+sprite_frames = SubResource("SpriteFrames_q7t3w")
+animation = &"Reaload"
+frame = 12
+frame_progress = 1.0
+
 [node name="Shoot" type="Sprite2D" parent="." unique_id=17550775]
 visible = false
 self_modulate = Color(1, 1, 1, 0.8039216)
 y_sort_enabled = true
-position = Vector2(62.999992, -1.9999998)
-scale = Vector2(0.10427517, 0.10427517)
+position = Vector2(50.000008, -16.999996)
+scale = Vector2(0.080709, 0.080709)
 texture = ExtResource("4")
 
 [node name="HitBox" type="Area2D" parent="." unique_id=1941780108 groups=["no_place"]]
@@ -143,6 +313,7 @@ offset_bottom = 77.0
 flat = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=686156716]
+visible = false
 offset_left = 20.0
 offset_top = -9.0
 offset_right = 82.0

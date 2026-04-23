@@ -43,6 +43,7 @@ func atacar(alvo):
     if alvo.has_method("DMGED"):
         $Anarchist/AnimationPlayer.play("Anarchist_Attack")
         $Shot.play()
+        $Anarchist_Animations.play("Attack")
         alvo.DMGED(dmg_Anarchist)
         pronto_para_atacar = false
         
@@ -53,6 +54,8 @@ func atacar(alvo):
 
 func _on_reload_timeout() -> void :
     balas = 5
+    $Reload2.play()
+    $Anarchist_Animations.play("Reaload")
     pronto_para_atacar = false
 
 

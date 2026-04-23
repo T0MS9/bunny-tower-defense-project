@@ -53,8 +53,8 @@
 [ext_resource type="Texture2D" uid="uid://bb3lucdtipoh3" path="res://Assets/Bunnies/AlienDisable.png" id="45"]
 [ext_resource type="Texture2D" uid="uid://b4f81ngh84xns" path="res://Assets/Bunnies/Mystical.png" id="46"]
 [ext_resource type="Texture2D" uid="uid://bi1v8dc7c16vq" path="res://Assets/Bunnies/MysticalDisable.png" id="47"]
-[ext_resource type="Texture2D" uid="uid://hl88b3x0bjqb" path="res://Assets/Others/HUD_Assets/StartBTN.png" id="50_q3bjx"]
-[ext_resource type="Texture2D" uid="uid://uwe38mnunjf0" path="res://Assets/Others/HUD_Assets/RepeatBTN.png" id="52_iqxei"]
+[ext_resource type="Texture2D" uid="uid://ddkefcr0b17gg" path="res://Assets/Others/HUD_Assets/StartBTN.png" id="50_q3bjx"]
+[ext_resource type="Texture2D" uid="uid://cbwlvkux1et17" path="res://Assets/Others/HUD_Assets/RepeatBTN.png" id="52_iqxei"]
 [ext_resource type="Texture2D" uid="uid://blgrbhb1doycn" path="res://Assets/Others/HUD_Assets/StartBTNPressed.png" id="53_dsgg8"]
 [ext_resource type="Texture2D" uid="uid://bcpm0c0r2ugqw" path="res://Assets/Others/HUD_Assets/RepeatBTNPressed.png" id="55_jjmk5"]
 
@@ -1134,7 +1134,7 @@ offset_bottom = 1107.0001
 texture_normal = ExtResource("50_q3bjx")
 texture_pressed = ExtResource("53_dsgg8")
 texture_hover = ExtResource("53_dsgg8")
-texture_disabled = ExtResource("50_q3bjx")
+texture_disabled = ExtResource("53_dsgg8")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1146,7 +1146,7 @@ offset_bottom = 1107.0001
 texture_normal = ExtResource("52_iqxei")
 texture_pressed = ExtResource("55_jjmk5")
 texture_hover = ExtResource("55_jjmk5")
-texture_disabled = ExtResource("52_iqxei")
+texture_disabled = ExtResource("55_jjmk5")
 ignore_texture_size = true
 stretch_mode = 0
 
