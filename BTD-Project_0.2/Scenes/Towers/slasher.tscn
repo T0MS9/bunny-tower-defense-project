@@ -5,9 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://dj2br232rt5gk" path="res://Assets/SFX/SlasherBunnyULT.mp3" id="2_5vwpn"]
 [ext_resource type="AudioStream" uid="uid://dctet7hu5vyh4" path="res://Assets/SFX/SlasherSlash.mp3" id="3_5ydw3"]
 [ext_resource type="Texture2D" uid="uid://berciy7trmcu5" path="res://Assets/Bunnies/Animations/SlashVFXSpriteSheet.png" id="4_q08p7"]
-[ext_resource type="Texture2D" uid="uid://c27x81cqlc3tj" path="res://Assets/Bunnies/Animations/SlasherAttackIdle.png" id="5_6rs88"]
-[ext_resource type="Texture2D" uid="uid://cavnfm1vgsxf2" path="res://Assets/Bunnies/Animations/SlasherAttackSpriteSheet.png" id="6_5ydw3"]
-[ext_resource type="Texture2D" uid="uid://dce8tf2dokn4g" path="res://Assets/Bunnies/Animations/EyeGlowSlasherSpriteSheet.png" id="6_qeanp"]
+[ext_resource type="Texture2D" uid="uid://nlcd786q3rpu" path="res://Assets/Bunnies/Animations/SlasherAttackIdle.png" id="5_6rs88"]
+[ext_resource type="Texture2D" uid="uid://eubwp3pjhmbu" path="res://Assets/Bunnies/Animations/SlasherAttackSpriteSheet.png" id="6_5ydw3"]
+[ext_resource type="Texture2D" uid="uid://2y3kmlwntxsq" path="res://Assets/Bunnies/Animations/EyeGlowSlasherSpriteSheet.png" id="6_qeanp"]
 [ext_resource type="Texture2D" uid="uid://dwrbtgkce4l1u" path="res://Assets/Others/UI_Assets/ArrowDPS.png" id="9_qeanp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q08p7"]
@@ -424,6 +424,7 @@ max_value = 30.0
 value = 20.0
 
 [node name="ArrowDps" type="Sprite2D" parent="." unique_id=775453035]
+visible = false
 position = Vector2(-7.000001, -160.00002)
 scale = Vector2(0.085, 0.085)
 texture = ExtResource("9_qeanp")

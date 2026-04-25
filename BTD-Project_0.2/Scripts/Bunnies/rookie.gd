@@ -69,11 +69,15 @@ func mudar_skin():
     
     var path = $Rookie.texture.resource_path
     match path:
-        "res://Assets/Bunnies/Rookie.png":
+        "res://Assets/Bunnies/Animations/RookieAttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/buny.png")
+            $RookieHandsSkin_Attack.visible = true
+            $RookieHands_Attack.visible = false
             
         "res://Assets/Bunnies/Skins/buny.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Rookie.png")
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/RookieAttackIdle.png")
+            $RookieHandsSkin_Attack.visible = false
+            $RookieHands_Attack.visible = true
             
         "res://Assets/Bunnies/Paths/Rookie01.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
@@ -120,5 +124,6 @@ func aplicar_upgrade(caminho: int):
         
         if skin:
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
+
         else:
             $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")

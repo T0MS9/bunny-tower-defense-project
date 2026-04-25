@@ -307,12 +307,12 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_55yyg")
 
 [node name="RookieHands_Attack" type="AnimatedSprite2D" parent="." unique_id=179038366]
-visible = false
 position = Vector2(-3, -45)
 scale = Vector2(0.11799297, 0.12516825)
 sprite_frames = SubResource("SpriteFrames_2ted8")
 
 [node name="RookieHandsSkin_Attack" type="AnimatedSprite2D" parent="." unique_id=1553756429]
+visible = false
 position = Vector2(-3, -45)
 scale = Vector2(0.11799297, 0.12516825)
 sprite_frames = SubResource("SpriteFrames_1cf3o")
