@@ -1,10 +1,18 @@
-# Godot-specific ignores
+# Godot 4+
 .godot/
 *.import
-export_preset.cfg
+export/
 build/
+.tmp/
 
-# Mono-specific ignores
+# Ficheiros pesados que o Git NÃO deve tocar
+*.mp4
+*.wav
+*.zip
+*.pck
+*.exe
+
+# Mono/C#
 .mono/
 bin/
 obj/
