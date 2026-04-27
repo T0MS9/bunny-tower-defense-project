@@ -322,13 +322,9 @@ libraries/Animations = ExtResource("3")
 position = Vector2(5, 1.0000001)
 scale = Vector2(0.68458676, 0.68458706)
 sprite_frames = SubResource("SpriteFrames_71q4f")
-frame = 9
-frame_progress = 1.0
 
 [node name="Goo_Splash" type="AnimatedSprite2D" parent="." unique_id=1489114371]
 position = Vector2(5, -7)
 scale = Vector2(0.535863, 0.53586304)
 sprite_frames = SubResource("SpriteFrames_1wb60")
 animation = &"Void_Goo"
-frame = 6
-frame_progress = 1.0

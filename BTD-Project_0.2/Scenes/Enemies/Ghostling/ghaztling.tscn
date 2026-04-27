@@ -330,5 +330,3 @@ position = Vector2(-9.536743e-07, 83.333336)
 scale = Vector2(4.0503473, 4.050348)
 sprite_frames = SubResource("SpriteFrames_7xpid")
 animation = &"Purple_Goo"
-frame = 6
-frame_progress = 1.0

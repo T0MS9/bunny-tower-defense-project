@@ -71,25 +71,27 @@ func mudar_skin():
     match path:
         "res://Assets/Bunnies/Animations/RookieAttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/buny.png")
-            $RookieHandsSkin_Attack.visible = true
-            $RookieHands_Attack.visible = false
+            
             
         "res://Assets/Bunnies/Skins/buny.png":
             $Rookie.texture = load("res://Assets/Bunnies/Animations/RookieAttackIdle.png")
-            $RookieHandsSkin_Attack.visible = false
-            $RookieHands_Attack.visible = true
             
-        "res://Assets/Bunnies/Paths/Rookie01.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
             
-        "res://Assets/Bunnies/Skins/Paths/buny02.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
-            
-        "res://Assets/Bunnies/Paths/Rookie02.png":
+        "res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
             
+            
         "res://Assets/Bunnies/Skins/Paths/buny01.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Skins/Paths/buny01AttackSpriteSheet.png")
+            
+            
+        "res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+            
+            
+        "res://Assets/Bunnies/Skins/Paths/buny02.png":
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Skins/Paths/buny02AttackSpriteSheet.png")
+            
 
 func _on_button_button_down() -> void:
     # 1. Diz a TODOS os nós no grupo "Bunnies" para correrem a função reset_focus
@@ -116,7 +118,8 @@ func aplicar_upgrade(caminho: int):
         if skin:
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
         else:
-            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie01.png")
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png")
+            
         
     elif caminho == 2:
         #nivel_velocidade += 1
@@ -126,4 +129,4 @@ func aplicar_upgrade(caminho: int):
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
 
         else:
-            $Rookie.texture = load("res://Assets/Bunnies/Paths/Rookie02.png")
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png")

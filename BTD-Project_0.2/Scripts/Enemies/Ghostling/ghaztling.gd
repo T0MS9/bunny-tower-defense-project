@@ -22,6 +22,10 @@ func DMGED(quantidade):
     vida -= quantidade
 
     if vida <= 0:
+        $Death.play()
+        $"../Goo_Splash".visible = false
+        $HitBoxGhostling.disabled = true
+        
         var moedas = get_tree().current_scene.find_child("Moedas")
         var valor_atual = int(moedas.text)
         moedas.text = str(valor_atual + 1)

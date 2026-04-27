@@ -28,6 +28,11 @@ func DMGED(quantidade):
     moedas.text = str(valor_atual + quantidade)
 
     if vida <= 0:
+        $Death.play()
+        $"../Goo_Splash".visible = false
+        $HitBoxGhostling.disabled = true
+        
+        
         var novo_total = int(moedas.text)
         moedas.text = str(novo_total + 5)
         speed = 0

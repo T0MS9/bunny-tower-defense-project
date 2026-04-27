@@ -52,10 +52,6 @@ func iniciar_vaga():
             vaga_atual = [Ghazt, Ghazt, Ghostling, Brute, Brute, Brute, Ghoul, Ghoul, Ghazt, Ghaztling, Ghaztling, Ghaztling]
         10:
             vaga_atual = [Brute, Ghaztling, Brute, Ghaztling, Brute, Brute, Brute, Brute]
-        11:
-            vaga_atual = [Brute, Ghaztling, Brute, Ghaztling, Brute, Brute, Brute, Brute, Undead_Ghostling]    
-        12:
-            vaga_atual = [Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling, Undead_Ghostling] 
 
     $Timer.start()
 
@@ -65,10 +61,8 @@ func _on_timer_timeout():
 
         var cena_do_inimigo = vaga_atual.pop_front()
 
-
         var novo_fantasma = cena_do_inimigo.instantiate()
         get_node("../Path2D").add_child(novo_fantasma)
-
 
         inimigos_vivos += 1
     else:

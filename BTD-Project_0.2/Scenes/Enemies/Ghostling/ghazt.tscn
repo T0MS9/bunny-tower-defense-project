@@ -320,8 +320,8 @@ root_node = NodePath("../Ghazt")
 libraries/Animations = ExtResource("3")
 
 [node name="POP" type="AnimatedSprite2D" parent="." unique_id=990862593]
-position = Vector2(4.0000005, 5.684342e-14)
-scale = Vector2(0.60242337, 0.60242337)
+position = Vector2(1, 2)
+scale = Vector2(0.7648915, 0.7648915)
 sprite_frames = SubResource("SpriteFrames_urirk")
 frame = 9
 frame_progress = 1.0

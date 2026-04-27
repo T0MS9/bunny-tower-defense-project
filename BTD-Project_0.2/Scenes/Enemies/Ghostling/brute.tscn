@@ -341,8 +341,8 @@ libraries/ = SubResource("AnimationLibrary_rlpjo")
 libraries/Animations = ExtResource("3")
 
 [node name="POP" type="AnimatedSprite2D" parent="." unique_id=1316815315]
-position = Vector2(7.6293945e-06, 10.416687)
-scale = Vector2(7.3816295, 7.381629)
+position = Vector2(-9.536743e-07, 0)
+scale = Vector2(9.792004, 9.792004)
 sprite_frames = SubResource("SpriteFrames_jar28")
 frame = 9
 frame_progress = 1.0
