@@ -630,14 +630,15 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="BunnySel" type="Sprite2D" parent="HUD/HUD_Shop/HudBgDown" unique_id=2059092966]
-position = Vector2(-332.53345, -96.06146)
+position = Vector2(-323.06763, -96.06152)
 scale = Vector2(0.09667676, 0.09131366)
+texture = ExtResource("24")
 
 [node name="path 1" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=19946101]
-offset_left = -159.92026
-offset_top = -126.433014
-offset_right = 0.44265747
-offset_bottom = -58.524506
+offset_left = -162.14752
+offset_top = -208.72134
+offset_right = -1.7846069
+offset_bottom = -140.81284
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -649,10 +650,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="path 2" type="Button" parent="HUD/HUD_Shop/HudBgDown" unique_id=1096517178]
-offset_left = -164.37479
-offset_top = -62.768764
-offset_right = 4.8971863
-offset_bottom = 4.286289
+offset_left = 12.135803
+offset_top = -210.84349
+offset_right = 181.40778
+offset_bottom = -143.78844
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
