@@ -34,7 +34,7 @@ func verificar_e_atacar():
 func atacar(alvo):
     if alvo.has_method("DMGED"):
         $Rookie/AnimationPlayer.play("RookieAttack")
-        $RookieHands_Attack.play("default")
+        $RookieHands_Attack.play()
         
         var sons_hit = [$Hit, $Hit2, $Hit3]
         var som_sorteado = sons_hit[randi() % sons_hit.size()]
@@ -71,27 +71,27 @@ func mudar_skin():
     match path:
         "res://Assets/Bunnies/Animations/RookieAttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/buny.png")
-            
+            $RookieHands_Attack.animation = "RookieSkin"
             
         "res://Assets/Bunnies/Skins/buny.png":
             $Rookie.texture = load("res://Assets/Bunnies/Animations/RookieAttackIdle.png")
-            
+            $RookieHands_Attack.animation = "Rookie"
             
         "res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
-            
+            $RookieHands_Attack.animation = "RookieSkin01"
             
         "res://Assets/Bunnies/Skins/Paths/buny01.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Animations/Skins/Paths/buny01AttackSpriteSheet.png")
-            
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png")
+            $RookieHands_Attack.animation = "Rookie01"
             
         "res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
-            
+            $RookieHands_Attack.animation = "RookieSkin02"
             
         "res://Assets/Bunnies/Skins/Paths/buny02.png":
-            $Rookie.texture = load("res://Assets/Bunnies/Animations/Skins/Paths/buny02AttackSpriteSheet.png")
-            
+            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png")
+            $RookieHands_Attack.animation = "Rookie02"
 
 func _on_button_button_down() -> void:
     # 1. Diz a TODOS os nós no grupo "Bunnies" para correrem a função reset_focus
@@ -116,9 +116,11 @@ func aplicar_upgrade(caminho: int):
         #dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
         
         if skin:
-            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
+            $RookieHands_Attack.animation = "RookieSkin01"
         else:
             $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png")
+            $RookieHands_Attack.animation = "Rookie01"
             
         
     elif caminho == 2:
@@ -126,7 +128,8 @@ func aplicar_upgrade(caminho: int):
         #$Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
         
         if skin:
-            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
-
+            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+            $RookieHands_Attack.animation = "RookieSkin02"
         else:
             $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png")
+            $RookieHands_Attack.animation = "Rookie02"
