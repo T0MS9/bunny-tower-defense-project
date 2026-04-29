@@ -5,11 +5,13 @@ var skin = false
 var mostrar_range = false
 var pronto_para_atacar = false
 
-var nivel_dano = 0
-var nivel_velocidade = 0
+#var nivel_dano = 0
+#var nivel_velocidade = 0
 var dmg_Rookie = 1
 var focus = false
 
+var path1 = 0
+var path2 = 0
 
 func _process(float) -> void :
     
@@ -67,8 +69,8 @@ func reset_focus():
 func mudar_skin():
     skin = !skin
     
-    var path = $Rookie.texture.resource_path
-    match path:
+    var texture = $Rookie.texture.resource_path
+    match texture:
         "res://Assets/Bunnies/Animations/RookieAttackIdle.png":
             $Rookie.texture = load("res://Assets/Bunnies/Skins/buny.png")
             $RookieHands_Attack.animation = "RookieSkin"
@@ -109,27 +111,45 @@ func _on_button_button_down() -> void:
         hud.get_node("HUD_Shop/HudBgDown/ExitShop").disabled = false
         hud.get_node("HUD_Shop/Shop_Appear").play("Shop_Appear")
     
-
-func aplicar_upgrade(caminho: int):
+func aplicar_upgrade(caminho): 
     if caminho == 1:
-        #nivel_dano += 1
-        #dmg_Rookie += 1 # Só ESTE Rookie ganha +1 de dano
-        
-        if skin:
-            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
-            $RookieHands_Attack.animation = "RookieSkin01"
-        else:
-            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png")
-            $RookieHands_Attack.animation = "Rookie01"
-            
-        
+        # Regra de bloqueio: se o path2 já é nível 3, o path1 não passa do 2
+        if path2 >= 3 and path1 >= 2:
+            print("Bloqueado pelo Path 2!")
+            return
+
+        path1 += 1 # ISTO É O QUE ADICIONA O PONTO!
+        match path1:
+            1: dmg_Rookie = 2
+            2: dmg_Rookie = 3
+            3: dmg_Rookie = 5
+            4: 
+                dmg_Rookie = 8
+                
+                if skin:
+                    $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny01.png")
+                    $RookieHands_Attack.animation = "RookieSkin01"
+                else:
+                    $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie01AttackIdle.png")
+                    $RookieHands_Attack.animation = "Rookie01"
+                
     elif caminho == 2:
-        #nivel_velocidade += 1
-        #$Timer.wait_time -= 0.1 # Só ESTE Rookie ataca mais rápido
-        
-        if skin:
-            $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
-            $RookieHands_Attack.animation = "RookieSkin02"
-        else:
-            $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png")
-            $RookieHands_Attack.animation = "Rookie02"
+        # Regra de bloqueio
+        if path1 >= 3 and path2 >= 2:
+            print("Bloqueado pelo Path 1!")
+            return
+
+        path2 += 1 # ADICIONA O PONTO NO CAMINHO 2
+        match path2:
+            1: $Timer.wait_time = 0.8
+            2: $Timer.wait_time = 0.6
+            3: $Timer.wait_time = 0.4
+            4: 
+                $Timer.wait_time = 0.2
+                
+                if skin:
+                    $Rookie.texture = load("res://Assets/Bunnies/Skins/Paths/buny02.png")
+                    $RookieHands_Attack.animation = "RookieSkin02"
+                else:
+                    $Rookie.texture = load("res://Assets/Bunnies/Animations/Paths/Rookie02AttackIdle.png")
+                    $RookieHands_Attack.animation = "Rookie02"
